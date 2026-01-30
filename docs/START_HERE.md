@@ -4,6 +4,7 @@
 > Last updated: 2026-01-30
 
 Prereqs: Python 3, local repo, and either `KAI_ENCRYPTION_KEY` or `KAI_ALLOW_PLAINTEXT=1`.
+See `docs/USER_CHECKLIST.md` for all configurable options.
 
 1) Build the local vector DB
 ```
