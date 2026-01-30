@@ -36,6 +36,7 @@ from .webhooks import post_webhook
 from .report_context import build_report_context
 from .scan_planner import build_scan_plan
 from .autonomy import autonomy_insights
+from .learning_loop import record_training_examples
 from .validation import validation_checklist
 from .graph_builder import write_graph
 from .vuln_findings import normalize_vuln_result
@@ -307,6 +308,7 @@ def run_execute(scope: Dict[str, Any], approved: bool = False, mitigation_tier: 
         "report_bundle": report_paths,
         "validation_recommendation": report_context.get("validation_recommendation"),
     }
+    run_record["training_data"] = record_training_examples(record.run_id, scope, findings)
     eval_path = evaluate_findings([f.__dict__ for f in findings], record.run_id)
     run_record["eval_path"] = eval_path
     evidence_path = write_evidence_bundle(record.run_id, module_exec)

@@ -42,3 +42,7 @@
   - `python3 scripts/import_nvd_cve.py --input /path/to/nvd.json.gz`
 - Store path: `outputs/cve_store.jsonl`
 - Findings with CVE IDs will be enriched from this store.
+
+## Learning Loop Outputs
+- Training examples: `outputs/training_data.jsonl`
+- Training vector store: `outputs/training_vector_store.jsonl`
