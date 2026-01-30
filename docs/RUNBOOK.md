@@ -20,3 +20,8 @@
 ## Backups
 - Archive `outputs/` daily
 - Snapshot pgvector volume weekly
+
+## Program Scope Cache
+- Refresh bug bounty program scopes:
+  - `python3 scripts/fetch_program_guidelines.py`
+- Cache location: `data/programs/scopes/`

@@ -25,12 +25,17 @@ python3 -m kai11.cli --mode plan --kind osint --role operator --scope '{"allowli
 - `outputs/` for logs, evidence, and reports
 - `outputs/tool_health.json` for installed tool status
 
-5) Launch local UI
+5) (Optional) Refresh public program scope cache
+```
+python3 scripts/fetch_program_guidelines.py
+```
+
+6) Launch local UI
 ```
 python3 -m kai11.services.server --index ./outputs/vector_store.jsonl --host 127.0.0.1 --port 7878
 ```
 
-6) Optional: execute (requires HiL approval + allow network)
+7) Optional: execute (requires HiL approval + allow network)
 ```
 export KAI_ALLOW_NETWORK=1
 export KAI_ALLOW_ACTIVE=1

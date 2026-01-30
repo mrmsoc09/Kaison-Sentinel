@@ -1,14 +1,329 @@
 {
-  "version": 1,
+  "version": 2,
   "programs": [
     {
       "id": "default",
       "name": "Default Program",
-      "allowed_techniques": ["passive", "safe_active"],
-      "scope": {
-        "allowlist": []
-      },
+      "platform": "Local",
+      "scope_url": "",
+      "public": false,
       "notes": "Replace with actual program scope and rules."
+    },
+    {
+      "id": "1password",
+      "name": "1Password",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/1password",
+      "public": true
+    },
+    {
+      "id": "23andme_bbp",
+      "name": "23andMe",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/23andme_bbp",
+      "public": true
+    },
+    {
+      "id": "3cx",
+      "name": "3CX",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/3cx",
+      "public": true
+    },
+    {
+      "id": "8x8-bounty",
+      "name": "8x8",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/8x8-bounty",
+      "public": true
+    },
+    {
+      "id": "acronis",
+      "name": "Acronis",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/acronis",
+      "public": true
+    },
+    {
+      "id": "affirm",
+      "name": "Affirm",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/affirm",
+      "public": true
+    },
+    {
+      "id": "airbnb",
+      "name": "Airbnb",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/airbnb",
+      "public": true
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/airtable",
+      "public": true
+    },
+    {
+      "id": "algolia",
+      "name": "Algolia",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/algolia",
+      "public": true
+    },
+    {
+      "id": "aliexpress",
+      "name": "AliExpress",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/aliexpress",
+      "public": true
+    },
+    {
+      "id": "amazonvrp",
+      "name": "Amazon VRP",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/amazonvrp",
+      "public": true
+    },
+    {
+      "id": "checkpointsw",
+      "name": "Check Point",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/checkpointsw",
+      "public": true
+    },
+    {
+      "id": "chess_com",
+      "name": "Chess.com",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/chess_com",
+      "public": true
+    },
+    {
+      "id": "chia_network",
+      "name": "Chia Network",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/chia_network",
+      "public": true
+    },
+    {
+      "id": "chromium",
+      "name": "Google Chrome",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/chromium",
+      "public": true
+    },
+    {
+      "id": "circle-bbp",
+      "name": "Circle",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/circle-bbp",
+      "public": true
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/cloudflare",
+      "public": true
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/coinbase",
+      "public": true
+    },
+    {
+      "id": "etsy",
+      "name": "Etsy",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/etsy",
+      "public": true
+    },
+    {
+      "id": "evernote",
+      "name": "Evernote",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/evernote",
+      "public": true
+    },
+    {
+      "id": "expediagroup_bbp",
+      "name": "Expedia Group",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/expediagroup_bbp",
+      "public": true
+    },
+    {
+      "id": "fsecure",
+      "name": "F-Secure",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/fsecure",
+      "public": true
+    },
+    {
+      "id": "fanduel",
+      "name": "FanDuel",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/fanduel",
+      "public": true
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/github",
+      "public": true
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/gitlab",
+      "public": true
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/google",
+      "public": true
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/kubernetes",
+      "public": true
+    },
+    {
+      "id": "lastpass",
+      "name": "LastPass",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/lastpass",
+      "public": true
+    },
+    {
+      "id": "launchdarkly",
+      "name": "LaunchDarkly",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/launchdarkly",
+      "public": true
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/linkedin",
+      "public": true
+    },
+    {
+      "id": "logitech",
+      "name": "Logitech",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/logitech",
+      "public": true
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/notion",
+      "public": true
+    },
+    {
+      "id": "oculus",
+      "name": "Oculus",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/oculus",
+      "public": true
+    },
+    {
+      "id": "oppo_bbp",
+      "name": "OPPO",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/oppo_bbp",
+      "public": true
+    },
+    {
+      "id": "samsungmobile",
+      "name": "Samsung Mobile",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/samsungmobile",
+      "public": true
+    },
+    {
+      "id": "samsungsmarttv",
+      "name": "Samsung SmartTV",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/samsungsmarttv",
+      "public": true
+    },
+    {
+      "id": "temu",
+      "name": "Temu",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/temu",
+      "public": true
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/tiktok",
+      "public": true
+    },
+    {
+      "id": "tinder",
+      "name": "Tinder",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/tinder",
+      "public": true
+    },
+    {
+      "id": "torproject",
+      "name": "Tor Project",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/torproject",
+      "public": true
+    },
+    {
+      "id": "tradingview-2",
+      "name": "TradingView",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/tradingview-2",
+      "public": true
+    },
+    {
+      "id": "toolsforhumanity",
+      "name": "Tools for Humanity",
+      "platform": "HackerOne",
+      "scope_url": "https://hackerone.com/toolsforhumanity",
+      "public": true
+    },
+    {
+      "id": "apple_security_bounty",
+      "name": "Apple Security Bounty",
+      "platform": "Direct",
+      "scope_url": "https://security.apple.com/bounty/",
+      "public": true
+    },
+    {
+      "id": "microsoft_m365_bounty",
+      "name": "Microsoft Online Services (M365) Bounty",
+      "platform": "Direct",
+      "scope_url": "https://www.microsoft.com/en-us/msrc/bounty-online-services",
+      "policy_url": "https://www.microsoft.com/en-us/msrc/bounty-guidelines",
+      "public": true
+    },
+    {
+      "id": "openai_bug_bounty",
+      "name": "OpenAI Bug Bounty",
+      "platform": "Bugcrowd",
+      "scope_url": "https://bugcrowd.com/engagements/openai",
+      "public": true
     }
   ]
 }
