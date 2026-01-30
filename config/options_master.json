@@ -35,6 +35,12 @@
     },
     "langstudio": {
       "wrap_tools": true
+    },
+    "program_sync": {
+      "enabled": false,
+      "auto_trigger": false,
+      "interval_hours": 24,
+      "sleep_seconds": 1.5
     }
   },
   "osint_overrides": {

@@ -9,7 +9,8 @@ See `docs/USER_CHECKLIST.md` for the full options checklist.
 2) (Optional) Use **MITRE Planner** to auto‑fill playbooks + technique
 3) Fill **Guided Plan** (goal + targets + playbook IDs)
 4) (Optional) Refresh program scope cache
-   - `python3 scripts/fetch_program_guidelines.py`
+   - `KAI_ALLOW_NETWORK=1 python3 scripts/fetch_program_guidelines.py --allow-network`
+   - Or use **Setup Hub → Program scopes cache → Sync now**
 5) Review plan output (ensure scope + modules are correct)
 6) Execute only after HiL approval
 7) Attach evidence (include screen recording)

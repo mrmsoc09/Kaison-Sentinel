@@ -179,6 +179,20 @@ textarea {
 .setup-status {
   width: 160px;
 }
+.setup-sync {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+.setup-sync:hover {
+  border-color: var(--accent);
+}
 .key-link {
   display: inline-block;
   color: var(--accent);

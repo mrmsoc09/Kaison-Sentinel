@@ -27,6 +27,8 @@ from ..core.setup_hub import load_setup_hub, update_setup_step
 from ..core.key_catalog import load_key_catalog
 from ..core.export_bundle import build_bundle
 from ..core.task_queue import list_jobs, enqueue_task
+from ..core.programs import list_programs
+from ..core.program_sync import program_sync_status
 from ..core.run_history import list_runs
 from ..core.mitre_planner import list_techniques as list_mitre_techniques, build_mitre_plan, export_mitre_bundle
 
@@ -130,6 +132,10 @@ def handle_assets(path: str, query: str = ""):
         qs = parse_qs(query)
         limit = int((qs.get("limit") or ["25"])[0])
         return 200, list_runs(limit=limit)
+    if path == "/api/programs/list":
+        return 200, {"programs": list_programs()}
+    if path == "/api/programs/sync/status":
+        return 200, program_sync_status()
     if path == "/api/jobs":
         return 200, list_jobs()
     if path == "/api/exports/bundle":
@@ -230,6 +236,14 @@ def handle_execute_async(payload: dict):
         "scope": scope,
         "approve": bool(payload.get("approve")),
         "tier": payload.get("mitigation_tier") or "standard",
+    }
+    return 202, enqueue_task(task)
+
+
+def handle_program_sync(payload: dict):
+    task = {
+        "mode": "program_sync",
+        "force": bool(payload.get("force")),
     }
     return 202, enqueue_task(task)
 

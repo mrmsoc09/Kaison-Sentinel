@@ -10,7 +10,7 @@ from ..core.api_auth import auth_enabled, validate_api_key, header_name
 from ..core.api_limits import check_rate_limit
 from ..core.rbac import has_permission
 from ..core.config import BUILD_ROOT
-from .ui_api import handle_assets, handle_plan, handle_execute, handle_add_key, handle_save_playbook, handle_import_playbooks, handle_queue_email, handle_attach_evidence, handle_email_draft, handle_profile_update, handle_email_config_update, handle_setup_update, handle_options_override, handle_execute_async, handle_mitre_plan, handle_mitre_export
+from .ui_api import handle_assets, handle_plan, handle_execute, handle_add_key, handle_save_playbook, handle_import_playbooks, handle_queue_email, handle_attach_evidence, handle_email_draft, handle_profile_update, handle_email_config_update, handle_setup_update, handle_options_override, handle_execute_async, handle_mitre_plan, handle_mitre_export, handle_program_sync
 
 UI_DIR = BUILD_ROOT / "ui"
 
@@ -356,6 +356,18 @@ class SearchHandler(BaseHTTPRequestHandler):
             except Exception:
                 payload = {}
             status, data = handle_options_override(payload)
+            return self._send_json(status, data)
+        if parsed.path == "/api/programs/sync":
+            auth = self._ensure_auth("plan")
+            if auth is None:
+                return
+            length = int(self.headers.get("Content-Length", "0"))
+            raw = self.rfile.read(length).decode("utf-8") if length else "{}"
+            try:
+                payload = json.loads(raw)
+            except Exception:
+                payload = {}
+            status, data = handle_program_sync(payload)
             return self._send_json(status, data)
         self._send_json(404, {"error": "not_found"})
 

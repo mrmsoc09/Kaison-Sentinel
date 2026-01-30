@@ -4,7 +4,9 @@ async function loadSetupHub() {
   try {
     const res = await fetch('/api/setup/hub');
     const data = await res.json();
-    renderSetupHub(el, data.steps || []);
+    const statusRes = await fetch('/api/programs/sync/status');
+    const status = await statusRes.json();
+    renderSetupHub(el, data.steps || [], status);
   } catch (e) {
     el.textContent = 'Failed to load setup hub.';
   }
@@ -22,7 +24,20 @@ async function updateSetupStep(stepId, status) {
   }
 }
 
-function renderSetupHub(el, steps) {
+async function triggerProgramSync() {
+  try {
+    await fetch('/api/programs/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ force: true })
+    });
+  } catch (e) {
+    // ignore
+  }
+  loadSetupHub();
+}
+
+function renderSetupHub(el, steps, programStatus) {
   el.innerHTML = '';
   if (!steps.length) {
     el.textContent = 'No setup steps configured.';
@@ -50,6 +65,19 @@ function renderSetupHub(el, steps) {
     row.appendChild(title);
     row.appendChild(notes);
     row.appendChild(status);
+    if (step.id === 'program_scopes') {
+      const meta = document.createElement('div');
+      meta.className = 'setup-notes';
+      const last = programStatus && programStatus.last_sync ? programStatus.last_sync : 'never';
+      const state = programStatus && programStatus.status ? programStatus.status : 'unknown';
+      meta.textContent = `last sync: ${last} · status: ${state}`;
+      const btn = document.createElement('button');
+      btn.className = 'setup-sync';
+      btn.textContent = 'Sync now';
+      btn.addEventListener('click', () => triggerProgramSync());
+      row.appendChild(meta);
+      row.appendChild(btn);
+    }
     el.appendChild(row);
   });
 }

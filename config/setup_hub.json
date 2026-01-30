@@ -19,6 +19,12 @@
       "notes": "Add API keys to the vault with required scopes."
     },
     {
+      "id": "program_scopes",
+      "title": "Program scopes cache",
+      "status": "todo",
+      "notes": "Sync scope + policy pages for target programs."
+    },
+    {
       "id": "autonomy",
       "title": "Autonomy profile",
       "status": "todo",

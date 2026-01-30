@@ -10,6 +10,7 @@
 - [ ] `KAI_API_AUTH=1` (enable API key auth)
 - [ ] `KAI_VECTOR_BACKEND=pgvector` (pgvector backend)
 - [ ] `KAI_RUN_DB=pg` (store run metadata in Postgres)
+- [ ] Enable auto program sync in `config/options_override.json` (program_sync)
 
 ## UI — Guided Plan
 - [ ] Goal
@@ -40,6 +41,7 @@
 
 ## UI — Setup Hub
 - [ ] Mark setup steps complete/in progress
+- [ ] Program scopes cache sync (Sync now)
 
 ## UI — Proxy Overrides
 - [ ] HTTP proxy
@@ -85,6 +87,7 @@
 ## Core Config Files (editable options)
 - [ ] `config/options_master.json` (global options)
 - [ ] `config/options_override.json` (runtime overrides)
+- [ ] `config/programs.json` (program list + scope URLs)
 - [ ] `config/policy.json` + `config/policy_rules.json` (RBAC/deny rules)
 - [ ] `config/tools_osint.json` / `config/tools_vuln.json` (tool configs)
 - [ ] `config/tool_registry.json` / `config/tool_substitutes.json`

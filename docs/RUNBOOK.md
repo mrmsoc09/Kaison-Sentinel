@@ -23,5 +23,8 @@
 
 ## Program Scope Cache
 - Refresh bug bounty program scopes:
-  - `python3 scripts/fetch_program_guidelines.py`
+  - `KAI_ALLOW_NETWORK=1 python3 scripts/fetch_program_guidelines.py --allow-network`
 - Cache location: `data/programs/scopes/`
+- Auto-sync (optional):
+  - Enable in `config/options_override.json`:
+    - `"program_sync": {"enabled": true, "auto_trigger": true, "interval_hours": 24}`

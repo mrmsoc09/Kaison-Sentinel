@@ -5,7 +5,7 @@ This folder stores downloaded scope and policy pages for public bug bounty progr
 To fetch and refresh scopes:
 
 ```bash
-python3 scripts/fetch_program_guidelines.py
+KAI_ALLOW_NETWORK=1 python3 scripts/fetch_program_guidelines.py --allow-network
 ```
 
 Output layout:

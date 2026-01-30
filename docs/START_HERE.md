@@ -27,7 +27,7 @@ python3 -m kai11.cli --mode plan --kind osint --role operator --scope '{"allowli
 
 5) (Optional) Refresh public program scope cache
 ```
-python3 scripts/fetch_program_guidelines.py
+KAI_ALLOW_NETWORK=1 python3 scripts/fetch_program_guidelines.py --allow-network
 ```
 
 6) Launch local UI

@@ -13,6 +13,11 @@ def _load_programs() -> Dict[str, Any]:
     return json.loads(CONF.read_text())
 
 
+def list_programs() -> list[Dict[str, Any]]:
+    data = _load_programs()
+    return data.get("programs", [])
+
+
 def get_program(program_id: str | None) -> Dict[str, Any]:
     data = _load_programs()
     for p in data.get("programs", []):
