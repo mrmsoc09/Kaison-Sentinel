@@ -5,7 +5,7 @@
 ![Governance](https://img.shields.io/badge/governance-HiL%20gated?style=flat-square&color=blue)
 
 This repository contains the Kaison Sentinel offline-first build for:
-- ingesting local files from `/home/user23/KAI`
+- ingesting local files from the current repo (or a specified source path)
 - generating self-supervised training data
 - creating a local vector database using hashed embeddings (pure Python)
 
