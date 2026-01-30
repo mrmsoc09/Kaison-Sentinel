@@ -8,6 +8,7 @@ from .module_registry import list_modules, load_module
 from .evidence import write_evidence_bundle
 from .mitigation import generate_mitigation
 from .findings import normalize_findings, dedupe_findings, score_confidence, apply_signal_threshold
+from .cve_enrich import enrich_findings_with_cve
 from .duplicate_risk import apply_duplicate_risk
 from .report import render_report, render_report_with_format, render_report_bundle
 from .report_formatter import format_report
@@ -228,6 +229,7 @@ def run_execute(scope: Dict[str, Any], approved: bool = False, mitigation_tier: 
     findings = enforce_evidence_required(findings)
     findings = score_reportability(findings, module_kind)
     findings = label_findings(findings, scope)
+    findings = enrich_findings_with_cve(findings)
     findings = apply_guardrails(findings, scope)
     findings = apply_duplicate_risk(findings, record.run_id)
     alert_info = maybe_alert(findings, options, record.run_id, module_kind, scope)

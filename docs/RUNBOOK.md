@@ -36,3 +36,9 @@
   - Set `KAI_VAULT_BACKEND=hashicorp`
   - Set `VAULT_ADDR` and `VAULT_TOKEN`
   - Keys stored under `secret/kaison/<source_id>`
+
+## CVE Enrichment
+- Import NVD CVE feed into local store:
+  - `python3 scripts/import_nvd_cve.py --input /path/to/nvd.json.gz`
+- Store path: `outputs/cve_store.jsonl`
+- Findings with CVE IDs will be enriched from this store.
