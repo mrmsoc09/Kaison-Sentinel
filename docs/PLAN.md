@@ -1,5 +1,8 @@
 # Overall Plan (Structure‑First)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Goal
 Build a secure, modular, governed scanning platform that produces validated findings with actionable mitigation, while minimizing false positives.
 

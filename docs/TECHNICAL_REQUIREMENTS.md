@@ -1,5 +1,8 @@
 # Technical Requirements
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 1) All prompts, personas, playbooks, and report formats must be JSON-defined and validated.
 2) All prompts must support placeholder substitution with validation for missing variables.
 3) Prompt, persona, playbook, and report format registries must be listable and previewable via CLI.

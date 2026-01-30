@@ -1,5 +1,8 @@
 # Lang Studio To-Do (Approval Required)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 This list is staged for approval and later execution.
 
 ## Core Integration

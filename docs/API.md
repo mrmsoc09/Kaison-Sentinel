@@ -1,5 +1,8 @@
 # API Reference (Local)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 All endpoints are local-only by default. If API auth is enabled, include `X-API-Key`.
 
 ## Auth

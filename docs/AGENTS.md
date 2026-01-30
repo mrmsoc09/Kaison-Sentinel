@@ -1,5 +1,8 @@
 # Core Agents (Support Files Included)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 Each agent has:
 - Config: `config/agents/<agent_id>.json`
 - System prompt: `config/prompts/system_<agent_id>.json`

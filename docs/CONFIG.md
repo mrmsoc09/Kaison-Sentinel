@@ -1,5 +1,8 @@
 # Configuration Reference
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 - `config/options_master.json` — core options and tool allowlists
 - `config/options_override.json` — runtime overrides (proxy, etc.)
 - `config/policy.json` — RBAC and defaults

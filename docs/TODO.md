@@ -1,5 +1,8 @@
 # TODO (Status)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Completed
 - System contract and schemas (core contracts, mitigation schema, scope model)
 - Governance + approvals (scope enforced, HiL gates, safe-mode flags)

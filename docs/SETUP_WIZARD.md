@@ -1,5 +1,8 @@
 # Setup Wizard (OSINT)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 The setup wizard guides users through:
 1) Scope + authorization
 2) Goal selection

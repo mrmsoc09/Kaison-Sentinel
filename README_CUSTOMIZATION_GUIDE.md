@@ -1,5 +1,8 @@
 # Kaison Sentinel Customization Guide (Safe Usage)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 This guide explains how to customize MITRE-aligned assessment plans **without** implementing evasion, bypass, or destructive behavior.
 Kaison Sentinel is built for authorized, defensive assessment and reporting.
 

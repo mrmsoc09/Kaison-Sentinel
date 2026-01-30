@@ -1,5 +1,8 @@
 # OSINT Module Spec (Module=1 Agent=1 Tool=1 Job)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## OSINT/DNS Lookup
 - Module: `osint.dns_lookup`
 - Agent: `agent.osint_dns`

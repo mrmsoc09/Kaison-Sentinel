@@ -1,5 +1,8 @@
 # Data Retention
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 Retention is disabled by default. When enabled, files are **archived** (not deleted) unless explicitly configured.
 
 Config: `config/retention.json`

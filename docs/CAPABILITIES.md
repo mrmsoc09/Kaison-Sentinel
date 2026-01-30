@@ -1,5 +1,8 @@
 # Core Capabilities (WOW Factor)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 - **End‑to‑end autonomous pipeline**: plan → execute → parse → normalize → triage → validate → report → mitigate.
 - **Evidence‑first validation**: no VALIDATED finding without screen recording + immutable evidence bundle.
 - **Tiered mitigation output**: Minimal / Standard / Deep remediation with dry‑run + apply + verify + rollback steps.

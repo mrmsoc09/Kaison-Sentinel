@@ -1,5 +1,8 @@
 # Kaison Sentinel Branding & Rename Guide
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 This project is designed to be renamed safely **without** violating third‑party licenses.
 
 ## What you may rename

@@ -1,5 +1,8 @@
 # Mitigation Template (Mandatory for VALIDATED Findings)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Finding Summary
 - ID:
 - Title:

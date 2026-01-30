@@ -1,3 +1,6 @@
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 osint.subdomain.amass | agent.osint_amass | tool.amass | job.enumerate_subdomains
 osint.subdomain.subfinder | agent.osint_subfinder | tool.subfinder | job.enumerate_subdomains
 osint.subdomain.assetfinder | agent.osint_assetfinder | tool.assetfinder | job.find_assets

@@ -1,5 +1,8 @@
 # Vault Guide (OSINT)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Providers registry
 - File: `config/vault/providers.json`
 - Each provider lists auth type and docs link.

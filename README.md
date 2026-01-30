@@ -1,5 +1,8 @@
 # Kaison Sentinel
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ![Status](https://img.shields.io/badge/status-mvp-ready?style=flat-square&color=gold)
 ![Mode](https://img.shields.io/badge/mode-offline--first?style=flat-square&color=orange)
 ![Governance](https://img.shields.io/badge/governance-HiL%20gated?style=flat-square&color=blue)

@@ -1,5 +1,8 @@
 # Roadmap (Sequential, No Timelines)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 1) Finalize system contract and schemas
 2) Implement governance gates and HiL approvals
 3) Define module interface and registry

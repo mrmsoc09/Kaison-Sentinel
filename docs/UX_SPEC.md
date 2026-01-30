@@ -1,5 +1,8 @@
 # UI/UX Specification (Kaison Sentinel)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Objectives
 - Maximize validated findings and minimize false positives.
 - Make scope, approvals, and evidence unmissable.

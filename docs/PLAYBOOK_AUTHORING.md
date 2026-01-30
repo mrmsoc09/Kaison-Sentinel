@@ -1,5 +1,8 @@
 # Playbook Authoring Guide
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 A playbook is a JSON file that lists modules to run in order.
 
 ## Example
@@ -26,3 +29,4 @@ python3 -m kai11.assets_cli --validate playbooks --path config/playbooks/osint.b
 - Use stable module IDs from `modules/registry.json`
 - Keep playbooks small and composable
 - Prefer safe-mode tools in default playbooks
+- Include a validation playbook for evidence collection when required

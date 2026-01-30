@@ -1,5 +1,8 @@
 # OSINT/Recon Governance
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Principles
 - Plan-first execution with explicit approvals.
 - Deny-by-default for out-of-scope tools/targets.

@@ -1,5 +1,8 @@
 # Customization Guide (Playbooks, Personas, Prompts)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 ## Directories
 - `config/playbooks/` — playbook JSON
 - `config/personas/` — persona JSON

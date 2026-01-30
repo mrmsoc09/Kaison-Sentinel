@@ -1,5 +1,8 @@
 # Guardrails (RBAC + Policy-as-Code)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 This build enforces plan-first execution with explicit approval gates, role-based permissions, and policy rules defined in JSON.
 
 ## Key files

@@ -1,5 +1,8 @@
 # Vulnerability Core Install (Local)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 - Script: `scripts/install_vuln_core.sh`
 - Notes:
   - Installs baseline tools: nmap, nikto, sqlmap, masscan, nuclei, semgrep, bandit, pip-audit, zap-cli.

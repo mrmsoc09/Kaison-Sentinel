@@ -1,5 +1,8 @@
 # Reportability Scoring (OSINT)
 
+> Project: Kaison Sentinel — offline-first build. See START_HERE.md for current setup.
+> Last updated: 2026-01-30
+
 Reportability is a heuristic score (0–100) used to prioritize OSINT findings for bug‑bounty reporting.
 
 ## Factors
