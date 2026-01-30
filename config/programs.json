@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "programs": [
+    {
+      "id": "default",
+      "name": "Default Program",
+      "allowed_techniques": ["passive", "safe_active"],
+      "scope": {
+        "allowlist": []
+      },
+      "notes": "Replace with actual program scope and rules."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "tool.amass": {
+    "substitutes": ["tool.subfinder", "tool.assetfinder"],
+    "install_hint": "Install via package manager or go install; see tool docs."
+  },
+  "tool.subfinder": {
+    "substitutes": ["tool.amass", "tool.findomain"],
+    "install_hint": "Install via package manager or go install; see tool docs."
+  },
+  "tool.httpx": {
+    "substitutes": ["tool.httprobe"],
+    "install_hint": "Install via package manager or go install; see tool docs."
+  },
+  "tool.nmap": {
+    "substitutes": ["tool.naabu", "tool.rustscan"],
+    "install_hint": "Install via system package manager (apt/yum)."
+  },
+  "tool.gowitness": {
+    "substitutes": ["tool.eyewitness", "tool.aquatone"],
+    "install_hint": "Install via go or python; see tool docs."
+  },
+  "tool.theharvester": {
+    "substitutes": ["tool.spiderfoot"],
+    "install_hint": "Install via pip; see tool docs."
+  },
+  "tool.nuclei": {
+    "substitutes": ["tool.nikto"],
+    "install_hint": "Install via package manager or go install; see tool docs."
+  },
+  "tool.nikto": {
+    "substitutes": ["tool.nuclei", "tool.zap_cli"],
+    "install_hint": "Install via OS package manager or run from Kali/Parrot repos."
+  }
+}

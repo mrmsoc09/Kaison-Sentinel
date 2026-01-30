@@ -1,0 +1,5 @@
+{
+  "id": "mitre_plan_md",
+  "format": "md",
+  "template": "# MITRE Plan {technique_id}\n\n## Tactic\n{tactic_id} — {tactic}\n\n## Technique\n{technique}\n\n## Objective\n{objective}\n\n## Risk\n{risk}\n\n## Gating\n```\n{gating}\n```\n\n## Muted Plan\n```\n{muted_plan}\n```\n\n## Playbooks by Module\n```\n{playbooks_by_module}\n```\n\n## Recommended Playbooks\n{recommended_playbooks}\n\n## Report Templates\n{report_templates}\n\n## Steps\n{steps_md}\n"
+}

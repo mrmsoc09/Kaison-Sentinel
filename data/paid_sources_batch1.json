@@ -1,0 +1,13 @@
+{
+  "batch": 1,
+  "sources": [
+    {"id":"shodan","name":"Shodan API","type":"threat_intel","access":"paid","url":"https://developer.shodan.io/"},
+    {"id":"censys","name":"Censys API","type":"threat_intel","access":"paid","url":"https://search.censys.io/api"},
+    {"id":"securitytrails","name":"SecurityTrails API","type":"threat_intel","access":"paid","url":"https://securitytrails.com/corp/api"},
+    {"id":"greynoise","name":"GreyNoise API","type":"threat_intel","access":"paid","url":"https://docs.greynoise.io/"},
+    {"id":"recordedfuture","name":"Recorded Future API","type":"threat_intel","access":"paid","url":"https://www.recordedfuture.com/"},
+    {"id":"virustotal","name":"VirusTotal API","type":"threat_intel","access":"paid","url":"https://www.virustotal.com/gui/apis"},
+    {"id":"riskiq","name":"RiskIQ/PassiveTotal","type":"threat_intel","access":"paid","url":"https://community.riskiq.com/docs/api"},
+    {"id":"spamhaus","name":"Spamhaus Data Access","type":"threat_intel","access":"paid","url":"https://www.spamhaus.com/data-access/"}
+  ]
+}

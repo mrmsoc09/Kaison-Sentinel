@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "pre": {
+    "enforce_target_nonempty": true
+  },
+  "post": {
+    "attach_evidence_meta": true
+  }
+}

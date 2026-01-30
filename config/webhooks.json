@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "endpoints": [
+    {
+      "id": "default",
+      "url": "http://localhost:9999/webhook",
+      "events": ["run.completed", "alert.raised", "hil.overdue"]
+    }
+  ]
+}

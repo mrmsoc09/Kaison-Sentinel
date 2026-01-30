@@ -1,0 +1,7 @@
+{
+  "id": "report.default",
+  "type": "report",
+  "version": "1.0",
+  "tags": ["default"],
+  "content": "# Report for {run_id}\n\n## Summary\n{summary}\n\n## Findings\n{findings}\n\n## Evidence\n{evidence}\n\n## Mitigation\n{mitigation}\n"
+}

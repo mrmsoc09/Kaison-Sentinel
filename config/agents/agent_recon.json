@@ -1,0 +1,16 @@
+{
+  "id": "agent.recon",
+  "name": "OSINT Recon Lead",
+  "role": "recon",
+  "capabilities": [
+    "osint_plan",
+    "tool_select",
+    "signal_prioritize"
+  ],
+  "tools": [
+    "osint_tools",
+    "langchain"
+  ],
+  "prompt_id": "system.agent.recon",
+  "persona_id": "persona.recon"
+}

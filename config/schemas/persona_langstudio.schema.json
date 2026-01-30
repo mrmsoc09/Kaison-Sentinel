@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PersonaLangStudio",
+  "type": "object",
+  "required": ["id", "name", "role", "system_prompt"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "role": {"type": "string"},
+    "system_prompt": {"type": "string"},
+    "backstory": {"type": "string"},
+    "principles": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "voice": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}}
+  }
+}

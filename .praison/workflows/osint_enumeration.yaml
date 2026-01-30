@@ -1,0 +1,16 @@
+name: OSINT Enumeration
+version: 1
+agents:
+  dns_agent:
+    role: DNS Analyst
+    goal: Enumerate DNS and subdomains
+  web_agent:
+    role: Web Enumerator
+    goal: Collect web endpoints and parameters
+steps:
+  - agent: dns_agent
+    action: Enumerate DNS/subdomains for {{target}}
+    output_variable: dns_results
+  - agent: web_agent
+    action: Enumerate web endpoints for {{target}}
+    output_variable: web_results

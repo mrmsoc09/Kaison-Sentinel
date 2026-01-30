@@ -1,0 +1,15 @@
+{
+  "id": "agent.policy",
+  "name": "Policy Guardian",
+  "role": "policy",
+  "capabilities": [
+    "rbac",
+    "hil_gate",
+    "scope_enforce"
+  ],
+  "tools": [
+    "policy_engine"
+  ],
+  "prompt_id": "system.agent.policy",
+  "persona_id": "persona.policy"
+}

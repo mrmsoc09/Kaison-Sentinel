@@ -1,0 +1,32 @@
+name: vuln_scan_all
+modules:
+  - vuln.scan
+  - vuln.web.nikto
+  - vuln.web.nuclei
+  - vuln.web.zap
+  - vuln.web.arachni
+  - vuln.web.sqlmap
+  - vuln.web.wpscan
+  - vuln.web.dirsearch
+  - vuln.web.gobuster
+  - vuln.web.ffuf
+  - vuln.web.xsstrike
+  - vuln.net.nmap_vuln
+  - vuln.net.rustscan
+  - vuln.net.masscan
+  - vuln.net.openvas
+  - vuln.container.trivy
+  - vuln.container.grype
+  - vuln.container.syft
+  - vuln.deps.osv_scanner
+  - vuln.deps.dependency_check
+  - vuln.deps.npm_audit
+  - vuln.deps.pip_audit
+  - vuln.sast.semgrep
+  - vuln.sast.bandit
+  - vuln.sast.gosec
+  - vuln.sast.brakeman
+  - vuln.cloud.tfsec
+  - vuln.cloud.checkov
+  - vuln.mobile.mobfs
+  - vuln.firmware.binwalk

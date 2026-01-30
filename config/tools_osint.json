@@ -1,0 +1,2112 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "tool_id": "tool.amass",
+      "module_id": "osint.subdomain.amass",
+      "binary": "amass",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "enum",
+        "-passive",
+        "-d",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "subdomains"
+    },
+    {
+      "tool_id": "tool.subfinder",
+      "module_id": "osint.subdomain.subfinder",
+      "binary": "subfinder",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-silent",
+        "-d",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "subdomains"
+    },
+    {
+      "tool_id": "tool.assetfinder",
+      "module_id": "osint.subdomain.assetfinder",
+      "binary": "assetfinder",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--subs-only",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "subdomains"
+    },
+    {
+      "tool_id": "tool.sublist3r",
+      "module_id": "osint.subdomain.sublist3r",
+      "binary": "sublist3r",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-d",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "subdomains"
+    },
+    {
+      "tool_id": "tool.findomain",
+      "module_id": "osint.subdomain.findomain",
+      "binary": "findomain",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-t",
+        "{target}",
+        "-q"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "subdomains"
+    },
+    {
+      "tool_id": "tool.chaos_client",
+      "module_id": "osint.subdomain.chaos_client",
+      "binary": "chaos_client",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.sudomy",
+      "module_id": "osint.subdomain.sudomy",
+      "binary": "sudomy",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.domained",
+      "module_id": "osint.subdomain.domained",
+      "binary": "domained",
+      "category": "subdomain",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.massdns",
+      "module_id": "osint.dns.massdns",
+      "binary": "massdns",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-r",
+        "/etc/resolv.conf",
+        "-t",
+        "A",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "hosts"
+    },
+    {
+      "tool_id": "tool.shuffledns",
+      "module_id": "osint.dns.shuffledns",
+      "binary": "shuffledns",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.dnsx",
+      "module_id": "osint.dns.dnsx",
+      "binary": "dnsx",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-a",
+        "-silent",
+        "-d",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "hosts"
+    },
+    {
+      "tool_id": "tool.puredns",
+      "module_id": "osint.dns.puredns",
+      "binary": "puredns",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "resolve",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "hosts"
+    },
+    {
+      "tool_id": "tool.altdns",
+      "module_id": "osint.dns.altdns",
+      "binary": "altdns",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.knockpy",
+      "module_id": "osint.dns.knockpy",
+      "binary": "knockpy",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.dnsgen",
+      "module_id": "osint.dns.dnsgen",
+      "binary": "dnsgen",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.gotator",
+      "module_id": "osint.dns.gotator",
+      "binary": "gotator",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.ripgen",
+      "module_id": "osint.dns.ripgen",
+      "binary": "ripgen",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.alterx",
+      "module_id": "osint.dns.alterx",
+      "binary": "alterx",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool_dnsenum",
+      "module_id": "osint.dns.dnsenum",
+      "binary": "tool_dnsenum",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.fierce",
+      "module_id": "osint.dns.fierce",
+      "binary": "fierce",
+      "category": "dns",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.subjack",
+      "module_id": "osint.takeover.subjack",
+      "binary": "subjack",
+      "category": "takeover",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.subzy",
+      "module_id": "osint.takeover.subzy",
+      "binary": "subzy",
+      "category": "takeover",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.tko_subs",
+      "module_id": "osint.takeover.tko_subs",
+      "binary": "tko_subs",
+      "category": "takeover",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.nmap",
+      "module_id": "osint.scan.nmap",
+      "binary": "nmap",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-sV",
+        "-T3",
+        "-Pn",
+        "{target}"
+      ],
+      "timeout": 300,
+      "parser": "nmap",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.masscan",
+      "module_id": "osint.scan.masscan",
+      "binary": "masscan",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-p",
+        "1-1000",
+        "--rate",
+        "{rate}",
+        "{target}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.naabu",
+      "module_id": "osint.scan.naabu",
+      "binary": "naabu",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-host",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.rustscan",
+      "module_id": "osint.scan.rustscan",
+      "binary": "rustscan",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-a",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.sandmap",
+      "module_id": "osint.scan.sandmap",
+      "binary": "sandmap",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.scancannon",
+      "module_id": "osint.scan.scancannon",
+      "binary": "scancannon",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.zmap",
+      "module_id": "osint.scan.zmap",
+      "binary": "zmap",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.unicornscan",
+      "module_id": "osint.scan.unicornscan",
+      "binary": "unicornscan",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.nrich",
+      "module_id": "osint.scan.nrich",
+      "binary": "nrich",
+      "category": "scan",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.httpx",
+      "module_id": "osint.web.httpx",
+      "binary": "httpx",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-silent",
+        "-json",
+        "-u",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "jsonl",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.httprobe",
+      "module_id": "osint.web.httprobe",
+      "binary": "httprobe",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.hakrawler",
+      "module_id": "osint.web.hakrawler",
+      "binary": "hakrawler",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-url",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.gospider",
+      "module_id": "osint.web.gospider",
+      "binary": "gospider",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-s",
+        "{target}",
+        "-q"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.katana",
+      "module_id": "osint.web.katana",
+      "binary": "katana",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}",
+        "-silent"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.gau",
+      "module_id": "osint.web.gau",
+      "binary": "gau",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--subs",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.waybackurls",
+      "module_id": "osint.web.waybackurls",
+      "binary": "waybackurls",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.waymore",
+      "module_id": "osint.web.waymore",
+      "binary": "waymore",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-i",
+        "{target}",
+        "-mode",
+        "U"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.linkfinder",
+      "module_id": "osint.web.linkfinder",
+      "binary": "linkfinder",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.paramspider",
+      "module_id": "osint.web.paramspider",
+      "binary": "paramspider",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.arjun",
+      "module_id": "osint.web.arjun",
+      "binary": "arjun",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.kiterunner",
+      "module_id": "osint.web.kiterunner",
+      "binary": "kiterunner",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cariddi",
+      "module_id": "osint.web.cariddi",
+      "binary": "cariddi",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.photon",
+      "module_id": "osint.web.photon",
+      "binary": "photon",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.paramminer",
+      "module_id": "osint.web.paramminer",
+      "binary": "paramminer",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.aquatone",
+      "module_id": "osint.visual.aquatone",
+      "binary": "aquatone",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.eyewitness",
+      "module_id": "osint.visual.eyewitness",
+      "binary": "eyewitness",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.gowitness",
+      "module_id": "osint.visual.gowitness",
+      "binary": "gowitness",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.screenshoteer",
+      "module_id": "osint.visual.screenshoteer",
+      "binary": "screenshoteer",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.witnessme",
+      "module_id": "osint.visual.witnessme",
+      "binary": "witnessme",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.scrying",
+      "module_id": "osint.visual.scrying",
+      "binary": "scrying",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.httpscreenshot",
+      "module_id": "osint.visual.httpscreenshot",
+      "binary": "httpscreenshot",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.eyeballer",
+      "module_id": "osint.visual.eyeballer",
+      "binary": "eyeballer",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.depix",
+      "module_id": "osint.visual.depix",
+      "binary": "depix",
+      "category": "visual",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.ffuf",
+      "module_id": "osint.content.ffuf",
+      "binary": "ffuf",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "{wordlist}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.dirsearch",
+      "module_id": "osint.content.dirsearch",
+      "binary": "dirsearch",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "{wordlist}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.feroxbuster",
+      "module_id": "osint.content.feroxbuster",
+      "binary": "feroxbuster",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "{wordlist}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.gobuster",
+      "module_id": "osint.content.gobuster",
+      "binary": "gobuster",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "{wordlist}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.dirb",
+      "module_id": "osint.content.dirb",
+      "binary": "dirb",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "{wordlist}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.dirbuster",
+      "module_id": "osint.content.dirbuster",
+      "binary": "dirbuster",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.wfuzz",
+      "module_id": "osint.content.wfuzz",
+      "binary": "wfuzz",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "{wordlist}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "urls"
+    },
+    {
+      "tool_id": "tool.whatweb",
+      "module_id": "osint.tech.whatweb",
+      "binary": "whatweb",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.webanalyze",
+      "module_id": "osint.tech.webanalyze",
+      "binary": "webanalyze",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.wappalyzer",
+      "module_id": "osint.tech.wappalyzer",
+      "binary": "wappalyzer",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.wafw00f",
+      "module_id": "osint.tech.wafw00f",
+      "binary": "wafw00f",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.fingerprintx",
+      "module_id": "osint.tech.fingerprintx",
+      "binary": "fingerprintx",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.graphw00f",
+      "module_id": "osint.tech.graphw00f",
+      "binary": "graphw00f",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cdncheck",
+      "module_id": "osint.tech.cdncheck",
+      "binary": "cdncheck",
+      "category": "tech",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.tlsx",
+      "module_id": "osint.tls.tlsx",
+      "binary": "tlsx",
+      "category": "tls",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.sslscan",
+      "module_id": "osint.tls.sslscan",
+      "binary": "sslscan",
+      "category": "tls",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.sslyze",
+      "module_id": "osint.tls.sslyze",
+      "binary": "sslyze",
+      "category": "tls",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.testssl",
+      "module_id": "osint.tls.testssl",
+      "binary": "testssl",
+      "category": "tls",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--quiet",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.trufflehog",
+      "module_id": "osint.secrets.trufflehog",
+      "binary": "trufflehog",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.gitleaks",
+      "module_id": "osint.secrets.gitleaks",
+      "binary": "gitleaks",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.detect_secrets",
+      "module_id": "osint.secrets.detect_secrets",
+      "binary": "detect_secrets",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.shhgit",
+      "module_id": "osint.secrets.shhgit",
+      "binary": "shhgit",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.gitrob",
+      "module_id": "osint.secrets.gitrob",
+      "binary": "gitrob",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.git_secrets",
+      "module_id": "osint.secrets.git_secrets",
+      "binary": "git_secrets",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.noseyparker",
+      "module_id": "osint.secrets.noseyparker",
+      "binary": "noseyparker",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.secretfinder",
+      "module_id": "osint.secrets.secretfinder",
+      "binary": "secretfinder",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.githound",
+      "module_id": "osint.secrets.githound",
+      "binary": "githound",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "secrets"
+    },
+    {
+      "tool_id": "tool.reconng",
+      "module_id": "osint.framework.reconng",
+      "binary": "reconng",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.spiderfoot",
+      "module_id": "osint.framework.spiderfoot",
+      "binary": "spiderfoot",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.theharvester",
+      "module_id": "osint.framework.theharvester",
+      "binary": "theharvester",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.sn0int",
+      "module_id": "osint.framework.sn0int",
+      "binary": "sn0int",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.datasploit",
+      "module_id": "osint.framework.datasploit",
+      "binary": "datasploit",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.osintgram",
+      "module_id": "osint.framework.osintgram",
+      "binary": "osintgram",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.maigret",
+      "module_id": "osint.framework.maigret",
+      "binary": "maigret",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.sherlock",
+      "module_id": "osint.framework.sherlock",
+      "binary": "sherlock",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.social_analyzer",
+      "module_id": "osint.framework.social_analyzer",
+      "binary": "social_analyzer",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.whatsmyname",
+      "module_id": "osint.framework.whatsmyname",
+      "binary": "whatsmyname",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.holehe",
+      "module_id": "osint.framework.holehe",
+      "binary": "holehe",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.infoga",
+      "module_id": "osint.framework.infoga",
+      "binary": "infoga",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.h8mail",
+      "module_id": "osint.framework.h8mail",
+      "binary": "h8mail",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.ghunt",
+      "module_id": "osint.framework.ghunt",
+      "binary": "ghunt",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.twint",
+      "module_id": "osint.framework.twint",
+      "binary": "twint",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.snoop",
+      "module_id": "osint.framework.snoop",
+      "binary": "snoop",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.blackbird",
+      "module_id": "osint.framework.blackbird",
+      "binary": "blackbird",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.userrecon",
+      "module_id": "osint.framework.userrecon",
+      "binary": "userrecon",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.mosint",
+      "module_id": "osint.framework.mosint",
+      "binary": "mosint",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.osintsh",
+      "module_id": "osint.framework.osintsh",
+      "binary": "osintsh",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.metagoofil",
+      "module_id": "osint.meta.metagoofil",
+      "binary": "metagoofil",
+      "category": "meta",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.exiftool",
+      "module_id": "osint.meta.exiftool",
+      "binary": "exiftool",
+      "category": "meta",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.pdfid",
+      "module_id": "osint.meta.pdfid",
+      "binary": "pdfid",
+      "category": "meta",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cloudbrute",
+      "module_id": "osint.cloud.cloudbrute",
+      "binary": "cloudbrute",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.s3cario",
+      "module_id": "osint.cloud.s3cario",
+      "binary": "s3cario",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.s3cruze",
+      "module_id": "osint.cloud.s3cruze",
+      "binary": "s3cruze",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.s3dns",
+      "module_id": "osint.cloud.s3dns",
+      "binary": "s3dns",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cloud_enum",
+      "module_id": "osint.cloud.cloud_enum",
+      "binary": "cloud_enum",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.anew",
+      "module_id": "osint.util.anew",
+      "binary": "anew",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.gf",
+      "module_id": "osint.util.gf",
+      "binary": "gf",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.uro",
+      "module_id": "osint.util.uro",
+      "binary": "uro",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.unfurl",
+      "module_id": "osint.util.unfurl",
+      "binary": "unfurl",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.qsreplace",
+      "module_id": "osint.util.qsreplace",
+      "binary": "qsreplace",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.notify",
+      "module_id": "osint.util.notify",
+      "binary": "notify",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.misp",
+      "module_id": "osint.intel.misp",
+      "binary": "misp",
+      "category": "intel",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.opencti",
+      "module_id": "osint.intel.opencti",
+      "binary": "opencti",
+      "category": "intel",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.wazuh",
+      "module_id": "osint.intel.wazuh",
+      "binary": "wazuh",
+      "category": "intel",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.shuffle",
+      "module_id": "osint.intel.shuffle",
+      "binary": "shuffle",
+      "category": "intel",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.webanalyze",
+      "module_id": "osint.web.webanalyze",
+      "binary": "webanalyze",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.retirejs",
+      "module_id": "osint.web.retirejs",
+      "binary": "retirejs",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cdncheck",
+      "module_id": "osint.web.cdncheck",
+      "binary": "cdncheck",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.uncover",
+      "module_id": "osint.web.uncover",
+      "binary": "uncover",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cvemap",
+      "module_id": "osint.web.cvemap",
+      "binary": "cvemap",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.notify",
+      "module_id": "osint.web.notify",
+      "binary": "notify",
+      "category": "web",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.fdsploit",
+      "module_id": "osint.content.fdsploit",
+      "binary": "fdsploit",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.liffy",
+      "module_id": "osint.content.liffy",
+      "binary": "liffy",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.lfi_enum",
+      "module_id": "osint.content.lfi_enum",
+      "binary": "lfi_enum",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.lfisuite",
+      "module_id": "osint.content.lfisuite",
+      "binary": "lfisuite",
+      "category": "content",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.inql",
+      "module_id": "osint.graphql.inql",
+      "binary": "inql",
+      "category": "graphql",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.graphqlmap",
+      "module_id": "osint.graphql.graphqlmap",
+      "binary": "graphqlmap",
+      "category": "graphql",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.clairvoyance",
+      "module_id": "osint.graphql.clairvoyance",
+      "binary": "clairvoyance",
+      "category": "graphql",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.smuggler",
+      "module_id": "osint.smuggling.smuggler",
+      "binary": "smuggler",
+      "category": "smuggling",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.ssrfmap",
+      "module_id": "osint.ssrf.ssrfmap",
+      "binary": "ssrfmap",
+      "category": "ssrf",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.gopherus",
+      "module_id": "osint.ssrf.gopherus",
+      "binary": "gopherus",
+      "category": "ssrf",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.httprebind",
+      "module_id": "osint.ssrf.httprebind",
+      "binary": "httprebind",
+      "category": "ssrf",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.keyhacks",
+      "module_id": "osint.secrets.keyhacks",
+      "binary": "keyhacks",
+      "category": "secrets",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.cut_cdn",
+      "module_id": "osint.util.cuttcdn",
+      "binary": "cut_cdn",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.hakip2host",
+      "module_id": "osint.util.hakip2host",
+      "binary": "hakip2host",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.jsmon",
+      "module_id": "osint.util.jsmon",
+      "binary": "jsmon",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.related_domains",
+      "module_id": "osint.util.related_domains",
+      "binary": "related_domains",
+      "category": "util",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.whatsmyname",
+      "module_id": "osint.user.whatsmyname",
+      "binary": "whatsmyname",
+      "category": "user",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.sherlock",
+      "module_id": "osint.user.sherlock",
+      "binary": "sherlock",
+      "category": "user",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.maigret",
+      "module_id": "osint.user.maigret",
+      "binary": "maigret",
+      "category": "user",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.socialscan",
+      "module_id": "osint.user.socialscan",
+      "binary": "socialscan",
+      "category": "user",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.namechk",
+      "module_id": "osint.user.namechk",
+      "binary": "namechk",
+      "category": "user",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.nexfil",
+      "module_id": "osint.user.nexfil",
+      "binary": "nexfil",
+      "category": "user",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.holehe",
+      "module_id": "osint.email.holehe",
+      "binary": "holehe",
+      "category": "email",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.infoga",
+      "module_id": "osint.email.infoga",
+      "binary": "infoga",
+      "category": "email",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.h8mail",
+      "module_id": "osint.email.h8mail",
+      "binary": "h8mail",
+      "category": "email",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.mosint",
+      "module_id": "osint.email.mosint",
+      "binary": "mosint",
+      "category": "email",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.theharvester",
+      "module_id": "osint.email.theharvester",
+      "binary": "theharvester",
+      "category": "email",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.twint",
+      "module_id": "osint.social.twint",
+      "binary": "twint",
+      "category": "social",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "items"
+    },
+    {
+      "tool_id": "tool.osintgram",
+      "module_id": "osint.social.osintgram",
+      "binary": "osintgram",
+      "category": "social",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.toutatis",
+      "module_id": "osint.social.toutatis",
+      "binary": "toutatis",
+      "category": "social",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.instaloader",
+      "module_id": "osint.social.instaloader",
+      "binary": "instaloader",
+      "category": "social",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.osintframework",
+      "module_id": "osint.framework.osintframework",
+      "binary": "osintframework",
+      "category": "framework",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.pagodo",
+      "module_id": "osint.dork.pagodo",
+      "binary": "pagodo",
+      "category": "dork",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.searxng",
+      "module_id": "osint.search.searxng",
+      "binary": "searxng",
+      "category": "search",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.pastehunter",
+      "module_id": "osint.paste.pastehunter",
+      "binary": "pastehunter",
+      "category": "paste",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    },
+    {
+      "tool_id": "tool.intelowl",
+      "module_id": "osint.intel.intelowl",
+      "binary": "intelowl",
+      "category": "intel",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120
+    }
+  ]
+}

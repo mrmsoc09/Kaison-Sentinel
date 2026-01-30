@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PersonaPraison",
+  "type": "object",
+  "required": ["id", "name", "role", "backstory", "principles", "constraints"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "role": {"type": "string"},
+    "backstory": {"type": "string"},
+    "principles": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "voice": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "tools": {"type": "array", "items": {"type": "string"}},
+    "goals": {"type": "array", "items": {"type": "string"}}
+  }
+}

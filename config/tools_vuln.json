@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "tool_id": "tool.nikto",
+      "module_id": "vuln.web.nikto",
+      "binary": "nikto",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-host",
+        "{target}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.nuclei",
+      "module_id": "vuln.web.nuclei",
+      "binary": "nuclei",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}",
+        "-jsonl"
+      ],
+      "timeout": 300,
+      "parser": "jsonl",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.zap_cli",
+      "module_id": "vuln.web.zap",
+      "binary": "zap-cli",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "quick-scan",
+        "--self-contained",
+        "--spider",
+        "-l",
+        "medium",
+        "{target}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.arachni",
+      "module_id": "vuln.web.arachni",
+      "binary": "arachni",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.sqlmap",
+      "module_id": "vuln.web.sqlmap",
+      "binary": "sqlmap",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}",
+        "--batch",
+        "--crawl=1"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.wpscan",
+      "module_id": "vuln.web.wpscan",
+      "binary": "wpscan",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "--url",
+        "{target}",
+        "--enumerate",
+        "vp,vt,cb,dbe"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.dirsearch",
+      "module_id": "vuln.web.dirsearch",
+      "binary": "dirsearch",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}",
+        "-e",
+        "*"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "endpoints"
+    },
+    {
+      "tool_id": "tool.gobuster",
+      "module_id": "vuln.web.gobuster",
+      "binary": "gobuster",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "dir",
+        "-u",
+        "{target}",
+        "-w",
+        "{wordlist}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "endpoints"
+    },
+    {
+      "tool_id": "tool.ffuf",
+      "module_id": "vuln.web.ffuf",
+      "binary": "ffuf",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}/FUZZ",
+        "-w",
+        "{wordlist}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "endpoints"
+    },
+    {
+      "tool_id": "tool.xsstrike",
+      "module_id": "vuln.web.xsstrike",
+      "binary": "xsstrike",
+      "category": "web",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-u",
+        "{target}",
+        "--crawl"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.nmap_vuln",
+      "module_id": "vuln.net.nmap_vuln",
+      "binary": "nmap",
+      "category": "net",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-sV",
+        "--script",
+        "vuln",
+        "{target}"
+      ],
+      "timeout": 300,
+      "parser": "nmap",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.rustscan",
+      "module_id": "vuln.net.rustscan",
+      "binary": "rustscan",
+      "category": "net",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-a",
+        "{target}",
+        "--",
+        "-sV"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.masscan",
+      "module_id": "vuln.net.masscan",
+      "binary": "masscan",
+      "category": "net",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "-p1-1000",
+        "{target}",
+        "--rate",
+        "{rate}"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "ports"
+    },
+    {
+      "tool_id": "tool.gvm",
+      "module_id": "vuln.net.openvas",
+      "binary": "gvm-cli",
+      "category": "net",
+      "active": true,
+      "args_template": [
+        "{binary}",
+        "--gmp-username",
+        "admin",
+        "--gmp-password",
+        "admin",
+        "socket",
+        "--xml",
+        "<get_tasks/>"
+      ],
+      "timeout": 300,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.trivy",
+      "module_id": "vuln.container.trivy",
+      "binary": "trivy",
+      "category": "container",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "image",
+        "{target}",
+        "--quiet",
+        "--format",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.grype",
+      "module_id": "vuln.container.grype",
+      "binary": "grype",
+      "category": "container",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "-o",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.syft",
+      "module_id": "vuln.container.syft",
+      "binary": "syft",
+      "category": "container",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}",
+        "-o",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "sbom"
+    },
+    {
+      "tool_id": "tool.osv_scanner",
+      "module_id": "vuln.deps.osv_scanner",
+      "binary": "osv-scanner",
+      "category": "deps",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-r",
+        "{target}",
+        "-o",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.dependency_check",
+      "module_id": "vuln.deps.dependency_check",
+      "binary": "dependency-check",
+      "category": "deps",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--scan",
+        "{target}",
+        "--format",
+        "JSON"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.npm_audit",
+      "module_id": "vuln.deps.npm_audit",
+      "binary": "npm",
+      "category": "deps",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "audit",
+        "--json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.pip_audit",
+      "module_id": "vuln.deps.pip_audit",
+      "binary": "pip-audit",
+      "category": "deps",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-f",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.semgrep",
+      "module_id": "vuln.sast.semgrep",
+      "binary": "semgrep",
+      "category": "sast",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--config",
+        "auto",
+        "--json",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.bandit",
+      "module_id": "vuln.sast.bandit",
+      "binary": "bandit",
+      "category": "sast",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-r",
+        "{target}",
+        "-f",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.gosec",
+      "module_id": "vuln.sast.gosec",
+      "binary": "gosec",
+      "category": "sast",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-fmt",
+        "json",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.brakeman",
+      "module_id": "vuln.sast.brakeman",
+      "binary": "brakeman",
+      "category": "sast",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-f",
+        "json",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.tfsec",
+      "module_id": "vuln.cloud.tfsec",
+      "binary": "tfsec",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--format",
+        "json",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.checkov",
+      "module_id": "vuln.cloud.checkov",
+      "binary": "checkov",
+      "category": "cloud",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "-d",
+        "{target}",
+        "-o",
+        "json"
+      ],
+      "timeout": 120,
+      "parser": "json",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.mobfs",
+      "module_id": "vuln.mobile.mobfs",
+      "binary": "mobfs",
+      "category": "mobile",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "--input",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "findings"
+    },
+    {
+      "tool_id": "tool.binwalk",
+      "module_id": "vuln.firmware.binwalk",
+      "binary": "binwalk",
+      "category": "firmware",
+      "active": false,
+      "args_template": [
+        "{binary}",
+        "{target}"
+      ],
+      "timeout": 120,
+      "parser": "lines",
+      "output_kind": "artifacts"
+    }
+  ]
+}

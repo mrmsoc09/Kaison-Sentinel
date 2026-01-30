@@ -1,0 +1,10 @@
+name: OSINT Attribution
+version: 1
+agents:
+  attribution_agent:
+    role: Attribution Analyst
+    goal: Attribute assets to organizations and vendors
+steps:
+  - agent: attribution_agent
+    action: Attribute assets to owners for {{target}}
+    output_variable: attribution_results

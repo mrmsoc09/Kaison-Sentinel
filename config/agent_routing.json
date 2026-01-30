@@ -1,0 +1,9 @@
+{
+  "default_persona": "persona.security_analyst",
+  "rules": [
+    {"if": {"vertical": "healthcare"}, "persona": "persona.lib.001"},
+    {"if": {"vertical": "finance"}, "persona": "persona.lib.002"},
+    {"if": {"module_kind": "osint"}, "persona": "persona.lib.003"},
+    {"if": {"module_kind": "vuln"}, "persona": "persona.lib.004"}
+  ]
+}

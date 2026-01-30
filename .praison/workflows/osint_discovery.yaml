@@ -1,0 +1,16 @@
+name: OSINT Discovery
+version: 1
+agents:
+  scoper:
+    role: OSINT Scoper
+    goal: Confirm scope and build target profile
+  enumerator:
+    role: Asset Enumerator
+    goal: Discover initial asset surface
+steps:
+  - agent: scoper
+    action: Validate scope for {{target}}
+    output_variable: scope_profile
+  - agent: enumerator
+    action: Enumerate initial assets for {{target}} using allowlist {{allowlist}}
+    output_variable: discovery_assets

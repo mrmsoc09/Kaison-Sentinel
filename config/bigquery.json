@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "project_id": "",
+  "dataset": "kai_osint",
+  "dataset_id": "",
+  "tables": {
+    "artifacts": "artifacts",
+    "findings": "findings",
+    "evidence": "evidence",
+    "traces": "traces",
+    "reports": "reports",
+    "training": "training_data"
+  },
+  "location": "US",
+  "service_account_json": ""
+}

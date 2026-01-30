@@ -1,0 +1,5 @@
+{
+  "id": "mitre_plan_html",
+  "format": "html",
+  "template": "<h1>MITRE Plan {technique_id}</h1><h2>Tactic</h2><p>{tactic_id} — {tactic}</p><h2>Technique</h2><p>{technique}</p><h2>Objective</h2><p>{objective}</p><h2>Risk</h2><p>{risk}</p><h2>Gating</h2><pre>{gating}</pre><h2>Muted Plan</h2><pre>{muted_plan}</pre><h2>Playbooks by Module</h2><pre>{playbooks_by_module}</pre><h2>Recommended Playbooks</h2><p>{recommended_playbooks}</p><h2>Report Templates</h2><p>{report_templates}</p><h2>Steps</h2><ul>{steps_html}</ul>"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "agent.toolhealth",
+  "name": "Tool Health Monitor",
+  "role": "ops",
+  "capabilities": [
+    "tool_health",
+    "version_check",
+    "readiness"
+  ],
+  "tools": [
+    "tool_health"
+  ],
+  "prompt_id": "system.agent.toolhealth",
+  "persona_id": "persona.toolhealth"
+}

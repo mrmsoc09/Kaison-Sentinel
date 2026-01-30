@@ -1,0 +1,11 @@
+{
+  "id": "playbook.vuln.validation",
+  "name": "Vuln Validation",
+  "version": "1.0",
+  "modules": [
+    "vuln.validation",
+    "vuln.web.nuclei",
+    "vuln.web.zap"
+  ],
+  "tags": ["vuln", "validation"]
+}

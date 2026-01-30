@@ -1,0 +1,7 @@
+{
+  "id": "report.vuln.md",
+  "format": "md",
+  "version": "1.0",
+  "tags": ["vuln"],
+  "template": "# Kaison Sentinel Vulnerability Report {run_id}\n\n## Executive Summary\n{summary}\n\n## Scope & Methodology\n{scope_summary}\n\n{methodology}\n\n## MITRE Context\n{mitre_context}\n\n## Playbooks\n{playbook_context}\n\n## Validation Recommendation\n{validation_recommendation}\n\n## Asset Inventory\n{assets_inventory}\n\n## Risk Matrix\n{risk_matrix}\n\n## Findings (by severity)\n{findings}\n\n## Evidence\n{evidence}\n\n## Mitigation\n{mitigation}\n\n## Compliance Mapping\n{compliance}\n"
+}

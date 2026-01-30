@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "enabled": true,
+  "scope_gated": true,
+  "hil_required": true,
+  "max_branches": 5,
+  "notes": "Enable for long-horizon OSINT investigations and chaining."
+}

@@ -1,0 +1,68 @@
+{
+  "batch": 1,
+  "sources": [
+    {
+      "id": "otx",
+      "name": "AlienVault OTX",
+      "type": "threat_intel",
+      "access": "free",
+      "url": "https://otx.alienvault.com/"
+    },
+    {
+      "id": "urlhaus",
+      "name": "URLhaus",
+      "type": "threat_intel",
+      "access": "free",
+      "url": "https://urlhaus.abuse.ch/api/"
+    },
+    {
+      "id": "phishtank",
+      "name": "PhishTank",
+      "type": "threat_intel",
+      "access": "free",
+      "url": "https://phishtank.org/api_info.php"
+    },
+    {
+      "id": "misp",
+      "name": "MISP",
+      "type": "threat_intel",
+      "access": "open_source",
+      "url": "https://github.com/MISP/MISP"
+    },
+    {
+      "id": "opencti",
+      "name": "OpenCTI",
+      "type": "threat_intel",
+      "access": "open_source",
+      "url": "https://docs.opencti.io/latest/"
+    },
+    {
+      "id": "abuse_ch",
+      "name": "abuse.ch",
+      "type": "threat_intel",
+      "access": "free",
+      "url": "https://abuse.ch/"
+    },
+    {
+      "id": "threatfox",
+      "name": "ThreatFox",
+      "type": "threat_intel",
+      "access": "free",
+      "url": "https://threatfox.abuse.ch/"
+    },
+    {
+      "id": "nvd",
+      "name": "NVD (NIST)",
+      "type": "vuln_db",
+      "access": "free",
+      "url": "https://nvd.nist.gov/"
+    },
+    {
+      "id": "exploitdb",
+      "name": "Exploit-DB",
+      "type": "exploit_db",
+      "access": "free",
+      "url": "https://www.exploit-db.com/"
+    }
+  ]
+}

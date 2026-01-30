@@ -1,0 +1,11 @@
+name: vuln_scan_basic
+modules:
+  - vuln.scan
+  - vuln.web.nikto
+  - vuln.web.nuclei
+  - vuln.net.nmap_vuln
+  - vuln.container.trivy
+  - vuln.container.grype
+  - vuln.sast.semgrep
+  - vuln.sast.bandit
+  - vuln.cloud.checkov

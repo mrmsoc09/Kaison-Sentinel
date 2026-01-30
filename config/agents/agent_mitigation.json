@@ -1,0 +1,15 @@
+{
+  "id": "agent.mitigation",
+  "name": "Mitigation Engineer",
+  "role": "mitigation",
+  "capabilities": [
+    "remediation",
+    "rollback",
+    "cloud_cli"
+  ],
+  "tools": [
+    "mitigation_engine"
+  ],
+  "prompt_id": "system.agent.mitigation",
+  "persona_id": "persona.mitigation"
+}

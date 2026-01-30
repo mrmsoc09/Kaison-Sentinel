@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  kai11:
+    build: .
+    ports:
+      - "7878:7878"
+    environment:
+      - KAI_ALLOW_PLAINTEXT=1
+    volumes:
+      - ./outputs:/app/outputs

@@ -1,0 +1,20 @@
+{
+  "id": "playbook.vuln.basic",
+  "name": "Vuln Basic",
+  "version": "1.0",
+  "modules": [
+    "vuln.web.nikto",
+    "vuln.web.nuclei",
+    "vuln.web.zap",
+    "vuln.web.arachni",
+    "vuln.web.sqlmap",
+    "vuln.web.wpscan",
+    "vuln.web.dirsearch",
+    "vuln.web.gobuster",
+    "vuln.validation"
+  ],
+  "tags": [
+    "vuln",
+    "basic"
+  ]
+}

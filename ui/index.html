@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kaison Sentinel — OSINT/Vuln Console</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-orb"></div>
+  <header class="hero">
+    <div class="hero-left">
+      <div class="badge">Kaison Sentinel · Offline MVP</div>
+      <h1>Kaison Sentinel</h1>
+      <p>OSINT & vulnerability pipelines with plan-first governance, redaction, and audit trails.</p>
+      <div class="hero-actions">
+        <button class="primary">New Plan</button>
+        <button class="ghost">Open Run</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="stat">
+        <div class="stat-label">Pipelines</div>
+        <div class="stat-value">OSINT · Vuln</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Mode</div>
+        <div class="stat-value">Plan → HiL → Execute</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Guardrails</div>
+        <div class="stat-value">RBAC · Policy-as-Code</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="grid">
+    <div class="panel">
+      <div class="panel-title">Quick Search</div>
+      <div class="panel-body">
+        <input id="query" placeholder="Search vector store…" />
+        <button id="searchBtn">Search</button>
+        <div id="results" class="results"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Guided Plan</div>
+      <div class="panel-body">
+        <input id="planGoal" placeholder="Goal (e.g., OSINT recon for example.com)" />
+        <input id="planTargets" placeholder="Targets (comma-separated)" />
+        <input id="planConstraints" placeholder="Constraints (optional)" />
+        <input id="planPlaybooks" placeholder="Playbook IDs (comma-separated)" />
+        <input id="planMitre" placeholder="MITRE technique id (optional)" />
+        <div class="row">
+          <select id="planKind">
+            <option value="osint">OSINT</option>
+            <option value="vuln">Vuln</option>
+            <option value="all">All</option>
+          </select>
+          <select id="planRole">
+            <option value="analyst">Analyst</option>
+            <option value="operator" selected>Operator</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <select id="reportFormat"></select>
+        <button id="planBtn" class="primary">Generate Plan</button>
+        <pre id="planOut" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Execution</div>
+      <div class="panel-body">
+        <label><input id="executeApprove" type="checkbox" /> Approve (HiL)</label>
+        <label><input id="validationConfirm" type="checkbox" /> Validation confirmed (HiL)</label>
+        <label><input id="reportHilConfirm" type="checkbox" /> Report HiL confirmed</label>
+        <div class="row">
+          <select id="mitigationTier">
+            <option value="minimal">Minimal</option>
+            <option value="standard" selected>Standard</option>
+            <option value="deep">Deep</option>
+          </select>
+          <button id="executeBtn" class="primary">Execute</button>
+        </div>
+        <pre id="executeOut" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">MITRE Planner</div>
+      <div class="panel-body">
+        <select id="mitreTechnique"></select>
+        <input id="mitreAllowlist" placeholder="Allowlist (comma-separated)" />
+        <label><input id="mitreHil" type="checkbox" /> HiL approved</label>
+        <button id="mitrePlanBtn" class="primary">Generate MITRE Plan</button>
+        <button id="mitreExportBtn">Export MITRE Report Bundle</button>
+        <pre id="mitreOut" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">API Access</div>
+      <div class="panel-body">
+        <input id="apiKeyInput" placeholder="X-API-Key (optional)" />
+        <button id="apiKeySave" class="primary">Save API Key</button>
+        <button id="apiKeyClear">Clear</button>
+        <pre id="apiKeyStatus" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Setup Hub</div>
+      <div class="panel-body">
+        <div id="setupHub" class="results"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Proxy Overrides</div>
+      <div class="panel-body">
+        <input id="proxyHttp" placeholder="HTTP proxy (http://host:port)" />
+        <input id="proxyHttps" placeholder="HTTPS proxy (http://host:port)" />
+        <input id="proxyNo" placeholder="NO_PROXY (comma-separated)" />
+        <button id="proxySave" class="primary">Save Proxy</button>
+        <pre id="proxyStatus" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">API Key Catalog</div>
+      <div class="panel-body">
+        <div id="keyCatalog" class="results"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Key Vault (OSINT)</div>
+      <div class="panel-body">
+        <button id="vaultRefresh">Refresh</button>
+        <pre id="vaultProviders" class="results"></pre>
+        <input id="vaultSource" placeholder="Source id (e.g., source.shodan)" />
+        <input id="vaultKey" placeholder="API key" />
+        <button id="vaultAdd" class="primary">Add Key</button>
+        <pre id="vaultStatus" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Pipeline Status</div>
+      <div class="panel-body">
+        <div class="chip">OSINT circle: enabled</div>
+        <div class="chip">Vuln circle: enabled</div>
+        <div class="chip">LangStudio: enabled</div>
+        <div class="chip">Network: gated</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Run Outputs</div>
+      <div class="panel-body">
+        <input id="runIdLookup" placeholder="run_id (optional)" />
+        <button id="outputsRefresh">Refresh</button>
+        <div class="chip">Traces</div>
+        <pre id="traceList" class="results"></pre>
+        <div class="chip">LangStudio Evals</div>
+        <pre id="evalList" class="results"></pre>
+        <div class="chip">BigQuery Exports</div>
+        <pre id="bqList" class="results"></pre>
+        <div class="chip">Loop State</div>
+        <pre id="loopState" class="results"></pre>
+        <div class="chip">Loop Audit</div>
+        <pre id="loopAudit" class="results"></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel wide">
+    <div class="panel-title">Run Notes</div>
+    <div class="panel-body">
+      <textarea placeholder="Operator notes, approvals, and HiL decisions..."></textarea>
+    </div>
+  </section>
+
+  <section class="panel wide">
+    <div class="panel-title">Setup Wizard (Steps)</div>
+    <div class="panel-body">
+      <pre id="wizardSteps" class="results"></pre>
+    </div>
+  </section>
+
+    <section class="panel wide">
+    <div class="panel-title">Validation Checklist</div>
+    <div class="panel-body">
+      <pre id="validationChecklist" class="results"></pre>
+    </div>
+  </section>
+
+<section class="panel wide">
+    <div class="panel-title">Playbook Editor</div>
+    <div class="panel-body">
+      <input id="playbookId" placeholder="playbook.id (e.g., playbook.osint.custom)" />
+      <input id="playbookName" placeholder="Playbook name" />
+      <input id="playbookModules" placeholder="Modules (comma-separated)" />
+      <button id="playbookAdd" class="primary">Save Playbook</button>
+      <pre id="playbookStatus" class="results"></pre>
+
+      <div class="row">
+        <select id="playbookImportFormat">
+          <option value="json">JSON</option>
+          <option value="csv">CSV</option>
+        </select>
+        <button id="playbookExportBtn">Export</button>
+      </div>
+      <textarea id="playbookImportData" placeholder="Paste playbook JSON or CSV here..."></textarea>
+      <button id="playbookImportBtn" class="primary">Import</button>
+      <pre id="playbookImportStatus" class="results"></pre>
+      <pre id="playbookExport" class="results"></pre>
+
+      <pre id="playbookList" class="results"></pre>
+    </div>
+  </section>
+
+  <section class="panel wide">
+    <div class="panel-title">Stakeholder Follow-up Email</div>
+    <div class="panel-body">
+      <div class="row">
+        <input id="profileName" placeholder="Your name" />
+        <input id="profileOrg" placeholder="Organization" />
+        <input id="profileEmail" placeholder="Your email" />
+        <button id="profileSaveBtn">Save Profile</button>
+      </div>
+      <div class="row">
+        <select id="emailProvider">
+          <option value="gmail_smtp">Gmail (SMTP)</option>
+          <option value="proton_bridge">Proton Mail Bridge</option>
+          <option value="custom_smtp">Custom SMTP</option>
+        </select>
+        <input id="emailFrom" placeholder="From email" />
+        <input id="emailUser" placeholder="SMTP username" />
+        <input id="emailHost" placeholder="SMTP host" />
+        <input id="emailPort" placeholder="SMTP port" />
+      </div>
+      <div id="emailProviderHelp" class="note"></div>
+      <div class="row">
+        <input id="emailPasswordSource" placeholder="Password source id (vault)" />
+        <label><input id="emailStarttls" type="checkbox" /> STARTTLS</label>
+        <label><input id="emailSsl" type="checkbox" /> SSL</label>
+        <label><input id="emailEnabled" type="checkbox" /> Enable send</label>
+        <button id="emailConfigSaveBtn">Save Email Config</button>
+      </div>
+      <div class="row">
+        <a class="ghost" href="https://myaccount.google.com/" target="_blank" rel="noopener">Open Google Account Dashboard</a>
+        <a class="ghost" href="https://www.google.com/intl/en_us/about/products" target="_blank" rel="noopener">Open Google Apps (Full List)</a>
+        <a class="ghost" href="https://mail.google.com/" target="_blank" rel="noopener">Open Gmail</a>
+        <a class="ghost" href="https://drive.google.com/" target="_blank" rel="noopener">Open Google Drive</a>
+        <a class="ghost" href="https://calendar.google.com/" target="_blank" rel="noopener">Open Google Calendar</a>
+        <a class="ghost" href="https://admin.google.com/" target="_blank" rel="noopener">Open Google Workspace Admin</a>
+        <a class="ghost" href="https://console.cloud.google.com/" target="_blank" rel="noopener">Open Google Cloud Console</a>
+      </div>
+      <input id="emailRunId" placeholder="run_id" />
+      <input id="emailTo" placeholder="to (comma-separated)" />
+      <input id="emailSubject" placeholder="subject" />
+      <textarea id="emailBody" placeholder="email body..."></textarea>
+      <label><input id="emailHilConfirm" type="checkbox" /> HiL confirmed (required)</label>
+      <button id="emailDraftBtn">Generate Draft</button>
+      <button id="emailQueueBtn" class="primary">Queue Email</button>
+      <pre id="emailStatus" class="results"></pre>
+    </div>
+  </section>
+
+  <section class="panel wide">
+    <div class="panel-title">Evidence Attachment</div>
+    <div class="panel-body">
+      <input id="evidenceRunId" placeholder="run_id" />
+      <input id="evidenceFindingId" placeholder="finding_id" />
+      <input id="evidenceKind" placeholder="kind (screenshot/pcap)" />
+      <input id="evidencePath" placeholder="path to file" />
+      <button id="evidenceAttachBtn" class="primary">Attach Evidence</button>
+      <pre id="evidenceStatus" class="results"></pre>
+    </div>
+  </section>
+
+  <section class="panel wide">
+    <div class="panel-title">Export Bundle</div>
+    <div class="panel-body">
+      <input id="exportRunId" placeholder="run_id" />
+      <button id="exportBundleBtn" class="primary">Generate Bundle</button>
+      <pre id="exportStatus" class="results"></pre>
+    </div>
+  </section>
+
+<section class="panel wide">
+    <div class="panel-title">Graph Viewer</div>
+    <div class="panel-body">
+      <pre id="graphView" class="results"></pre>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <div class="panel-title">Prompts</div>
+      <pre id="assetPrompts" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Personas</div>
+      <pre id="assetPersonas" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Playbooks</div>
+      <pre id="assetPlaybooks" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Report Formats</div>
+      <pre id="assetReports" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Run History</div>
+      <pre id="runHistory" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Job Queue</div>
+      <pre id="jobQueue" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Tool Health</div>
+      <pre id="assetHealth" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Tool Registry</div>
+      <pre id="assetToolRegistry" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Tools (OSINT/Recon)</div>
+      <pre id="assetToolsOsint" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Tools (Vulnerability)</div>
+      <pre id="assetToolsVuln" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Tool Substitutes</div>
+      <pre id="assetToolSubs" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Agents</div>
+      <pre id="assetAgents" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Personas (PraisonAI)</div>
+      <pre id="assetPersonasPraison" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Personas (LangStudio)</div>
+      <pre id="assetPersonasLang" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Options (Merged)</div>
+      <pre id="assetOptions" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Options (OSINT/Recon)</div>
+      <pre id="assetOptionsOsint" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Options (Vulnerability)</div>
+      <pre id="assetOptionsVuln" class="results"></pre>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Options (Validation)</div>
+      <pre id="assetOptionsValidation" class="results"></pre>
+    </div>
+  </section>
+
+  <footer class="footer">Kaison Sentinel · Local-first · No external network calls by default</footer>
+
+  <script src="/app.js"></script>
+  <script src="/api.js"></script>
+  <script src="/loops.js"></script>
+  <script src="/assets.js"></script>
+  <script src="/playbooks.js"></script>
+  <script src="/wizard.js"></script>
+  <script src="/graph.js"></script>
+  <script src="/execute.js"></script>
+  <script src="/validation.js"></script>
+  <script src="/email.js"></script>
+  <script src="/email_config.js"></script>
+  <script src="/setup.js"></script>
+  <script src="/options_override.js"></script>
+  <script src="/exports.js"></script>
+  <script src="/run_history.js"></script>
+  <script src="/jobs.js"></script>
+  <script src="/evidence.js"></script>
+  <script src="/mitre.js"></script>
+</body>
+</html>

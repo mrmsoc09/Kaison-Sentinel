@@ -1,0 +1,983 @@
+{
+  "count": 163,
+  "items": [
+    {
+      "module": "osint.subdomain.amass",
+      "agent": "agent.osint_amass",
+      "tool": "tool.amass",
+      "job": "job.enumerate_subdomains"
+    },
+    {
+      "module": "osint.subdomain.subfinder",
+      "agent": "agent.osint_subfinder",
+      "tool": "tool.subfinder",
+      "job": "job.enumerate_subdomains"
+    },
+    {
+      "module": "osint.subdomain.assetfinder",
+      "agent": "agent.osint_assetfinder",
+      "tool": "tool.assetfinder",
+      "job": "job.find_assets"
+    },
+    {
+      "module": "osint.subdomain.sublist3r",
+      "agent": "agent.osint_sublist3r",
+      "tool": "tool.sublist3r",
+      "job": "job.enumerate_subdomains"
+    },
+    {
+      "module": "osint.subdomain.findomain",
+      "agent": "agent.osint_findomain",
+      "tool": "tool.findomain",
+      "job": "job.enumerate_subdomains"
+    },
+    {
+      "module": "osint.subdomain.chaos_client",
+      "agent": "agent.osint_chaos",
+      "tool": "tool.chaos_client",
+      "job": "job.passive_enum"
+    },
+    {
+      "module": "osint.subdomain.sudomy",
+      "agent": "agent.osint_sudomy",
+      "tool": "tool.sudomy",
+      "job": "job.enumerate_subdomains"
+    },
+    {
+      "module": "osint.subdomain.domained",
+      "agent": "agent.osint_domained",
+      "tool": "tool.domained",
+      "job": "job.enumerate_subdomains"
+    },
+    {
+      "module": "osint.dns.massdns",
+      "agent": "agent.osint_massdns",
+      "tool": "tool.massdns",
+      "job": "job.mass_resolve"
+    },
+    {
+      "module": "osint.dns.shuffledns",
+      "agent": "agent.osint_shuffledns",
+      "tool": "tool.shuffledns",
+      "job": "job.mass_resolve"
+    },
+    {
+      "module": "osint.dns.dnsx",
+      "agent": "agent.osint_dnsx",
+      "tool": "tool.dnsx",
+      "job": "job.resolve_dns"
+    },
+    {
+      "module": "osint.dns.puredns",
+      "agent": "agent.osint_puredns",
+      "tool": "tool.puredns",
+      "job": "job.resolve_dns"
+    },
+    {
+      "module": "osint.dns.altdns",
+      "agent": "agent.osint_altdns",
+      "tool": "tool.altdns",
+      "job": "job.permutation_enum"
+    },
+    {
+      "module": "osint.dns.knockpy",
+      "agent": "agent.osint_knockpy",
+      "tool": "tool.knockpy",
+      "job": "job.subdomain_discovery"
+    },
+    {
+      "module": "osint.dns.dnsgen",
+      "agent": "agent.osint_dnsgen",
+      "tool": "tool.dnsgen",
+      "job": "job.permutation_enum"
+    },
+    {
+      "module": "osint.dns.gotator",
+      "agent": "agent.osint_gotator",
+      "tool": "tool.gotator",
+      "job": "job.permutation_enum"
+    },
+    {
+      "module": "osint.dns.ripgen",
+      "agent": "agent.osint_ripgen",
+      "tool": "tool.ripgen",
+      "job": "job.permutation_enum"
+    },
+    {
+      "module": "osint.dns.alterx",
+      "agent": "agent.osint_alterx",
+      "tool": "tool.alterx",
+      "job": "job.permutation_enum"
+    },
+    {
+      "module": "osint.dns.dnsenum",
+      "agent": "agent.osint_dnsenum",
+      "tool": "tool_dnsenum",
+      "job": "job.dns_enum"
+    },
+    {
+      "module": "osint.dns.fierce",
+      "agent": "agent.osint_fierce",
+      "tool": "tool.fierce",
+      "job": "job.dns_enum"
+    },
+    {
+      "module": "osint.takeover.subjack",
+      "agent": "agent.osint_subjack",
+      "tool": "tool.subjack",
+      "job": "job.subdomain_takeover_check"
+    },
+    {
+      "module": "osint.takeover.subzy",
+      "agent": "agent.osint_subzy",
+      "tool": "tool.subzy",
+      "job": "job.subdomain_takeover_check"
+    },
+    {
+      "module": "osint.takeover.tko_subs",
+      "agent": "agent.osint_tko_subs",
+      "tool": "tool.tko_subs",
+      "job": "job.subdomain_takeover_check"
+    },
+    {
+      "module": "osint.scan.nmap",
+      "agent": "agent.osint_nmap",
+      "tool": "tool.nmap",
+      "job": "job.network_scan"
+    },
+    {
+      "module": "osint.scan.masscan",
+      "agent": "agent.osint_masscan",
+      "tool": "tool.masscan",
+      "job": "job.high_speed_scan"
+    },
+    {
+      "module": "osint.scan.naabu",
+      "agent": "agent.osint_naabu",
+      "tool": "tool.naabu",
+      "job": "job.port_scan"
+    },
+    {
+      "module": "osint.scan.rustscan",
+      "agent": "agent.osint_rustscan",
+      "tool": "tool.rustscan",
+      "job": "job.port_scan"
+    },
+    {
+      "module": "osint.scan.sandmap",
+      "agent": "agent.osint_sandmap",
+      "tool": "tool.sandmap",
+      "job": "job.profiled_scan"
+    },
+    {
+      "module": "osint.scan.scancannon",
+      "agent": "agent.osint_scancannon",
+      "tool": "tool.scancannon",
+      "job": "job.hybrid_scan"
+    },
+    {
+      "module": "osint.scan.zmap",
+      "agent": "agent.osint_zmap",
+      "tool": "tool.zmap",
+      "job": "job.internet_scan"
+    },
+    {
+      "module": "osint.scan.unicornscan",
+      "agent": "agent.osint_unicornscan",
+      "tool": "tool.unicornscan",
+      "job": "job.port_scan"
+    },
+    {
+      "module": "osint.scan.nrich",
+      "agent": "agent.osint_nrich",
+      "tool": "tool.nrich",
+      "job": "job.ip_enrichment"
+    },
+    {
+      "module": "osint.web.httpx",
+      "agent": "agent.osint_httpx",
+      "tool": "tool.httpx",
+      "job": "job.http_probe"
+    },
+    {
+      "module": "osint.web.httprobe",
+      "agent": "agent.osint_httprobe",
+      "tool": "tool.httprobe",
+      "job": "job.http_probe"
+    },
+    {
+      "module": "osint.web.hakrawler",
+      "agent": "agent.osint_hakrawler",
+      "tool": "tool.hakrawler",
+      "job": "job.crawl_urls"
+    },
+    {
+      "module": "osint.web.gospider",
+      "agent": "agent.osint_gospider",
+      "tool": "tool.gospider",
+      "job": "job.crawl_urls"
+    },
+    {
+      "module": "osint.web.katana",
+      "agent": "agent.osint_katana",
+      "tool": "tool.katana",
+      "job": "job.crawl_urls"
+    },
+    {
+      "module": "osint.web.gau",
+      "agent": "agent.osint_gau",
+      "tool": "tool.gau",
+      "job": "job.archive_urls"
+    },
+    {
+      "module": "osint.web.waybackurls",
+      "agent": "agent.osint_waybackurls",
+      "tool": "tool.waybackurls",
+      "job": "job.archive_urls"
+    },
+    {
+      "module": "osint.web.waymore",
+      "agent": "agent.osint_waymore",
+      "tool": "tool.waymore",
+      "job": "job.archive_urls"
+    },
+    {
+      "module": "osint.web.linkfinder",
+      "agent": "agent.osint_linkfinder",
+      "tool": "tool.linkfinder",
+      "job": "job.js_endpoints"
+    },
+    {
+      "module": "osint.web.paramspider",
+      "agent": "agent.osint_paramspider",
+      "tool": "tool.paramspider",
+      "job": "job.param_discovery"
+    },
+    {
+      "module": "osint.web.arjun",
+      "agent": "agent.osint_arjun",
+      "tool": "tool.arjun",
+      "job": "job.param_discovery"
+    },
+    {
+      "module": "osint.web.kiterunner",
+      "agent": "agent.osint_kiterunner",
+      "tool": "tool.kiterunner",
+      "job": "job.api_discovery"
+    },
+    {
+      "module": "osint.web.cariddi",
+      "agent": "agent.osint_cariddi",
+      "tool": "tool.cariddi",
+      "job": "job.crawl_and_secrets"
+    },
+    {
+      "module": "osint.web.photon",
+      "agent": "agent.osint_photon",
+      "tool": "tool.photon",
+      "job": "job.crawl_urls"
+    },
+    {
+      "module": "osint.web.paramminer",
+      "agent": "agent.osint_paramminer",
+      "tool": "tool.paramminer",
+      "job": "job.param_discovery"
+    },
+    {
+      "module": "osint.visual.aquatone",
+      "agent": "agent.osint_aquatone",
+      "tool": "tool.aquatone",
+      "job": "job.web_screenshots"
+    },
+    {
+      "module": "osint.visual.eyewitness",
+      "agent": "agent.osint_eyewitness",
+      "tool": "tool.eyewitness",
+      "job": "job.web_screenshots"
+    },
+    {
+      "module": "osint.visual.gowitness",
+      "agent": "agent.osint_gowitness",
+      "tool": "tool.gowitness",
+      "job": "job.web_screenshots"
+    },
+    {
+      "module": "osint.visual.screenshoteer",
+      "agent": "agent.osint_screenshoteer",
+      "tool": "tool.screenshoteer",
+      "job": "job.web_screenshots"
+    },
+    {
+      "module": "osint.visual.witnessme",
+      "agent": "agent.osint_witnessme",
+      "tool": "tool.witnessme",
+      "job": "job.web_screenshots"
+    },
+    {
+      "module": "osint.visual.scrying",
+      "agent": "agent.osint_scrying",
+      "tool": "tool.scrying",
+      "job": "job.multi_protocol_screens"
+    },
+    {
+      "module": "osint.visual.httpscreenshot",
+      "agent": "agent.osint_httpscreenshot",
+      "tool": "tool.httpscreenshot",
+      "job": "job.web_screenshots"
+    },
+    {
+      "module": "osint.visual.eyeballer",
+      "agent": "agent.osint_eyeballer",
+      "tool": "tool.eyeballer",
+      "job": "job.image_classification"
+    },
+    {
+      "module": "osint.visual.depix",
+      "agent": "agent.osint_depix",
+      "tool": "tool.depix",
+      "job": "job.pixel_recovery"
+    },
+    {
+      "module": "osint.content.ffuf",
+      "agent": "agent.osint_ffuf",
+      "tool": "tool.ffuf",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.content.dirsearch",
+      "agent": "agent.osint_dirsearch",
+      "tool": "tool.dirsearch",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.content.feroxbuster",
+      "agent": "agent.osint_feroxbuster",
+      "tool": "tool.feroxbuster",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.content.gobuster",
+      "agent": "agent.osint_gobuster",
+      "tool": "tool.gobuster",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.content.dirb",
+      "agent": "agent.osint_dirb",
+      "tool": "tool.dirb",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.content.dirbuster",
+      "agent": "agent.osint_dirbuster",
+      "tool": "tool.dirbuster",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.content.wfuzz",
+      "agent": "agent.osint_wfuzz",
+      "tool": "tool.wfuzz",
+      "job": "job.content_discovery"
+    },
+    {
+      "module": "osint.tech.whatweb",
+      "agent": "agent.osint_whatweb",
+      "tool": "tool.whatweb",
+      "job": "job.tech_fingerprint"
+    },
+    {
+      "module": "osint.tech.webanalyze",
+      "agent": "agent.osint_webanalyze",
+      "tool": "tool.webanalyze",
+      "job": "job.tech_fingerprint"
+    },
+    {
+      "module": "osint.tech.wappalyzer",
+      "agent": "agent.osint_wappalyzer",
+      "tool": "tool.wappalyzer",
+      "job": "job.tech_fingerprint"
+    },
+    {
+      "module": "osint.tech.wafw00f",
+      "agent": "agent.osint_wafw00f",
+      "tool": "tool.wafw00f",
+      "job": "job.waf_detection"
+    },
+    {
+      "module": "osint.tech.fingerprintx",
+      "agent": "agent.osint_fingerprintx",
+      "tool": "tool.fingerprintx",
+      "job": "job.service_fingerprint"
+    },
+    {
+      "module": "osint.tech.graphw00f",
+      "agent": "agent.osint_graphw00f",
+      "tool": "tool.graphw00f",
+      "job": "job.graphql_fingerprint"
+    },
+    {
+      "module": "osint.tech.cdncheck",
+      "agent": "agent.osint_cdncheck",
+      "tool": "tool.cdncheck",
+      "job": "job.cdn_fingerprint"
+    },
+    {
+      "module": "osint.tls.tlsx",
+      "agent": "agent.osint_tlsx",
+      "tool": "tool.tlsx",
+      "job": "job.tls_fingerprint"
+    },
+    {
+      "module": "osint.tls.sslscan",
+      "agent": "agent.osint_sslscan",
+      "tool": "tool.sslscan",
+      "job": "job.tls_scan"
+    },
+    {
+      "module": "osint.tls.sslyze",
+      "agent": "agent.osint_sslyze",
+      "tool": "tool.sslyze",
+      "job": "job.tls_scan"
+    },
+    {
+      "module": "osint.tls.testssl",
+      "agent": "agent.osint_testssl",
+      "tool": "tool.testssl",
+      "job": "job.tls_scan"
+    },
+    {
+      "module": "osint.secrets.trufflehog",
+      "agent": "agent.osint_trufflehog",
+      "tool": "tool.trufflehog",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.gitleaks",
+      "agent": "agent.osint_gitleaks",
+      "tool": "tool.gitleaks",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.detect_secrets",
+      "agent": "agent.osint_detect_secrets",
+      "tool": "tool.detect_secrets",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.shhgit",
+      "agent": "agent.osint_shhgit",
+      "tool": "tool.shhgit",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.gitrob",
+      "agent": "agent.osint_gitrob",
+      "tool": "tool.gitrob",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.git_secrets",
+      "agent": "agent.osint_git_secrets",
+      "tool": "tool.git_secrets",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.noseyparker",
+      "agent": "agent.osint_noseyparker",
+      "tool": "tool.noseyparker",
+      "job": "job.secret_scan"
+    },
+    {
+      "module": "osint.secrets.secretfinder",
+      "agent": "agent.osint_secretfinder",
+      "tool": "tool.secretfinder",
+      "job": "job.js_secret_scan"
+    },
+    {
+      "module": "osint.secrets.githound",
+      "agent": "agent.osint_githound",
+      "tool": "tool.githound",
+      "job": "job.code_search"
+    },
+    {
+      "module": "osint.framework.reconng",
+      "agent": "agent.osint_reconng",
+      "tool": "tool.reconng",
+      "job": "job.recon_framework"
+    },
+    {
+      "module": "osint.framework.spiderfoot",
+      "agent": "agent.osint_spiderfoot",
+      "tool": "tool.spiderfoot",
+      "job": "job.osint_automation"
+    },
+    {
+      "module": "osint.framework.theharvester",
+      "agent": "agent.osint_theharvester",
+      "tool": "tool.theharvester",
+      "job": "job.email_osint"
+    },
+    {
+      "module": "osint.framework.sn0int",
+      "agent": "agent.osint_sn0int",
+      "tool": "tool.sn0int",
+      "job": "job.osint_collection"
+    },
+    {
+      "module": "osint.framework.datasploit",
+      "agent": "agent.osint_datasploit",
+      "tool": "tool.datasploit",
+      "job": "job.osint_collection"
+    },
+    {
+      "module": "osint.framework.osintgram",
+      "agent": "agent.osint_osintgram",
+      "tool": "tool.osintgram",
+      "job": "job.social_osint"
+    },
+    {
+      "module": "osint.framework.maigret",
+      "agent": "agent.osint_maigret",
+      "tool": "tool.maigret",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.framework.sherlock",
+      "agent": "agent.osint_sherlock",
+      "tool": "tool.sherlock",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.framework.social_analyzer",
+      "agent": "agent.osint_social_analyzer",
+      "tool": "tool.social_analyzer",
+      "job": "job.social_profile_enum"
+    },
+    {
+      "module": "osint.framework.whatsmyname",
+      "agent": "agent.osint_whatsmyname",
+      "tool": "tool.whatsmyname",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.framework.holehe",
+      "agent": "agent.osint_holehe",
+      "tool": "tool.holehe",
+      "job": "job.email_enum"
+    },
+    {
+      "module": "osint.framework.infoga",
+      "agent": "agent.osint_infoga",
+      "tool": "tool.infoga",
+      "job": "job.email_enum"
+    },
+    {
+      "module": "osint.framework.h8mail",
+      "agent": "agent.osint_h8mail",
+      "tool": "tool.h8mail",
+      "job": "job.breach_search"
+    },
+    {
+      "module": "osint.framework.ghunt",
+      "agent": "agent.osint_ghunt",
+      "tool": "tool.ghunt",
+      "job": "job.google_account_osint"
+    },
+    {
+      "module": "osint.framework.twint",
+      "agent": "agent.osint_twint",
+      "tool": "tool.twint",
+      "job": "job.twitter_osint"
+    },
+    {
+      "module": "osint.framework.snoop",
+      "agent": "agent.osint_snoop",
+      "tool": "tool.snoop",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.framework.blackbird",
+      "agent": "agent.osint_blackbird",
+      "tool": "tool.blackbird",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.framework.userrecon",
+      "agent": "agent.osint_userrecon",
+      "tool": "tool.userrecon",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.framework.mosint",
+      "agent": "agent.osint_mosint",
+      "tool": "tool.mosint",
+      "job": "job.email_osint"
+    },
+    {
+      "module": "osint.framework.osintsh",
+      "agent": "agent.osint_osintsh",
+      "tool": "tool.osintsh",
+      "job": "job.osint_collection"
+    },
+    {
+      "module": "osint.meta.metagoofil",
+      "agent": "agent.osint_metagoofil",
+      "tool": "tool.metagoofil",
+      "job": "job.metadata_extract"
+    },
+    {
+      "module": "osint.meta.exiftool",
+      "agent": "agent.osint_exiftool",
+      "tool": "tool.exiftool",
+      "job": "job.metadata_extract"
+    },
+    {
+      "module": "osint.meta.pdfid",
+      "agent": "agent.osint_pdfid",
+      "tool": "tool.pdfid",
+      "job": "job.pdf_analysis"
+    },
+    {
+      "module": "osint.cloud.cloudbrute",
+      "agent": "agent.osint_cloudbrute",
+      "tool": "tool.cloudbrute",
+      "job": "job.cloud_enum"
+    },
+    {
+      "module": "osint.cloud.s3cario",
+      "agent": "agent.osint_s3cario",
+      "tool": "tool.s3cario",
+      "job": "job.s3_bucket_enum"
+    },
+    {
+      "module": "osint.cloud.s3cruze",
+      "agent": "agent.osint_s3cruze",
+      "tool": "tool.s3cruze",
+      "job": "job.s3_bucket_enum"
+    },
+    {
+      "module": "osint.cloud.s3dns",
+      "agent": "agent.osint_s3dns",
+      "tool": "tool.s3dns",
+      "job": "job.s3_bucket_enum"
+    },
+    {
+      "module": "osint.cloud.cloud_enum",
+      "agent": "agent.osint_cloud_enum",
+      "tool": "tool.cloud_enum",
+      "job": "job.cloud_enum"
+    },
+    {
+      "module": "osint.util.anew",
+      "agent": "agent.osint_anew",
+      "tool": "tool.anew",
+      "job": "job.dedupe_lines"
+    },
+    {
+      "module": "osint.util.gf",
+      "agent": "agent.osint_gf",
+      "tool": "tool.gf",
+      "job": "job.pattern_match"
+    },
+    {
+      "module": "osint.util.uro",
+      "agent": "agent.osint_uro",
+      "tool": "tool.uro",
+      "job": "job.url_dedupe"
+    },
+    {
+      "module": "osint.util.unfurl",
+      "agent": "agent.osint_unfurl",
+      "tool": "tool.unfurl",
+      "job": "job.url_parse"
+    },
+    {
+      "module": "osint.util.qsreplace",
+      "agent": "agent.osint_qsreplace",
+      "tool": "tool.qsreplace",
+      "job": "job.query_replace"
+    },
+    {
+      "module": "osint.util.notify",
+      "agent": "agent.osint_notify",
+      "tool": "tool.notify",
+      "job": "job.notifications"
+    },
+    {
+      "module": "osint.intel.misp",
+      "agent": "agent.osint_misp",
+      "tool": "tool.misp",
+      "job": "job.threat_intel_ingest"
+    },
+    {
+      "module": "osint.intel.opencti",
+      "agent": "agent.osint_opencti",
+      "tool": "tool.opencti",
+      "job": "job.threat_intel_ingest"
+    },
+    {
+      "module": "osint.intel.wazuh",
+      "agent": "agent.osint_wazuh",
+      "tool": "tool.wazuh",
+      "job": "job.security_event_ingest"
+    },
+    {
+      "module": "osint.intel.shuffle",
+      "agent": "agent.osint_shuffle",
+      "tool": "tool.shuffle",
+      "job": "job.osint_soar_playbooks"
+    },
+    {
+      "module": "osint.web.webanalyze",
+      "agent": "agent.osint_webanalyze",
+      "tool": "tool.webanalyze",
+      "job": "job.tech_fingerprint"
+    },
+    {
+      "module": "osint.web.retirejs",
+      "agent": "agent.osint_retirejs",
+      "tool": "tool.retirejs",
+      "job": "job.js_vuln_fingerprint"
+    },
+    {
+      "module": "osint.web.cdncheck",
+      "agent": "agent.osint_cdncheck",
+      "tool": "tool.cdncheck",
+      "job": "job.cdn_fingerprint"
+    },
+    {
+      "module": "osint.web.uncover",
+      "agent": "agent.osint_uncover",
+      "tool": "tool.uncover",
+      "job": "job.search_engine_discovery"
+    },
+    {
+      "module": "osint.web.cvemap",
+      "agent": "agent.osint_cvemap",
+      "tool": "tool.cvemap",
+      "job": "job.cve_search"
+    },
+    {
+      "module": "osint.web.notify",
+      "agent": "agent.osint_notify",
+      "tool": "tool.notify",
+      "job": "job.notifications"
+    },
+    {
+      "module": "osint.content.fdsploit",
+      "agent": "agent.osint_fdsploit",
+      "tool": "tool.fdsploit",
+      "job": "job.path_traversal_fuzz"
+    },
+    {
+      "module": "osint.content.liffy",
+      "agent": "agent.osint_liffy",
+      "tool": "tool.liffy",
+      "job": "job.lfi_scan"
+    },
+    {
+      "module": "osint.content.lfi_enum",
+      "agent": "agent.osint_lfi_enum",
+      "tool": "tool.lfi_enum",
+      "job": "job.lfi_scan"
+    },
+    {
+      "module": "osint.content.lfisuite",
+      "agent": "agent.osint_lfisuite",
+      "tool": "tool.lfisuite",
+      "job": "job.lfi_scan"
+    },
+    {
+      "module": "osint.graphql.inql",
+      "agent": "agent.osint_inql",
+      "tool": "tool.inql",
+      "job": "job.graphql_test"
+    },
+    {
+      "module": "osint.graphql.graphqlmap",
+      "agent": "agent.osint_graphqlmap",
+      "tool": "tool.graphqlmap",
+      "job": "job.graphql_test"
+    },
+    {
+      "module": "osint.graphql.clairvoyance",
+      "agent": "agent.osint_clairvoyance",
+      "tool": "tool.clairvoyance",
+      "job": "job.graphql_schema"
+    },
+    {
+      "module": "osint.smuggling.smuggler",
+      "agent": "agent.osint_smuggler",
+      "tool": "tool.smuggler",
+      "job": "job.request_smuggling"
+    },
+    {
+      "module": "osint.ssrf.ssrfmap",
+      "agent": "agent.osint_ssrfmap",
+      "tool": "tool.ssrfmap",
+      "job": "job.ssrf_test"
+    },
+    {
+      "module": "osint.ssrf.gopherus",
+      "agent": "agent.osint_gopherus",
+      "tool": "tool.gopherus",
+      "job": "job.ssrf_test"
+    },
+    {
+      "module": "osint.ssrf.httprebind",
+      "agent": "agent.osint_httprebind",
+      "tool": "tool.httprebind",
+      "job": "job.dns_rebind_test"
+    },
+    {
+      "module": "osint.secrets.keyhacks",
+      "agent": "agent.osint_keyhacks",
+      "tool": "tool.keyhacks",
+      "job": "job.api_key_validation"
+    },
+    {
+      "module": "osint.util.cuttcdn",
+      "agent": "agent.osint_cuttcdn",
+      "tool": "tool.cut_cdn",
+      "job": "job.cdn_ip_filter"
+    },
+    {
+      "module": "osint.util.hakip2host",
+      "agent": "agent.osint_hakip2host",
+      "tool": "tool.hakip2host",
+      "job": "job.ip_to_host"
+    },
+    {
+      "module": "osint.util.jsmon",
+      "agent": "agent.osint_jsmon",
+      "tool": "tool.jsmon",
+      "job": "job.js_change_monitor"
+    },
+    {
+      "module": "osint.util.related_domains",
+      "agent": "agent.osint_related_domains",
+      "tool": "tool.related_domains",
+      "job": "job.related_domains"
+    },
+    {
+      "module": "osint.user.whatsmyname",
+      "agent": "agent.osint_whatsmyname",
+      "tool": "tool.whatsmyname",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.user.sherlock",
+      "agent": "agent.osint_sherlock",
+      "tool": "tool.sherlock",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.user.maigret",
+      "agent": "agent.osint_maigret",
+      "tool": "tool.maigret",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.user.socialscan",
+      "agent": "agent.osint_socialscan",
+      "tool": "tool.socialscan",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.user.namechk",
+      "agent": "agent.osint_namechk",
+      "tool": "tool.namechk",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.user.nexfil",
+      "agent": "agent.osint_nexfil",
+      "tool": "tool.nexfil",
+      "job": "job.username_enum"
+    },
+    {
+      "module": "osint.email.holehe",
+      "agent": "agent.osint_holehe",
+      "tool": "tool.holehe",
+      "job": "job.email_enum"
+    },
+    {
+      "module": "osint.email.infoga",
+      "agent": "agent.osint_infoga",
+      "tool": "tool.infoga",
+      "job": "job.email_enum"
+    },
+    {
+      "module": "osint.email.h8mail",
+      "agent": "agent.osint_h8mail",
+      "tool": "tool.h8mail",
+      "job": "job.breach_search"
+    },
+    {
+      "module": "osint.email.mosint",
+      "agent": "agent.osint_mosint",
+      "tool": "tool.mosint",
+      "job": "job.email_osint"
+    },
+    {
+      "module": "osint.email.theharvester",
+      "agent": "agent.osint_theharvester",
+      "tool": "tool.theharvester",
+      "job": "job.email_osint"
+    },
+    {
+      "module": "osint.social.twint",
+      "agent": "agent.osint_twint",
+      "tool": "tool.twint",
+      "job": "job.twitter_osint"
+    },
+    {
+      "module": "osint.social.osintgram",
+      "agent": "agent.osint_osintgram",
+      "tool": "tool.osintgram",
+      "job": "job.instagram_osint"
+    },
+    {
+      "module": "osint.social.toutatis",
+      "agent": "agent.osint_toutatis",
+      "tool": "tool.toutatis",
+      "job": "job.instagram_osint"
+    },
+    {
+      "module": "osint.social.instaloader",
+      "agent": "agent.osint_instaloader",
+      "tool": "tool.instaloader",
+      "job": "job.instagram_osint"
+    },
+    {
+      "module": "osint.framework.osintframework",
+      "agent": "agent.osint_osintframework",
+      "tool": "tool.osintframework",
+      "job": "job.resource_framework"
+    },
+    {
+      "module": "osint.dork.pagodo",
+      "agent": "agent.osint_pagodo",
+      "tool": "tool.pagodo",
+      "job": "job.google_dorking"
+    },
+    {
+      "module": "osint.search.searxng",
+      "agent": "agent.osint_searxng",
+      "tool": "tool.searxng",
+      "job": "job.metasearch"
+    },
+    {
+      "module": "osint.paste.pastehunter",
+      "agent": "agent.osint_pastehunter",
+      "tool": "tool.pastehunter",
+      "job": "job.paste_monitor"
+    },
+    {
+      "module": "osint.intel.intelowl",
+      "agent": "agent.osint_intelowl",
+      "tool": "tool.intelowl",
+      "job": "job.threat_intel_enrichment"
+    }
+  ]
+}

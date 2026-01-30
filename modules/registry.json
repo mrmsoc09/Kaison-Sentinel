@@ -1,0 +1,1945 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "id": "osint.subdomain.amass",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_amass:OsintSubdomainAmass"
+    },
+    {
+      "id": "osint.subdomain.subfinder",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_subfinder:OsintSubdomainSubfinder"
+    },
+    {
+      "id": "osint.subdomain.assetfinder",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_assetfinder:OsintSubdomainAssetfinder"
+    },
+    {
+      "id": "osint.subdomain.sublist3r",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_sublist3r:OsintSubdomainSublist3r"
+    },
+    {
+      "id": "osint.subdomain.findomain",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_findomain:OsintSubdomainFindomain"
+    },
+    {
+      "id": "osint.subdomain.chaos_client",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_chaos_client:OsintSubdomainChaosClient"
+    },
+    {
+      "id": "osint.subdomain.sudomy",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_sudomy:OsintSubdomainSudomy"
+    },
+    {
+      "id": "osint.subdomain.domained",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_subdomain_domained:OsintSubdomainDomained"
+    },
+    {
+      "id": "osint.dns.massdns",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_massdns:OsintDnsMassdns"
+    },
+    {
+      "id": "osint.dns.shuffledns",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_shuffledns:OsintDnsShuffledns"
+    },
+    {
+      "id": "osint.dns.dnsx",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_dnsx:OsintDnsDnsx"
+    },
+    {
+      "id": "osint.dns.puredns",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_puredns:OsintDnsPuredns"
+    },
+    {
+      "id": "osint.dns.altdns",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_altdns:OsintDnsAltdns"
+    },
+    {
+      "id": "osint.dns.knockpy",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_knockpy:OsintDnsKnockpy"
+    },
+    {
+      "id": "osint.dns.dnsgen",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_dnsgen:OsintDnsDnsgen"
+    },
+    {
+      "id": "osint.dns.gotator",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_gotator:OsintDnsGotator"
+    },
+    {
+      "id": "osint.dns.ripgen",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_ripgen:OsintDnsRipgen"
+    },
+    {
+      "id": "osint.dns.alterx",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_alterx:OsintDnsAlterx"
+    },
+    {
+      "id": "osint.dns.dnsenum",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_dnsenum:OsintDnsDnsenum"
+    },
+    {
+      "id": "osint.dns.fierce",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dns_fierce:OsintDnsFierce"
+    },
+    {
+      "id": "osint.takeover.subjack",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_takeover_subjack:OsintTakeoverSubjack"
+    },
+    {
+      "id": "osint.takeover.subzy",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_takeover_subzy:OsintTakeoverSubzy"
+    },
+    {
+      "id": "osint.takeover.tko_subs",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_takeover_tko_subs:OsintTakeoverTkoSubs"
+    },
+    {
+      "id": "osint.scan.nmap",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_nmap:OsintScanNmap"
+    },
+    {
+      "id": "osint.scan.masscan",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_masscan:OsintScanMasscan"
+    },
+    {
+      "id": "osint.scan.naabu",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_naabu:OsintScanNaabu"
+    },
+    {
+      "id": "osint.scan.rustscan",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_rustscan:OsintScanRustscan"
+    },
+    {
+      "id": "osint.scan.sandmap",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_sandmap:OsintScanSandmap"
+    },
+    {
+      "id": "osint.scan.scancannon",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_scancannon:OsintScanScancannon"
+    },
+    {
+      "id": "osint.scan.zmap",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_zmap:OsintScanZmap"
+    },
+    {
+      "id": "osint.scan.unicornscan",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_unicornscan:OsintScanUnicornscan"
+    },
+    {
+      "id": "osint.scan.nrich",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_scan_nrich:OsintScanNrich"
+    },
+    {
+      "id": "osint.web.httpx",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_httpx:OsintWebHttpx"
+    },
+    {
+      "id": "osint.web.httprobe",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_httprobe:OsintWebHttprobe"
+    },
+    {
+      "id": "osint.web.hakrawler",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_hakrawler:OsintWebHakrawler"
+    },
+    {
+      "id": "osint.web.gospider",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_gospider:OsintWebGospider"
+    },
+    {
+      "id": "osint.web.katana",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_katana:OsintWebKatana"
+    },
+    {
+      "id": "osint.web.gau",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_gau:OsintWebGau"
+    },
+    {
+      "id": "osint.web.waybackurls",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_waybackurls:OsintWebWaybackurls"
+    },
+    {
+      "id": "osint.web.waymore",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_waymore:OsintWebWaymore"
+    },
+    {
+      "id": "osint.web.linkfinder",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_linkfinder:OsintWebLinkfinder"
+    },
+    {
+      "id": "osint.web.paramspider",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_paramspider:OsintWebParamspider"
+    },
+    {
+      "id": "osint.web.arjun",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_arjun:OsintWebArjun"
+    },
+    {
+      "id": "osint.web.kiterunner",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_kiterunner:OsintWebKiterunner"
+    },
+    {
+      "id": "osint.web.cariddi",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_cariddi:OsintWebCariddi"
+    },
+    {
+      "id": "osint.web.photon",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_photon:OsintWebPhoton"
+    },
+    {
+      "id": "osint.web.paramminer",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_paramminer:OsintWebParamminer"
+    },
+    {
+      "id": "osint.visual.aquatone",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_aquatone:OsintVisualAquatone"
+    },
+    {
+      "id": "osint.visual.eyewitness",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_eyewitness:OsintVisualEyewitness"
+    },
+    {
+      "id": "osint.visual.gowitness",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_gowitness:OsintVisualGowitness"
+    },
+    {
+      "id": "osint.visual.screenshoteer",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_screenshoteer:OsintVisualScreenshoteer"
+    },
+    {
+      "id": "osint.visual.witnessme",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_witnessme:OsintVisualWitnessme"
+    },
+    {
+      "id": "osint.visual.scrying",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_scrying:OsintVisualScrying"
+    },
+    {
+      "id": "osint.visual.httpscreenshot",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_httpscreenshot:OsintVisualHttpscreenshot"
+    },
+    {
+      "id": "osint.visual.eyeballer",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_eyeballer:OsintVisualEyeballer"
+    },
+    {
+      "id": "osint.visual.depix",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_visual_depix:OsintVisualDepix"
+    },
+    {
+      "id": "osint.content.ffuf",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_ffuf:OsintContentFfuf"
+    },
+    {
+      "id": "osint.content.dirsearch",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_dirsearch:OsintContentDirsearch"
+    },
+    {
+      "id": "osint.content.feroxbuster",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_feroxbuster:OsintContentFeroxbuster"
+    },
+    {
+      "id": "osint.content.gobuster",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_gobuster:OsintContentGobuster"
+    },
+    {
+      "id": "osint.content.dirb",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_dirb:OsintContentDirb"
+    },
+    {
+      "id": "osint.content.dirbuster",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_dirbuster:OsintContentDirbuster"
+    },
+    {
+      "id": "osint.content.wfuzz",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_wfuzz:OsintContentWfuzz"
+    },
+    {
+      "id": "osint.tech.whatweb",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_whatweb:OsintTechWhatweb"
+    },
+    {
+      "id": "osint.tech.webanalyze",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_webanalyze:OsintTechWebanalyze"
+    },
+    {
+      "id": "osint.tech.wappalyzer",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_wappalyzer:OsintTechWappalyzer"
+    },
+    {
+      "id": "osint.tech.wafw00f",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_wafw00f:OsintTechWafw00f"
+    },
+    {
+      "id": "osint.tech.fingerprintx",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_fingerprintx:OsintTechFingerprintx"
+    },
+    {
+      "id": "osint.tech.graphw00f",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_graphw00f:OsintTechGraphw00f"
+    },
+    {
+      "id": "osint.tech.cdncheck",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tech_cdncheck:OsintTechCdncheck"
+    },
+    {
+      "id": "osint.tls.tlsx",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tls_tlsx:OsintTlsTlsx"
+    },
+    {
+      "id": "osint.tls.sslscan",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tls_sslscan:OsintTlsSslscan"
+    },
+    {
+      "id": "osint.tls.sslyze",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tls_sslyze:OsintTlsSslyze"
+    },
+    {
+      "id": "osint.tls.testssl",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_tls_testssl:OsintTlsTestssl"
+    },
+    {
+      "id": "osint.secrets.trufflehog",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_trufflehog:OsintSecretsTrufflehog"
+    },
+    {
+      "id": "osint.secrets.gitleaks",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_gitleaks:OsintSecretsGitleaks"
+    },
+    {
+      "id": "osint.secrets.detect_secrets",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_detect_secrets:OsintSecretsDetectSecrets"
+    },
+    {
+      "id": "osint.secrets.shhgit",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_shhgit:OsintSecretsShhgit"
+    },
+    {
+      "id": "osint.secrets.gitrob",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_gitrob:OsintSecretsGitrob"
+    },
+    {
+      "id": "osint.secrets.git_secrets",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_git_secrets:OsintSecretsGitSecrets"
+    },
+    {
+      "id": "osint.secrets.noseyparker",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_noseyparker:OsintSecretsNoseyparker"
+    },
+    {
+      "id": "osint.secrets.secretfinder",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_secretfinder:OsintSecretsSecretfinder"
+    },
+    {
+      "id": "osint.secrets.githound",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_githound:OsintSecretsGithound"
+    },
+    {
+      "id": "osint.framework.reconng",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_reconng:OsintFrameworkReconng"
+    },
+    {
+      "id": "osint.framework.spiderfoot",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_spiderfoot:OsintFrameworkSpiderfoot"
+    },
+    {
+      "id": "osint.framework.theharvester",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_theharvester:OsintFrameworkTheharvester"
+    },
+    {
+      "id": "osint.framework.sn0int",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_sn0int:OsintFrameworkSn0int"
+    },
+    {
+      "id": "osint.framework.datasploit",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_datasploit:OsintFrameworkDatasploit"
+    },
+    {
+      "id": "osint.framework.osintgram",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_osintgram:OsintFrameworkOsintgram"
+    },
+    {
+      "id": "osint.framework.maigret",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_maigret:OsintFrameworkMaigret"
+    },
+    {
+      "id": "osint.framework.sherlock",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_sherlock:OsintFrameworkSherlock"
+    },
+    {
+      "id": "osint.framework.social_analyzer",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_social_analyzer:OsintFrameworkSocialAnalyzer"
+    },
+    {
+      "id": "osint.framework.whatsmyname",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_whatsmyname:OsintFrameworkWhatsmyname"
+    },
+    {
+      "id": "osint.framework.holehe",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_holehe:OsintFrameworkHolehe"
+    },
+    {
+      "id": "osint.framework.infoga",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_infoga:OsintFrameworkInfoga"
+    },
+    {
+      "id": "osint.framework.h8mail",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_h8mail:OsintFrameworkH8mail"
+    },
+    {
+      "id": "osint.framework.ghunt",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_ghunt:OsintFrameworkGhunt"
+    },
+    {
+      "id": "osint.framework.twint",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_twint:OsintFrameworkTwint"
+    },
+    {
+      "id": "osint.framework.snoop",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_snoop:OsintFrameworkSnoop"
+    },
+    {
+      "id": "osint.framework.blackbird",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_blackbird:OsintFrameworkBlackbird"
+    },
+    {
+      "id": "osint.framework.userrecon",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_userrecon:OsintFrameworkUserrecon"
+    },
+    {
+      "id": "osint.framework.mosint",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_mosint:OsintFrameworkMosint"
+    },
+    {
+      "id": "osint.framework.osintsh",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_osintsh:OsintFrameworkOsintsh"
+    },
+    {
+      "id": "osint.meta.metagoofil",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_meta_metagoofil:OsintMetaMetagoofil"
+    },
+    {
+      "id": "osint.meta.exiftool",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_meta_exiftool:OsintMetaExiftool"
+    },
+    {
+      "id": "osint.meta.pdfid",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_meta_pdfid:OsintMetaPdfid"
+    },
+    {
+      "id": "osint.cloud.cloudbrute",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_cloud_cloudbrute:OsintCloudCloudbrute"
+    },
+    {
+      "id": "osint.cloud.s3cario",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_cloud_s3cario:OsintCloudS3cario"
+    },
+    {
+      "id": "osint.cloud.s3cruze",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_cloud_s3cruze:OsintCloudS3cruze"
+    },
+    {
+      "id": "osint.cloud.s3dns",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_cloud_s3dns:OsintCloudS3dns"
+    },
+    {
+      "id": "osint.cloud.cloud_enum",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_cloud_cloud_enum:OsintCloudCloudEnum"
+    },
+    {
+      "id": "osint.util.anew",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_anew:OsintUtilAnew"
+    },
+    {
+      "id": "osint.util.gf",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_gf:OsintUtilGf"
+    },
+    {
+      "id": "osint.util.uro",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_uro:OsintUtilUro"
+    },
+    {
+      "id": "osint.util.unfurl",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_unfurl:OsintUtilUnfurl"
+    },
+    {
+      "id": "osint.util.qsreplace",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_qsreplace:OsintUtilQsreplace"
+    },
+    {
+      "id": "osint.util.notify",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_notify:OsintUtilNotify"
+    },
+    {
+      "id": "osint.intel.misp",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_intel_misp:OsintIntelMisp"
+    },
+    {
+      "id": "osint.intel.opencti",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_intel_opencti:OsintIntelOpencti"
+    },
+    {
+      "id": "osint.intel.wazuh",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_intel_wazuh:OsintIntelWazuh"
+    },
+    {
+      "id": "osint.intel.shuffle",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_intel_shuffle:OsintIntelShuffle"
+    },
+    {
+      "id": "osint.web.webanalyze",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_webanalyze:OsintWebWebanalyze"
+    },
+    {
+      "id": "osint.web.retirejs",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_retirejs:OsintWebRetirejs"
+    },
+    {
+      "id": "osint.web.cdncheck",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_cdncheck:OsintWebCdncheck"
+    },
+    {
+      "id": "osint.web.uncover",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_uncover:OsintWebUncover"
+    },
+    {
+      "id": "osint.web.cvemap",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_cvemap:OsintWebCvemap"
+    },
+    {
+      "id": "osint.web.notify",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_web_notify:OsintWebNotify"
+    },
+    {
+      "id": "osint.content.fdsploit",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_fdsploit:OsintContentFdsploit"
+    },
+    {
+      "id": "osint.content.liffy",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_liffy:OsintContentLiffy"
+    },
+    {
+      "id": "osint.content.lfi_enum",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_lfi_enum:OsintContentLfiEnum"
+    },
+    {
+      "id": "osint.content.lfisuite",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_content_lfisuite:OsintContentLfisuite"
+    },
+    {
+      "id": "osint.graphql.inql",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_graphql_inql:OsintGraphqlInql"
+    },
+    {
+      "id": "osint.graphql.graphqlmap",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_graphql_graphqlmap:OsintGraphqlGraphqlmap"
+    },
+    {
+      "id": "osint.graphql.clairvoyance",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_graphql_clairvoyance:OsintGraphqlClairvoyance"
+    },
+    {
+      "id": "osint.smuggling.smuggler",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_smuggling_smuggler:OsintSmugglingSmuggler"
+    },
+    {
+      "id": "osint.ssrf.ssrfmap",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_ssrf_ssrfmap:OsintSsrfSsrfmap"
+    },
+    {
+      "id": "osint.ssrf.gopherus",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_ssrf_gopherus:OsintSsrfGopherus"
+    },
+    {
+      "id": "osint.ssrf.httprebind",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_ssrf_httprebind:OsintSsrfHttprebind"
+    },
+    {
+      "id": "osint.secrets.keyhacks",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_secrets_keyhacks:OsintSecretsKeyhacks"
+    },
+    {
+      "id": "osint.util.cuttcdn",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_cuttcdn:OsintUtilCuttcdn"
+    },
+    {
+      "id": "osint.util.hakip2host",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_hakip2host:OsintUtilHakip2host"
+    },
+    {
+      "id": "osint.util.jsmon",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_jsmon:OsintUtilJsmon"
+    },
+    {
+      "id": "osint.util.related_domains",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_util_related_domains:OsintUtilRelatedDomains"
+    },
+    {
+      "id": "osint.user.whatsmyname",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_user_whatsmyname:OsintUserWhatsmyname"
+    },
+    {
+      "id": "osint.user.sherlock",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_user_sherlock:OsintUserSherlock"
+    },
+    {
+      "id": "osint.user.maigret",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_user_maigret:OsintUserMaigret"
+    },
+    {
+      "id": "osint.user.socialscan",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_user_socialscan:OsintUserSocialscan"
+    },
+    {
+      "id": "osint.user.namechk",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_user_namechk:OsintUserNamechk"
+    },
+    {
+      "id": "osint.user.nexfil",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_user_nexfil:OsintUserNexfil"
+    },
+    {
+      "id": "osint.email.holehe",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_email_holehe:OsintEmailHolehe"
+    },
+    {
+      "id": "osint.email.infoga",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_email_infoga:OsintEmailInfoga"
+    },
+    {
+      "id": "osint.email.h8mail",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_email_h8mail:OsintEmailH8mail"
+    },
+    {
+      "id": "osint.email.mosint",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_email_mosint:OsintEmailMosint"
+    },
+    {
+      "id": "osint.email.theharvester",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_email_theharvester:OsintEmailTheharvester"
+    },
+    {
+      "id": "osint.social.twint",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_social_twint:OsintSocialTwint"
+    },
+    {
+      "id": "osint.social.osintgram",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_social_osintgram:OsintSocialOsintgram"
+    },
+    {
+      "id": "osint.social.toutatis",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_social_toutatis:OsintSocialToutatis"
+    },
+    {
+      "id": "osint.social.instaloader",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_social_instaloader:OsintSocialInstaloader"
+    },
+    {
+      "id": "osint.framework.osintframework",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_framework_osintframework:OsintFrameworkOsintframework"
+    },
+    {
+      "id": "osint.dork.pagodo",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_dork_pagodo:OsintDorkPagodo"
+    },
+    {
+      "id": "osint.search.searxng",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_search_searxng:OsintSearchSearxng"
+    },
+    {
+      "id": "osint.paste.pastehunter",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_paste_pastehunter:OsintPastePastehunter"
+    },
+    {
+      "id": "osint.intel.intelowl",
+      "kind": "recon",
+      "risk": "low",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.osint_intel_intelowl:OsintIntelIntelowl"
+    },
+    {
+      "id": "vuln.web.nikto",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_nikto:VulnWebNikto"
+    },
+    {
+      "id": "vuln.web.nuclei",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_nuclei:VulnWebNuclei"
+    },
+    {
+      "id": "vuln.web.zap",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_zap:VulnWebZap"
+    },
+    {
+      "id": "vuln.web.arachni",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_arachni:VulnWebArachni"
+    },
+    {
+      "id": "vuln.web.sqlmap",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_sqlmap:VulnWebSqlmap"
+    },
+    {
+      "id": "vuln.web.wpscan",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_wpscan:VulnWebWpscan"
+    },
+    {
+      "id": "vuln.web.dirsearch",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_dirsearch:VulnWebDirsearch"
+    },
+    {
+      "id": "vuln.web.gobuster",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_gobuster:VulnWebGobuster"
+    },
+    {
+      "id": "vuln.web.ffuf",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_ffuf:VulnWebFfuf"
+    },
+    {
+      "id": "vuln.web.xsstrike",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_web_xsstrike:VulnWebXsstrike"
+    },
+    {
+      "id": "vuln.net.nmap_vuln",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_net_nmap_vuln:VulnNetNmapVuln"
+    },
+    {
+      "id": "vuln.net.rustscan",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_net_rustscan:VulnNetRustscan"
+    },
+    {
+      "id": "vuln.net.masscan",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_net_masscan:VulnNetMasscan"
+    },
+    {
+      "id": "vuln.net.openvas",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_net_openvas:VulnNetOpenvas"
+    },
+    {
+      "id": "vuln.container.trivy",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_container_trivy:VulnContainerTrivy"
+    },
+    {
+      "id": "vuln.container.grype",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_container_grype:VulnContainerGrype"
+    },
+    {
+      "id": "vuln.container.syft",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_container_syft:VulnContainerSyft"
+    },
+    {
+      "id": "vuln.deps.osv_scanner",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_deps_osv_scanner:VulnDepsOsvScanner"
+    },
+    {
+      "id": "vuln.deps.dependency_check",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_deps_dependency_check:VulnDepsDependencyCheck"
+    },
+    {
+      "id": "vuln.deps.npm_audit",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_deps_npm_audit:VulnDepsNpmAudit"
+    },
+    {
+      "id": "vuln.deps.pip_audit",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_deps_pip_audit:VulnDepsPipAudit"
+    },
+    {
+      "id": "vuln.sast.semgrep",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_sast_semgrep:VulnSastSemgrep"
+    },
+    {
+      "id": "vuln.sast.bandit",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_sast_bandit:VulnSastBandit"
+    },
+    {
+      "id": "vuln.sast.gosec",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_sast_gosec:VulnSastGosec"
+    },
+    {
+      "id": "vuln.sast.brakeman",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_sast_brakeman:VulnSastBrakeman"
+    },
+    {
+      "id": "vuln.cloud.tfsec",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_cloud_tfsec:VulnCloudTfsec"
+    },
+    {
+      "id": "vuln.cloud.checkov",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_cloud_checkov:VulnCloudCheckov"
+    },
+    {
+      "id": "vuln.mobile.mobfs",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_mobile_mobfs:VulnMobileMobfs"
+    },
+    {
+      "id": "vuln.firmware.binwalk",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_firmware_binwalk:VulnFirmwareBinwalk"
+    },
+    {
+      "id": "vuln.validation",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_validation:VulnValidationModule"
+    },
+    {
+      "id": "vuln.scan",
+      "kind": "vuln",
+      "risk": "medium",
+      "supports": [
+        "plan",
+        "execute"
+      ],
+      "entry": "kai11.modules.vuln_http:VulnScanModule"
+    }
+  ]
+}

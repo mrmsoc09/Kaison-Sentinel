@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "action": "archive",
+  "days": {
+    "runs": 30,
+    "reports": 60,
+    "evidence": 60,
+    "logs": 30,
+    "alerts": 30,
+    "emails": 30
+  }
+}

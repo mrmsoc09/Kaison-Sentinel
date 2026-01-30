@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "enabled": false,
+  "servers": [],
+  "client": {
+    "allow_remote": false,
+    "allow_local": true
+  }
+}

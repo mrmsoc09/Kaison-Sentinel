@@ -1,0 +1,15 @@
+{
+  "id": "agent.evidence",
+  "name": "Evidence Custodian",
+  "role": "evidence",
+  "capabilities": [
+    "evidence_verify",
+    "immutability",
+    "screen_record"
+  ],
+  "tools": [
+    "evidence_bundle"
+  ],
+  "prompt_id": "system.agent.evidence",
+  "persona_id": "persona.evidence"
+}

@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  kaison:
+    build: .
+    ports:
+      - "7878:7878"
+    environment:
+      - KAI_ALLOW_PLAINTEXT=1
+      - KAI_VECTOR_BACKEND=pgvector
+      - KAI_RUN_DB=pg
+      - KAI_PG_HOST=pgvector
+      - KAI_PG_PORT=5432
+      - KAI_PG_DB=kaison
+      - KAI_PG_USER=kaison
+      - KAI_PG_PASSWORD=kaison
+    volumes:
+      - ./outputs:/app/outputs
+    depends_on:
+      - pgvector
+
+  pgvector:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: kaison
+      POSTGRES_USER: kaison
+      POSTGRES_PASSWORD: kaison
+    ports:
+      - "5432:5432"
+    volumes:
+      - kaison_pgdata:/var/lib/postgresql/data
+
+volumes:
+  kaison_pgdata:

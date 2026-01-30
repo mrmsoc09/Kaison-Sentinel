@@ -1,0 +1,20 @@
+name: osint_recon_deep
+scope_required: true
+mode: plan
+sequence:
+  - module: osint.dns_lookup
+    purpose: resolve targets to IPs
+  - module: osint.subdomain.amass
+    purpose: passive subdomain enumeration
+  - module: osint.subdomain.subfinder
+    purpose: passive subdomain enumeration
+  - module: osint.web.httpx
+    purpose: HTTP probe
+  - module: osint.web.katana
+    purpose: crawl URLs
+  - module: osint.web.waybackurls
+    purpose: archive URLs
+  - module: osint.content.feroxbuster
+    purpose: content discovery
+  - module: osint.tech.whatweb
+    purpose: tech fingerprint

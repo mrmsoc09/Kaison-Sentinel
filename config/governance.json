@@ -1,0 +1,11 @@
+{
+  "redact_patterns": [
+    "AWS_SECRET_ACCESS_KEY",
+    "BEGIN RSA PRIVATE KEY",
+    "api_key=",
+    "password=",
+    "Authorization: Bearer"
+  ],
+  "log_redaction": true,
+  "evidence_immutable": true
+}

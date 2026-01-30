@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "checks": [
+    "Evidence captured (screenshots/pcap where applicable)",
+    "Scope verified for each finding",
+    "Reproduction steps documented",
+    "Impact clearly described",
+    "Mitigation steps provided and verified",
+    "Final HiL report approval confirmed"
+  ]
+}

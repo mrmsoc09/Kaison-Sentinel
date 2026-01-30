@@ -1,0 +1,48 @@
+{
+  "steps": [
+    {
+      "id": "scope",
+      "title": "Scope & Authorization",
+      "fields": [
+        "allowlist",
+        "program"
+      ]
+    },
+    {
+      "id": "goals",
+      "title": "Goals",
+      "fields": [
+        "goal",
+        "vertical"
+      ]
+    },
+    {
+      "id": "techniques",
+      "title": "Allowed Techniques",
+      "fields": [
+        "allowed_techniques"
+      ]
+    },
+    {
+      "id": "vault",
+      "title": "API Keys",
+      "fields": [
+        "vault_keys"
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "Plan Preview",
+      "fields": [
+        "plan"
+      ]
+    },
+    {
+      "id": "run",
+      "title": "Run",
+      "fields": [
+        "approve"
+      ]
+    }
+  ]
+}

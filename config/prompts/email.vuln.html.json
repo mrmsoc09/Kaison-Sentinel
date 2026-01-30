@@ -1,0 +1,5 @@
+{
+  "id": "email.vuln.html.v1",
+  "type": "email",
+  "content": "<html><body style=\"font-family: Arial, sans-serif; color: #111;\">\n  <h2>Kaison Sentinel — Security Report {run_id}</h2>\n  <p>Hello {stakeholder_name},</p>\n  <p>We have completed validation for the report <strong>{run_id}</strong>. Below is a concise summary of the validated findings and evidence attached.</p>\n  <p><strong>Severity breakdown:</strong></p>\n  <pre style=\"background:#f5f5f5;padding:12px;border-radius:8px;\">{severity_breakdown}</pre>\n  <p><strong>Key action items:</strong></p>\n  <pre style=\"background:#f5f5f5;padding:12px;border-radius:8px;\">{action_items}</pre>\n  <p><strong>Findings summary:</strong></p>\n  <pre style=\"background:#f5f5f5;padding:12px;border-radius:8px;\">{findings_summary}</pre>\n  <p>Reproduction and mitigation steps are included in the report bundle. Please review and apply per program policy.</p>\n  <p>Thank you,<br/>{sender_name}<br/>{org}</p>\n</body></html>"
+}

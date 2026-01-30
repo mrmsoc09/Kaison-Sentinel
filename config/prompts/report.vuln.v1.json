@@ -1,0 +1,7 @@
+{
+  "id": "report.vuln.v1",
+  "type": "report",
+  "version": "1.0",
+  "tags": ["vuln"],
+  "content": "# Vulnerability Report {run_id}\n\n## Executive Summary\n{summary}\n\n## Findings\n{findings}\n\n## Evidence\n{evidence}\n\n## Mitigation\n{mitigation}\n"
+}

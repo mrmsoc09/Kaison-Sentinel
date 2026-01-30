@@ -1,0 +1,317 @@
+{
+  "version": 1,
+  "techniques": [
+    {
+      "technique_id": "T1562.001",
+      "tactic_id": "TA0005",
+      "tactic": "Defense Evasion",
+      "technique": "Impair Defenses: Disable or Modify Tools",
+      "safe_objective": "Assess potential impairment of defenses without altering target state.",
+      "risk": "high",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1190",
+      "tactic_id": "TA0001",
+      "tactic": "Initial Access",
+      "technique": "Exploit Public-Facing Application",
+      "safe_objective": "Assess exposed application surfaces and known risk indicators without exploitation.",
+      "risk": "high",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1595",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Active Scanning",
+      "safe_objective": "Prepare read-only reconnaissance plan; require explicit approvals before any active scanning.",
+      "risk": "medium",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1046",
+      "tactic_id": "TA0007",
+      "tactic": "Discovery",
+      "technique": "Network Service Discovery",
+      "safe_objective": "Enumerate known services using passive sources or approved scans only.",
+      "risk": "medium",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1552",
+      "tactic_id": "TA0006",
+      "tactic": "Credential Access",
+      "technique": "Unsecured Credentials",
+      "safe_objective": "Detect exposed credentials in authorized data sources without accessing protected systems.",
+      "risk": "high",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1596",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Search Open Websites/Domains",
+      "safe_objective": "Collect publicly available information from open sources and approved repositories.",
+      "risk": "low",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1591",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Gather Victim Organization Information",
+      "safe_objective": "Inventory public organizational data and known assets without performing direct contact.",
+      "risk": "low",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1592",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Gather Victim Host Information",
+      "safe_objective": "Enumerate host metadata from authorized inventories and passive sources only.",
+      "risk": "medium",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1590",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Gather Victim Network Information",
+      "safe_objective": "Compile network metadata from passive sources; require approvals for any active scans.",
+      "risk": "medium",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1594",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Search Victim-Owned Websites",
+      "safe_objective": "Analyze publicly available pages for exposed endpoints and misconfig indicators.",
+      "risk": "low",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1589",
+      "tactic_id": "TA0043",
+      "tactic": "Reconnaissance",
+      "technique": "Gather Victim Identity Information",
+      "safe_objective": "Collect identity information from approved sources for scoping and impact assessment.",
+      "risk": "low",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1082",
+      "tactic_id": "TA0007",
+      "tactic": "Discovery",
+      "technique": "System Information Discovery",
+      "safe_objective": "Review system inventory data and CMDB records; no endpoint interrogation.",
+      "risk": "medium",
+      "playbooks": {
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1049",
+      "tactic_id": "TA0007",
+      "tactic": "Discovery",
+      "technique": "System Network Connections Discovery",
+      "safe_objective": "Use approved telemetry and logs to identify network dependencies.",
+      "risk": "medium",
+      "playbooks": {
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    },
+    {
+      "technique_id": "T1021",
+      "tactic_id": "TA0008",
+      "tactic": "Lateral Movement",
+      "technique": "Remote Services",
+      "safe_objective": "Assess exposed remote services through approved configuration review and logging only.",
+      "risk": "medium",
+      "playbooks": {
+        "osint": [
+          "playbook.osint.basic"
+        ],
+        "vuln": [
+          "playbook.vuln.basic"
+        ],
+        "validation": [
+          "playbook.vuln.validation"
+        ]
+      },
+      "report_templates": [
+        "mitre_plan_md",
+        "mitre_plan_html",
+        "mitre_plan_json"
+      ]
+    }
+  ]
+}

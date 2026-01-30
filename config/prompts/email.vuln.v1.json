@@ -1,0 +1,7 @@
+{
+  "id": "email.vuln.v1",
+  "type": "email",
+  "version": "1.0",
+  "tags": ["vuln", "stakeholder"],
+  "content": "Hello {stakeholder_name},\n\nWe have validated the findings for report {run_id}. Evidence (including screen recording) is attached, and the report includes reproduction steps and mitigation guidance.\n\nSeverity breakdown: {severity_breakdown}\n\nKey action items: {action_items}\n\nFindings summary: {findings_summary}\n\nPlease evaluate the payout in line with program policy and severity guidance. We appreciate a fair assessment based on evidence provided.\n\nThank you,\n{sender_name}\n{org}"
+}

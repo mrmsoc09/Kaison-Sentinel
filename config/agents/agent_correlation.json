@@ -1,0 +1,15 @@
+{
+  "id": "agent.correlation",
+  "name": "Correlation Analyst",
+  "role": "analysis",
+  "capabilities": [
+    "correlate",
+    "chain",
+    "rank"
+  ],
+  "tools": [
+    "correlation_engine"
+  ],
+  "prompt_id": "system.agent.correlation",
+  "persona_id": "persona.correlation"
+}

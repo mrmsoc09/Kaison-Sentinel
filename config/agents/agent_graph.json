@@ -1,0 +1,15 @@
+{
+  "id": "agent.graph",
+  "name": "Graph Builder",
+  "role": "graph",
+  "capabilities": [
+    "graph_build",
+    "rag_index",
+    "provenance"
+  ],
+  "tools": [
+    "graph_builder"
+  ],
+  "prompt_id": "system.agent.graph",
+  "persona_id": "persona.graph"
+}

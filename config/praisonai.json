@@ -1,0 +1,26 @@
+{
+  "enabled": true,
+  "governance": {
+    "hil_required": true,
+    "scope_enforced": true,
+    "safe_mode": true
+  },
+  "persona_defaults": {
+    "osint": ["osint_analyst", "data_hunter", "threat_intel"],
+    "vuln": ["appsec_analyst", "vuln_researcher", "triage"],
+    "governance": ["policy_owner", "approver"]
+  },
+  "workflows": {
+    "osint": [
+      ".praison/workflows/osint_discovery.yaml",
+      ".praison/workflows/osint_enumeration.yaml",
+      ".praison/workflows/osint_exposure.yaml",
+      ".praison/workflows/osint_attribution.yaml",
+      ".praison/workflows/osint_triage.yaml"
+    ]
+  },
+  "hooks": {
+    "enabled": true,
+    "config": "config/hooks.json"
+  }
+}

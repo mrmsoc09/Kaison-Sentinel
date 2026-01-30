@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "source.securitytrails",
+      "name": "SecurityTrails",
+      "category": "domain_intel",
+      "auth_type": "api_key",
+      "docs": "https://securitytrails.com/corp/apidocs",
+      "rate_limit": "varies",
+      "notes": "Requires user-provided key"
+    },
+    {
+      "id": "source.shodan",
+      "name": "Shodan",
+      "category": "host_intel",
+      "auth_type": "api_key",
+      "docs": "https://developer.shodan.io/api",
+      "rate_limit": "varies",
+      "notes": "Requires user-provided key"
+    },
+    {
+      "id": "source.otx",
+      "name": "AlienVault OTX",
+      "category": "threat_intel",
+      "auth_type": "api_key",
+      "docs": "https://otx.alienvault.com/api",
+      "rate_limit": "varies",
+      "notes": "Requires user-provided key"
+    },
+    {
+      "id": "source.github",
+      "name": "GitHub",
+      "category": "code_intel",
+      "auth_type": "token",
+      "docs": "https://docs.github.com/en/rest",
+      "rate_limit": "varies",
+      "notes": "Use fine-grained PAT"
+    }
+  ]
+}

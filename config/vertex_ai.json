@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "project_id": "",
+  "region": "us-central1",
+  "model_registry": "kai-models",
+  "training_pipeline": "kai-training",
+  "service_account_json": "",
+  "pipeline_spec_uri": "",
+  "staging_bucket": ""
+}

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "components": ["langchain", "langgraph", "langsmith"],
+  "policy": {
+    "offline_default": true,
+    "allow_network": false,
+    "hil_required": true
+  },
+  "flows": {
+    "osint": ["summarize", "triage", "correlate", "rank", "mitigate"],
+    "vuln": ["summarize", "triage", "validate", "rank", "mitigate"]
+  }
+}

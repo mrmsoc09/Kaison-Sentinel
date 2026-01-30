@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "header": "X-API-Key",
+  "keys": [
+    {
+      "id": "local-admin",
+      "key": "CHANGE_ME",
+      "role": "admin",
+      "tenant_id": "local"
+    }
+  ]
+}

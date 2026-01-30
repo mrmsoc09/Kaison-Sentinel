@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgvector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pgvector
+  template:
+    metadata:
+      labels:
+        app: pgvector
+    spec:
+      containers:
+        - name: pgvector
+          image: pgvector/pgvector:pg16
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_DB
+              value: kaison
+            - name: POSTGRES_USER
+              value: kaison
+            - name: POSTGRES_PASSWORD
+              value: kaison
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgvector
+spec:
+  selector:
+    app: pgvector
+  ports:
+    - port: 5432
+      targetPort: 5432
+  type: ClusterIP

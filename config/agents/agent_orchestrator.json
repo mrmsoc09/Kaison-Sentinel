@@ -1,0 +1,18 @@
+{
+  "id": "agent.orchestrator",
+  "name": "Circle Orchestrator",
+  "role": "coordination",
+  "capabilities": [
+    "route",
+    "select_circle",
+    "policy_enforce",
+    "schedule"
+  ],
+  "tools": [
+    "praisonai",
+    "langgraph",
+    "langchain"
+  ],
+  "prompt_id": "system.agent.orchestrator",
+  "persona_id": "persona.orchestrator"
+}

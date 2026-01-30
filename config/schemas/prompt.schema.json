@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prompt",
+  "type": "object",
+  "required": ["id", "type", "content"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"type": "string", "enum": ["system", "scan", "report"]},
+    "content": {"type": "string"},
+    "version": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "defaults": {"type": "object"}
+  }
+}

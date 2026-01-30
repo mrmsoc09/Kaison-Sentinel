@@ -1,0 +1,15 @@
+from typing import Dict, Any, List
+from ..tools.tool_githound import ToolGithound
+
+
+class JobCodeSearch:
+    id = "job.code_search"
+
+    def __init__(self):
+        self.tool = ToolGithound()
+
+    def run(self, targets: List[str], **kwargs) -> Dict[str, Any]:
+        results = []
+        for t in targets:
+            results.append(self.tool.run(t, options=kwargs.get("options")))
+        return {"results": results}

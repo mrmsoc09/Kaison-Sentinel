@@ -1,0 +1,15 @@
+{
+  "id": "agent.reporting",
+  "name": "Reporting Lead",
+  "role": "reporting",
+  "capabilities": [
+    "summarize",
+    "format_report",
+    "export"
+  ],
+  "tools": [
+    "report_formatter"
+  ],
+  "prompt_id": "system.agent.reporting",
+  "persona_id": "persona.reporting"
+}

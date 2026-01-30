@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReportFormat",
+  "type": "object",
+  "required": ["id", "format", "template"],
+  "properties": {
+    "id": {"type": "string"},
+    "format": {"type": "string", "enum": ["md", "json", "sarif"]},
+    "template": {"type": "string"},
+    "version": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}}
+  }
+}

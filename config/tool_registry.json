@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "defaults": {
+    "risk": "low",
+    "evidence_kind": "raw",
+    "install": ""
+  },
+  "categories": {
+    "dns": {"risk": "low", "evidence_kind": "dns_record", "install": "sudo apt-get install -y dnsutils"},
+    "subdomain": {"risk": "low", "evidence_kind": "hostname"},
+    "web": {"risk": "medium", "evidence_kind": "http_response"},
+    "content": {"risk": "medium", "evidence_kind": "endpoint_list"},
+    "tech": {"risk": "low", "evidence_kind": "fingerprint"},
+    "tls": {"risk": "low", "evidence_kind": "tls_report"},
+    "cloud": {"risk": "medium", "evidence_kind": "cloud_asset"},
+    "email": {"risk": "low", "evidence_kind": "email_artifact"},
+    "social": {"risk": "low", "evidence_kind": "profile"},
+    "intel": {"risk": "low", "evidence_kind": "intel_item"},
+    "paste": {"risk": "low", "evidence_kind": "paste_reference"},
+    "secrets": {"risk": "medium", "evidence_kind": "secret_finding"},
+    "dork": {"risk": "low", "evidence_kind": "dork_result"},
+    "search": {"risk": "low", "evidence_kind": "search_result"},
+    "framework": {"risk": "low", "evidence_kind": "framework_output"},
+    "visual": {"risk": "low", "evidence_kind": "screenshot"},
+    "scan": {"risk": "medium", "evidence_kind": "scan_report"},
+    "net": {"risk": "high", "evidence_kind": "network_report"},
+    "container": {"risk": "low", "evidence_kind": "sbom"},
+    "deps": {"risk": "low", "evidence_kind": "dependency_report"},
+    "sast": {"risk": "low", "evidence_kind": "sast_report"},
+    "mobile": {"risk": "medium", "evidence_kind": "mobile_report"},
+    "graphql": {"risk": "medium", "evidence_kind": "graphql_schema"},
+    "ssrf": {"risk": "high", "evidence_kind": "ssrf_probe"},
+    "smuggling": {"risk": "high", "evidence_kind": "smuggling_probe"},
+    "takeover": {"risk": "medium", "evidence_kind": "takeover_signal"},
+    "util": {"risk": "low", "evidence_kind": "utility_output"},
+    "meta": {"risk": "low", "evidence_kind": "metadata"},
+    "firmware": {"risk": "medium", "evidence_kind": "firmware_report"}
+  }
+}

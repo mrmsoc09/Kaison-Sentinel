@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "deny": [
+    {"action": "plan", "role_not_in": ["analyst", "operator", "admin"]},
+    {"action": "execute", "role_not_in": ["operator", "admin"]},
+    {"action": "approve", "role_not_in": ["admin"]},
+    {"action": "execute", "module_kind": "vuln", "role_not_in": ["admin"]},
+    {"action": "execute", "risk": "high", "role_not_in": ["admin"]}
+  ],
+  "require_hil_for_risk": ["medium", "high", "critical"]
+}

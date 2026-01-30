@@ -1,0 +1,12 @@
+{
+  "id": "scan.default",
+  "type": "scan",
+  "version": "1.0",
+  "tags": ["default"],
+  "content": "Goal: {goal}\nScope: {scope}\nMode: {mode}\nModules: {modules}\nConstraints: {constraints}\nReturn: normalized findings, evidence, and mitigation guidance.",
+  "defaults": {
+    "goal": "Gather actionable intelligence and validated findings",
+    "constraints": "plan-first, safe-mode",
+    "mode": "plan"
+  }
+}

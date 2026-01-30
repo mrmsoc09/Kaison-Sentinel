@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "tiers": [
+    {"id": "free", "name": "Free"},
+    {"id": "prospect", "name": "Prospect"},
+    {"id": "pro", "name": "Pro"},
+    {"id": "enterprise", "name": "Enterprise"},
+    {"id": "custom", "name": "Custom"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "scan.vuln.v1",
+  "type": "scan",
+  "version": "1.0",
+  "tags": ["vuln", "default"],
+  "content": "Vulnerability goal: {goal}\nScope: {scope}\nTechniques: {constraints}\nUse safe validation steps and provide evidence for all findings."
+}

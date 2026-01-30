@@ -1,0 +1,12 @@
+name: osint_recon_basic
+scope_required: true
+mode: plan
+sequence:
+  - module: osint.dns_lookup
+    purpose: resolve targets to IPs
+  - module: osint.web.httpx
+    purpose: HTTP probe (if enabled)
+  - module: osint.web.gau
+    purpose: archived URLs
+  - module: osint.content.ffuf
+    purpose: content discovery

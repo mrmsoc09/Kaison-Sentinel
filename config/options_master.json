@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "shared": {
+    "scope_lock": true,
+    "require_hil": true,
+    "allowed_techniques": ["passive", "safe_active"],
+    "autonomy_tier": 0,
+    "rate_limits": {
+      "global_min_interval_ms": 0,
+      "per_tool": {}
+    },
+    "evidence": {
+      "require_screen_recording_for_validated": true
+    },
+    "alerts": {
+      "enabled": true,
+      "thresholds": {
+        "high": "instant",
+        "medium": "batch",
+        "low": "digest"
+      }
+    },
+    "logging": {
+      "redaction": true,
+      "audit": true
+    },
+    "proxy": {
+      "http": "",
+      "https": "",
+      "no_proxy": ""
+    },
+    "retention": {
+      "enabled": false,
+      "action": "archive"
+    },
+    "langstudio": {
+      "wrap_tools": true
+    }
+  },
+  "osint_overrides": {
+    "autonomy_tier": 1,
+    "allowed_techniques": ["passive", "safe_active"],
+    "tool_categories_allowlist": [
+      "dns",
+      "subdomain",
+      "web",
+      "content",
+      "tech",
+      "tls",
+      "cloud",
+      "email",
+      "social",
+      "intel",
+      "paste",
+      "secrets",
+      "dork",
+      "search",
+      "framework",
+      "visual",
+      "scan",
+      "graphql",
+      "ssrf",
+      "smuggling",
+      "takeover",
+      "util",
+      "meta"
+    ],
+    "alerts": {
+      "enabled": true
+    }
+  },
+  "vuln_overrides": {
+    "autonomy_tier": 0,
+    "allowed_techniques": ["safe_active"],
+    "tool_categories_allowlist": [
+      "web",
+      "net",
+      "container",
+      "deps",
+      "sast",
+      "cloud",
+      "mobile",
+      "firmware"
+    ],
+    "require_hil": true
+  },
+  "validation_overrides": {
+    "autonomy_tier": 0,
+    "require_hil": true,
+    "evidence": {
+      "require_screen_recording_for_validated": true
+    }
+  }
+}

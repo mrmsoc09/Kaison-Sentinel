@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "per_minute": 120,
+  "per_minute_per_route": 60
+}

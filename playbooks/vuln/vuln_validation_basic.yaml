@@ -1,0 +1,10 @@
+name: vuln_validation_basic
+scope_required: true
+mode: plan
+sequence:
+  - module: vuln.validation
+    purpose: HiL validation checklist + evidence requirements
+  - module: vuln.web.zap
+    purpose: passive validation (read-only) if enabled
+  - module: vuln.web.nuclei
+    purpose: safe template validation (read-only)

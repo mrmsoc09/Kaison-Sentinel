@@ -1,0 +1,11 @@
+{
+  "id": "playbook.osint.basic",
+  "name": "OSINT Basic",
+  "version": "1.0",
+  "modules": [
+    "osint.subdomain.amass",
+    "osint.web.httpx",
+    "osint.web.waybackurls"
+  ],
+  "tags": ["osint", "basic"]
+}

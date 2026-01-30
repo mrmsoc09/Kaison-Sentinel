@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Build artifacts
+outputs/
+logs/
+.env
+.env.*
+
+# Node
+node_modules/
+
+# Virtualenvs
+.venv/
+.venv-tools/
+
+# OS
+.DS_Store
+
+# Local secrets
+config/*secret*
+config/*key*

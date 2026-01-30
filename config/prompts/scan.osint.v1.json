@@ -1,0 +1,7 @@
+{
+  "id": "scan.osint.v1",
+  "type": "scan",
+  "version": "1.0",
+  "tags": ["osint", "default"],
+  "content": "OSINT goal: {goal}\nScope: {scope}\nTechniques: {constraints}\nUse safe recon, prefer passive signals, and provide evidence with reportability scoring."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "report.sarif",
+  "format": "sarif",
+  "version": "1.0",
+  "tags": ["sarif"],
+  "template": ""
+}

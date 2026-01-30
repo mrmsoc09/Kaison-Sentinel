@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "defaults": {
+    "allow_network": false,
+    "allow_active": false,
+    "hil_required": true,
+    "safe_mode": true
+  },
+  "roles": {
+    "viewer": ["view"],
+    "analyst": ["view","plan"],
+    "operator": ["view","plan","execute"],
+    "admin": ["view","plan","execute","approve","export"]
+  }
+}

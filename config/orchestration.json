@@ -1,0 +1,19 @@
+{
+  "mode": "hybrid",
+  "osint": {
+    "circles": [
+      {"id": "gemini_praison", "llm": "gemini", "governance": "praisonai"},
+      {"id": "codex_praison", "llm": "codex", "governance": "praisonai"},
+      {"id": "claude_praison", "llm": "claude", "governance": "praisonai"}
+    ],
+    "lang_studio_cycle": {"enabled": true, "components": ["langchain", "langgraph", "langsmith"]}
+  },
+  "vuln": {
+    "circles": [
+      {"id": "gemini_praison", "llm": "gemini", "governance": "praisonai"},
+      {"id": "codex_praison", "llm": "codex", "governance": "praisonai"},
+      {"id": "claude_praison", "llm": "claude", "governance": "praisonai"}
+    ],
+    "lang_studio_cycle": {"enabled": true, "components": ["langchain", "langgraph", "langsmith"]}
+  }
+}

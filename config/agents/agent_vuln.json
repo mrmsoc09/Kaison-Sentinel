@@ -1,0 +1,16 @@
+{
+  "id": "agent.vuln",
+  "name": "Vulnerability Lead",
+  "role": "vuln",
+  "capabilities": [
+    "vuln_plan",
+    "tool_select",
+    "validation"
+  ],
+  "tools": [
+    "vuln_tools",
+    "langgraph"
+  ],
+  "prompt_id": "system.agent.vuln",
+  "persona_id": "persona.vuln"
+}

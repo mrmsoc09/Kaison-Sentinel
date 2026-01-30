@@ -1,0 +1,273 @@
+{
+  "batch": 1,
+  "source": [
+    "https://github.com/txuswashere/osint-tools",
+    "https://github.com/Astrosp/awesome-osint-for-everything"
+  ],
+  "tools": [
+    {
+      "id": "amass",
+      "name": "Amass",
+      "category": "subdomain",
+      "url": "https://github.com/owasp-amass/amass"
+    },
+    {
+      "id": "subfinder",
+      "name": "Subfinder",
+      "category": "subdomain",
+      "url": "https://github.com/projectdiscovery/subfinder"
+    },
+    {
+      "id": "assetfinder",
+      "name": "Assetfinder",
+      "category": "subdomain",
+      "url": "https://github.com/tomnomnom/assetfinder"
+    },
+    {
+      "id": "sublist3r",
+      "name": "Sublist3r",
+      "category": "subdomain",
+      "url": "https://github.com/aboul3la/Sublist3r"
+    },
+    {
+      "id": "findomain",
+      "name": "Findomain",
+      "category": "subdomain",
+      "url": "https://github.com/Findomain/Findomain"
+    },
+    {
+      "id": "chaos-client",
+      "name": "Chaos Client",
+      "category": "subdomain",
+      "url": "https://github.com/projectdiscovery/chaos-client"
+    },
+    {
+      "id": "dnsx",
+      "name": "dnsx",
+      "category": "dns",
+      "url": "https://github.com/projectdiscovery/dnsx"
+    },
+    {
+      "id": "shuffledns",
+      "name": "shuffledns",
+      "category": "dns",
+      "url": "https://github.com/projectdiscovery/shuffledns"
+    },
+    {
+      "id": "massdns",
+      "name": "massdns",
+      "category": "dns",
+      "url": "https://github.com/blechschmidt/massdns"
+    },
+    {
+      "id": "altdns",
+      "name": "altdns",
+      "category": "dns",
+      "url": "https://github.com/infosec-au/altdns"
+    },
+    {
+      "id": "puredns",
+      "name": "puredns",
+      "category": "dns",
+      "url": "https://github.com/d3mondev/puredns"
+    },
+    {
+      "id": "knockpy",
+      "name": "knockpy",
+      "category": "dns",
+      "url": "https://github.com/guelfoweb/knock"
+    },
+    {
+      "id": "aquatone",
+      "name": "Aquatone",
+      "category": "web",
+      "url": "https://github.com/michenriksen/aquatone"
+    },
+    {
+      "id": "httprobe",
+      "name": "httprobe",
+      "category": "web",
+      "url": "https://github.com/tomnomnom/httprobe"
+    },
+    {
+      "id": "httpx",
+      "name": "httpx",
+      "category": "web",
+      "url": "https://github.com/projectdiscovery/httpx"
+    },
+    {
+      "id": "waybackurls",
+      "name": "waybackurls",
+      "category": "web",
+      "url": "https://github.com/tomnomnom/waybackurls"
+    },
+    {
+      "id": "gau",
+      "name": "gau",
+      "category": "web",
+      "url": "https://github.com/lc/gau"
+    },
+    {
+      "id": "hakrawler",
+      "name": "hakrawler",
+      "category": "crawler",
+      "url": "https://github.com/hakluke/hakrawler"
+    },
+    {
+      "id": "gospider",
+      "name": "GoSpider",
+      "category": "crawler",
+      "url": "https://github.com/jaeles-project/gospider"
+    },
+    {
+      "id": "katana",
+      "name": "Katana",
+      "category": "crawler",
+      "url": "https://github.com/projectdiscovery/katana"
+    },
+    {
+      "id": "subjack",
+      "name": "subjack",
+      "category": "takeover",
+      "url": "https://github.com/haccer/subjack"
+    },
+    {
+      "id": "nuclei",
+      "name": "Nuclei",
+      "category": "scanner",
+      "url": "https://github.com/projectdiscovery/nuclei"
+    },
+    {
+      "id": "nmap",
+      "name": "Nmap",
+      "category": "scanner",
+      "url": "https://nmap.org"
+    },
+    {
+      "id": "masscan",
+      "name": "Masscan",
+      "category": "scanner",
+      "url": "https://github.com/robertdavidgraham/masscan"
+    },
+    {
+      "id": "naabu",
+      "name": "Naabu",
+      "category": "scanner",
+      "url": "https://github.com/projectdiscovery/naabu"
+    },
+    {
+      "id": "whatweb",
+      "name": "WhatWeb",
+      "category": "fingerprint",
+      "url": "https://github.com/urbanadventurer/WhatWeb"
+    },
+    {
+      "id": "wafw00f",
+      "name": "wafw00f",
+      "category": "fingerprint",
+      "url": "https://github.com/EnableSecurity/wafw00f"
+    },
+    {
+      "id": "tlsx",
+      "name": "tlsx",
+      "category": "tls",
+      "url": "https://github.com/projectdiscovery/tlsx"
+    },
+    {
+      "id": "sslscan",
+      "name": "sslscan",
+      "category": "tls",
+      "url": "https://github.com/rbsec/sslscan"
+    },
+    {
+      "id": "ffuf",
+      "name": "ffuf",
+      "category": "fuzzing",
+      "url": "https://github.com/ffuf/ffuf"
+    },
+    {
+      "id": "dirsearch",
+      "name": "dirsearch",
+      "category": "content-discovery",
+      "url": "https://github.com/maurosoria/dirsearch"
+    },
+    {
+      "id": "feroxbuster",
+      "name": "feroxbuster",
+      "category": "content-discovery",
+      "url": "https://github.com/epi052/feroxbuster"
+    },
+    {
+      "id": "nikto",
+      "name": "Nikto",
+      "category": "web-vuln",
+      "url": "https://github.com/sullo/nikto"
+    },
+    {
+      "id": "sqlmap",
+      "name": "sqlmap",
+      "category": "web-vuln",
+      "url": "https://github.com/sqlmapproject/sqlmap"
+    },
+    {
+      "id": "dalfox",
+      "name": "Dalfox",
+      "category": "xss",
+      "url": "https://github.com/hahwul/dalfox"
+    },
+    {
+      "id": "xsstrike",
+      "name": "XSStrike",
+      "category": "xss",
+      "url": "https://github.com/s0md3v/XSStrike"
+    },
+    {
+      "id": "arjun",
+      "name": "Arjun",
+      "category": "params",
+      "url": "https://github.com/s0md3v/Arjun"
+    },
+    {
+      "id": "theharvester",
+      "name": "theHarvester",
+      "category": "osint",
+      "url": "https://github.com/laramies/theHarvester"
+    },
+    {
+      "id": "recon-ng",
+      "name": "Recon-ng",
+      "category": "osint",
+      "url": "https://github.com/lanmaster53/recon-ng"
+    },
+    {
+      "id": "spiderfoot",
+      "name": "SpiderFoot",
+      "category": "osint",
+      "url": "https://github.com/smicallef/spiderfoot"
+    },
+    {
+      "id": "metagoofil",
+      "name": "Metagoofil",
+      "category": "metadata",
+      "url": "https://github.com/laramies/metagoofil"
+    },
+    {
+      "id": "wazuh",
+      "name": "Wazuh",
+      "category": "siem-xdr",
+      "url": "https://wazuh.com/"
+    },
+    {
+      "id": "shuffle",
+      "name": "Shuffle",
+      "category": "soar",
+      "url": "https://github.com/Shuffle/Shuffle"
+    },
+    {
+      "id": "misp",
+      "name": "MISP",
+      "category": "threat-intel",
+      "url": "https://misp-project.org/"
+    }
+  ]
+}

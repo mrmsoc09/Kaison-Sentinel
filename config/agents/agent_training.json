@@ -1,0 +1,15 @@
+{
+  "id": "agent.training",
+  "name": "Training Scheduler",
+  "role": "training",
+  "capabilities": [
+    "data_select",
+    "train_schedule",
+    "quality_gate"
+  ],
+  "tools": [
+    "training_pipeline"
+  ],
+  "prompt_id": "system.agent.training",
+  "persona_id": "persona.training"
+}

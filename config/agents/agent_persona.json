@@ -1,0 +1,15 @@
+{
+  "id": "agent.persona",
+  "name": "Persona Factory",
+  "role": "persona",
+  "capabilities": [
+    "persona_create",
+    "prompt_tune",
+    "vernacular"
+  ],
+  "tools": [
+    "persona_registry"
+  ],
+  "prompt_id": "system.agent.persona",
+  "persona_id": "persona.persona"
+}

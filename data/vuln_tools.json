@@ -1,0 +1,40 @@
+{
+  "count": 29,
+  "items": [
+    {"module": "vuln.web.nikto", "agent": "agent.vuln_nikto", "tool": "tool.nikto", "job": "job.web_server_scan"},
+    {"module": "vuln.web.nuclei", "agent": "agent.vuln_nuclei", "tool": "tool.nuclei", "job": "job.template_scan"},
+    {"module": "vuln.web.zap", "agent": "agent.vuln_zap", "tool": "tool.zap_cli", "job": "job.web_dynamic_scan"},
+    {"module": "vuln.web.arachni", "agent": "agent.vuln_arachni", "tool": "tool.arachni", "job": "job.web_crawl_scan"},
+    {"module": "vuln.web.sqlmap", "agent": "agent.vuln_sqlmap", "tool": "tool.sqlmap", "job": "job.sql_injection_probe"},
+    {"module": "vuln.web.wpscan", "agent": "agent.vuln_wpscan", "tool": "tool.wpscan", "job": "job.cms_scan"},
+    {"module": "vuln.web.dirsearch", "agent": "agent.vuln_dirsearch", "tool": "tool.dirsearch", "job": "job.content_discovery"},
+    {"module": "vuln.web.gobuster", "agent": "agent.vuln_gobuster", "tool": "tool.gobuster", "job": "job.content_discovery"},
+    {"module": "vuln.web.ffuf", "agent": "agent.vuln_ffuf", "tool": "tool.ffuf", "job": "job.content_discovery"},
+    {"module": "vuln.web.xsstrike", "agent": "agent.vuln_xsstrike", "tool": "tool.xsstrike", "job": "job.xss_probe"},
+
+    {"module": "vuln.net.nmap_vuln", "agent": "agent.vuln_nmap", "tool": "tool.nmap_vuln", "job": "job.network_vuln_scan"},
+    {"module": "vuln.net.rustscan", "agent": "agent.vuln_rustscan", "tool": "tool.rustscan", "job": "job.port_scan"},
+    {"module": "vuln.net.masscan", "agent": "agent.vuln_masscan", "tool": "tool.masscan", "job": "job.port_scan"},
+    {"module": "vuln.net.openvas", "agent": "agent.vuln_openvas", "tool": "tool.gvm", "job": "job.vuln_assessment"},
+
+    {"module": "vuln.container.trivy", "agent": "agent.vuln_trivy", "tool": "tool.trivy", "job": "job.container_scan"},
+    {"module": "vuln.container.grype", "agent": "agent.vuln_grype", "tool": "tool.grype", "job": "job.container_scan"},
+    {"module": "vuln.container.syft", "agent": "agent.vuln_syft", "tool": "tool.syft", "job": "job.sbom_generation"},
+
+    {"module": "vuln.deps.osv_scanner", "agent": "agent.vuln_osv", "tool": "tool.osv_scanner", "job": "job.dependency_scan"},
+    {"module": "vuln.deps.dependency_check", "agent": "agent.vuln_depcheck", "tool": "tool.dependency_check", "job": "job.dependency_scan"},
+    {"module": "vuln.deps.npm_audit", "agent": "agent.vuln_npm_audit", "tool": "tool.npm_audit", "job": "job.dependency_scan"},
+    {"module": "vuln.deps.pip_audit", "agent": "agent.vuln_pip_audit", "tool": "tool.pip_audit", "job": "job.dependency_scan"},
+
+    {"module": "vuln.sast.semgrep", "agent": "agent.vuln_semgrep", "tool": "tool.semgrep", "job": "job.sast_scan"},
+    {"module": "vuln.sast.bandit", "agent": "agent.vuln_bandit", "tool": "tool.bandit", "job": "job.sast_scan"},
+    {"module": "vuln.sast.gosec", "agent": "agent.vuln_gosec", "tool": "tool.gosec", "job": "job.sast_scan"},
+    {"module": "vuln.sast.brakeman", "agent": "agent.vuln_brakeman", "tool": "tool.brakeman", "job": "job.sast_scan"},
+
+    {"module": "vuln.cloud.tfsec", "agent": "agent.vuln_tfsec", "tool": "tool.tfsec", "job": "job.iac_scan"},
+    {"module": "vuln.cloud.checkov", "agent": "agent.vuln_checkov", "tool": "tool.checkov", "job": "job.iac_scan"},
+
+    {"module": "vuln.mobile.mobfs", "agent": "agent.vuln_mobfs", "tool": "tool.mobfs", "job": "job.mobile_scan"},
+    {"module": "vuln.firmware.binwalk", "agent": "agent.vuln_binwalk", "tool": "tool.binwalk", "job": "job.firmware_scan"}
+  ]
+}

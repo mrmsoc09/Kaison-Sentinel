@@ -1,0 +1,10 @@
+name: OSINT Exposure
+version: 1
+agents:
+  exposure_agent:
+    role: Exposure Analyst
+    goal: Identify public exposures and leaks
+steps:
+  - agent: exposure_agent
+    action: Check public exposures for {{target}}
+    output_variable: exposure_results

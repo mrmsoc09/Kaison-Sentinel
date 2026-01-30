@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kaison-sentinel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kaison-sentinel
+  template:
+    metadata:
+      labels:
+        app: kaison-sentinel
+    spec:
+      containers:
+        - name: kaison-sentinel
+          image: kaison-sentinel:latest
+          ports:
+            - containerPort: 7878
+          env:
+            - name: KAI_ALLOW_PLAINTEXT
+              value: "1"
+            - name: KAI_VECTOR_BACKEND
+              value: "pgvector"
+            - name: KAI_RUN_DB
+              value: "pg"
+            - name: KAI_PG_HOST
+              value: pgvector
+            - name: KAI_PG_PORT
+              value: "5432"
+            - name: KAI_PG_DB
+              value: kaison
+            - name: KAI_PG_USER
+              value: kaison
+            - name: KAI_PG_PASSWORD
+              value: kaison
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kaison-sentinel
+spec:
+  selector:
+    app: kaison-sentinel
+  ports:
+    - port: 7878
+      targetPort: 7878
+  type: ClusterIP

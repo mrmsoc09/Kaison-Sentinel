@@ -1,0 +1,10 @@
+name: OSINT Triage
+version: 1
+agents:
+  triage_agent:
+    role: Triage Analyst
+    goal: Rank and label intelligence without deletion
+steps:
+  - agent: triage_agent
+    action: Label intelligence states for {{target}} (raw/candidate/actionable/validated/suppressed)
+    output_variable: triage_results

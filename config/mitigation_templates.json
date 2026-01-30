@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "match": ["xss", "cross-site scripting"],
+      "dry_run": ["identify unsanitized output sinks"],
+      "apply": ["encode output contextually (HTML/JS/URL)"],
+      "verify": ["retest payload execution paths"],
+      "rollback": ["revert template changes and re-apply safe encoding"],
+      "code_fix": "Use context-aware encoding. Example: in templates, replace `{{ user_input }}` with `{{ user_input | e }}` (HTML-escape)."
+    },
+    {
+      "match": ["sql", "sqli"],
+      "dry_run": ["identify dynamic queries without parameterization"],
+      "apply": ["parameterize queries and enforce least-privilege DB role"],
+      "verify": ["retest payloads with prepared statements"],
+      "rollback": ["restore previous query logic and apply safe DB user"],
+      "code_fix": "Use parameterized queries. Example: `cursor.execute('SELECT * FROM t WHERE id = %s', (id,))`."
+    },
+    {
+      "match": ["s3", "bucket"],
+      "dry_run": ["list bucket ACL and public access block settings"],
+      "apply": ["enable BlockPublicAccess and set ACL private"],
+      "verify": ["confirm bucket is no longer public"],
+      "rollback": ["restore previous ACL if required by policy"],
+      "code_fix": "Set public access block and remove public ACLs in IaC (Terraform): `block_public_acls = true`, `block_public_policy = true`."
+    },
+    {
+      "match": ["iam", "policy"],
+      "dry_run": ["review IAM policies and attachment scope"],
+      "apply": ["remove wildcard permissions and scope to least privilege"],
+      "verify": ["audit policy simulator for denied actions"],
+      "rollback": ["restore last known good policy version"],
+      "code_fix": "Replace `*` actions/resources with scoped ARNs and least-privilege actions."
+    },
+    {
+      "match": ["csrf"],
+      "dry_run": ["identify state-changing endpoints without CSRF protection"],
+      "apply": ["add CSRF tokens and verify origin/referrer"],
+      "verify": ["ensure requests without token are rejected"],
+      "rollback": ["revert middleware changes if needed"],
+      "code_fix": "Enable CSRF middleware and include tokens in all state-changing forms/requests."
+    },
+    {
+      "match": ["ssrf"],
+      "dry_run": ["list all user-controlled URL fetch paths"],
+      "apply": ["implement allowlist + block internal IP ranges"],
+      "verify": ["confirm metadata/localhost requests are blocked"],
+      "rollback": ["restore previous fetch behavior if required"],
+      "code_fix": "Validate outbound URLs, enforce allowlists, and block RFC1918/metadata IPs."
+    },
+    {
+      "match": ["rce", "remote code execution", "command injection"],
+      "dry_run": ["identify user input reaching shell/system calls"],
+      "apply": ["remove shell invocation; use safe APIs; validate inputs"],
+      "verify": ["confirm payloads are rejected or sanitized"],
+      "rollback": ["restore previous implementation under feature flag"],
+      "code_fix": "Avoid shell=True; use parameterized API calls and strict validation."
+    },
+    {
+      "match": ["lfi", "file inclusion", "directory traversal", "path traversal"],
+      "dry_run": ["enumerate file path inputs and access patterns"],
+      "apply": ["normalize paths and enforce allowlist directories"],
+      "verify": ["confirm traversal sequences are blocked"],
+      "rollback": ["restore previous path logic if required"],
+      "code_fix": "Use pathlib normalization and restrict to an allowlist root."
+    },
+    {
+      "match": ["cors"],
+      "dry_run": ["inspect CORS headers and allowed origins"],
+      "apply": ["restrict origins and disallow wildcard with credentials"],
+      "verify": ["confirm disallowed origins are blocked"],
+      "rollback": ["restore previous CORS config if needed"],
+      "code_fix": "Set explicit origin allowlist and disable credentials on wildcard."
+    },
+    {
+      "match": ["csp", "content security policy"],
+      "dry_run": ["check missing or permissive CSP headers"],
+      "apply": ["add CSP with default-src 'self' and strict directives"],
+      "verify": ["confirm CSP is enforced and violations logged"],
+      "rollback": ["restore previous headers if necessary"],
+      "code_fix": "Add CSP header with strict directives and nonce-based scripts."
+    },
+    {
+      "match": ["open redirect"],
+      "dry_run": ["identify redirect parameters and destinations"],
+      "apply": ["allowlist redirect targets and enforce relative paths"],
+      "verify": ["confirm external URLs are rejected"],
+      "rollback": ["restore previous redirect handling if needed"],
+      "code_fix": "Validate redirect targets against a strict allowlist."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "tables": {
+    "artifacts": [
+      "run_id", "tenant_id", "target", "type", "value", "confidence", "module", "tool", "timestamp"
+    ],
+    "findings": [
+      "run_id", "tenant_id", "finding_id", "title", "severity", "confidence", "target", "status",
+      "intel_state", "scope_match", "reportability", "duplicate_risk", "duplicate_matches",
+      "duplicate_validated", "labels", "created_at"
+    ],
+    "evidence": [
+      "run_id", "tenant_id", "finding_id", "kind", "path"
+    ],
+    "traces": [
+      "run_id", "tenant_id", "module", "trace_path", "summary"
+    ],
+    "reports": [
+      "run_id", "tenant_id", "target", "report_path", "eval_path", "created_at"
+    ],
+    "training": [
+      "run_id", "tenant_id", "path", "created_at"
+    ]
+  }
+}

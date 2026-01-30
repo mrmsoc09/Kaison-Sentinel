@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "retain_all": true,
+  "states": {
+    "raw": {
+      "description": "Untriaged intelligence with minimal context",
+      "allowed_transitions": ["candidate", "contextual"]
+    },
+    "contextual": {
+      "description": "Out-of-scope or weakly related intelligence retained for later correlation",
+      "allowed_transitions": ["candidate", "raw"]
+    },
+    "candidate": {
+      "description": "Plausible intelligence needing verification",
+      "allowed_transitions": ["actionable", "contextual"]
+    },
+    "actionable": {
+      "description": "High-priority intelligence suitable for follow-up",
+      "required_fields": ["scope_match", "confidence", "evidence"],
+      "allowed_transitions": ["validated", "candidate"]
+    },
+    "validated": {
+      "description": "Human-confirmed intelligence with evidence",
+      "required_fields": ["hil_confirmed", "evidence"],
+      "allowed_transitions": ["actionable"]
+    },
+    "suppressed": {
+      "description": "Legacy label retained for compatibility (treat as contextual)",
+      "allowed_transitions": ["candidate", "raw"]
+    }
+  },
+  "labels": {
+    "actionable_is_label_only": true,
+    "do_not_delete": true,
+    "out_of_scope_label": "contextual"
+  }
+}

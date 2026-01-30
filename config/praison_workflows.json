@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "osint": [
+    ".praison/workflows/osint_discovery.yaml",
+    ".praison/workflows/osint_enumeration.yaml",
+    ".praison/workflows/osint_exposure.yaml",
+    ".praison/workflows/osint_attribution.yaml",
+    ".praison/workflows/osint_triage.yaml"
+  ]
+}

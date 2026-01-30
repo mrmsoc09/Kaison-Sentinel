@@ -1,0 +1,15 @@
+{
+  "batch": 1,
+  "vertical": "healthcare",
+  "sources": [
+    {"id":"healthdata_hhs","name":"HealthData.gov","type":"open_data","access":"free","url":"https://healthdata.gov"},
+    {"id":"hhs_dev","name":"HHS Developers' Center","type":"api","access":"free","url":"https://www.hhs.gov/web/developer/index.html"},
+    {"id":"cdc_data","name":"CDC Data (data.cdc.gov)","type":"open_data","access":"free","url":"https://data.cdc.gov"},
+    {"id":"cms_data","name":"CMS Data","type":"open_data","access":"free","url":"https://data.cms.gov"},
+    {"id":"openfda","name":"openFDA API","type":"api","access":"free","url":"https://open.fda.gov/apis/"},
+    {"id":"clinicaltrials","name":"ClinicalTrials.gov API","type":"api","access":"free","url":"https://clinicaltrials.gov/data-api/api"},
+    {"id":"ncbi_eutils","name":"NCBI E-utilities","type":"api","access":"free","url":"https://www.ncbi.nlm.nih.gov/home/develop/api/"},
+    {"id":"niaid_api","name":"NIAID Data Ecosystem API","type":"api","access":"free","url":"https://data.niaid.nih.gov/knowledge-center/accessing-the-metadata-api"},
+    {"id":"data_gov","name":"Data.gov","type":"open_data","access":"free","url":"https://www.data.gov"}
+  ]
+}
