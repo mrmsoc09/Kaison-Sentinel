@@ -68,6 +68,14 @@ def _effective_kind(module_ids: List[str] | None, requested: str) -> str:
     return "all"
 
 
+def _apply_scope_overrides(options: Dict[str, Any], scope: Dict[str, Any]) -> Dict[str, Any]:
+    out = dict(options)
+    for key in ("auto_install_tools", "allow_install"):
+        if key in scope:
+            out[key] = scope.get(key)
+    return out
+
+
 def plan_scan(scope: Dict[str, Any], mode: str = "plan", module_kind: str = "all", module_ids: List[str] | None = None) -> RunRecord:
     if not enforce_scope(scope):
         raise ValueError("scope_allowlist_required")
@@ -83,6 +91,7 @@ def plan_scan(scope: Dict[str, Any], mode: str = "plan", module_kind: str = "all
 def run_plan(scope: Dict[str, Any]) -> Dict[str, Any]:
     module_kind = scope.get("module_kind", "all")
     options = get_options(module_kind)
+    options = _apply_scope_overrides(options, scope)
     routing = route_for_context(scope)
     scan_prompt = render_prompt(routing["scan_prompt"], {
         "goal": scope.get("goal", ""),
@@ -98,6 +107,7 @@ def run_plan(scope: Dict[str, Any]) -> Dict[str, Any]:
         module_ids = resolved["modules"]
     module_kind_effective = _effective_kind(module_ids, module_kind)
     options = get_options(module_kind_effective)
+    options = _apply_scope_overrides(options, scope)
     record = plan_scan(scope, mode="plan", module_kind=module_kind_effective, module_ids=module_ids)
     module_plans: List[Dict[str, Any]] = []
     modules = list_modules("all") if module_ids else list_modules(module_kind)
@@ -143,6 +153,7 @@ def run_plan(scope: Dict[str, Any]) -> Dict[str, Any]:
 def run_execute(scope: Dict[str, Any], approved: bool = False, mitigation_tier: str = "standard") -> Dict[str, Any]:
     module_kind = scope.get("module_kind", "all")
     options = get_options(module_kind)
+    options = _apply_scope_overrides(options, scope)
     role = scope.get("role") or "operator"
     if scope.get("validation_confirmed") and not scope.get("validation_confirmed_at"):
         scope["validation_confirmed_at"] = __import__("datetime").datetime.utcnow().isoformat()
@@ -155,6 +166,7 @@ def run_execute(scope: Dict[str, Any], approved: bool = False, mitigation_tier: 
         module_ids = resolved["modules"]
     module_kind_effective = _effective_kind(module_ids, module_kind)
     options = get_options(module_kind_effective)
+    options = _apply_scope_overrides(options, scope)
     record = plan_scan(scope, mode="execute", module_kind=module_kind_effective, module_ids=module_ids)
     record.approvals.approved = approved
     if record.approvals.required and not approved:
