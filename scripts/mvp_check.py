@@ -39,7 +39,7 @@ def main() -> None:
     vuln_plan = run_plan({"allowlist": ["example.com"], "module_kind": "vuln"})
     report["checks"].append({"name": "plan_vuln", "ok": "plan" in vuln_plan})
 
-    path = Path("/home/user23/KAI/builds/Kai 1.1/outputs/mvp_check.json")
+    path = ROOT / "outputs" / "mvp_check.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2))
     print(json.dumps({"status": "ok", "path": str(path)}, ensure_ascii=False, indent=2))

@@ -1,5 +1,9 @@
 # Kaison Sentinel
 
+![Status](https://img.shields.io/badge/status-mvp-ready?style=flat-square&color=gold)
+![Mode](https://img.shields.io/badge/mode-offline--first?style=flat-square&color=orange)
+![Governance](https://img.shields.io/badge/governance-HiL%20gated?style=flat-square&color=blue)
+
 This repository contains the Kaison Sentinel offline-first build for:
 - ingesting local files from `/home/user23/KAI`
 - generating self-supervised training data
