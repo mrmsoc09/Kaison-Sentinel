@@ -4,6 +4,8 @@ set -euo pipefail
 # Installs a core vulnerability toolset (Ubuntu 22.04 compatible).
 # Run manually with sudo privileges.
 
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
 SUDO="sudo"
 if [ "${EUID:-$(id -u)}" -eq 0 ]; then
   SUDO=""
@@ -83,8 +85,8 @@ fi
 
 # Python-based tools (optional) - isolate per tool to avoid dependency conflicts
 if command -v python3 >/dev/null 2>&1; then
-  TOOLS_BIN="/home/user23/KAI/builds/Kai 1.1/tools/bin"
-  VENV_ROOT="/home/user23/KAI/builds/Kai 1.1/.venv-tools"
+  TOOLS_BIN="$ROOT/tools/bin"
+  VENV_ROOT="$ROOT/.venv-tools"
   mkdir -p "$TOOLS_BIN" "$VENV_ROOT"
 
   setup_tool_venv () {

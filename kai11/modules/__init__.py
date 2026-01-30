@@ -1,1 +1,1 @@
-"""Module registry for Kai 1.1."""
+"""Module registry for Kaison Sentinel."""

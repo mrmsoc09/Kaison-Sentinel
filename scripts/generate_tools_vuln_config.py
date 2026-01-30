@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-BASE = Path("/home/user23/KAI/builds/Kai 1.1")
+BASE = Path(__file__).resolve().parents[1]
 INPUT = BASE / "data" / "vuln_tools.json"
 OUT = BASE / "config" / "tools_vuln.json"
 

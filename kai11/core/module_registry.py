@@ -3,7 +3,9 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any
 
-REGISTRY_PATH = Path("/home/user23/KAI/builds/Kai 1.1/modules/registry.json")
+from .config import BUILD_ROOT
+
+REGISTRY_PATH = BUILD_ROOT / "modules" / "registry.json"
 
 
 def load_registry() -> Dict[str, Any]:

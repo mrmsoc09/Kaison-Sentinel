@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-export PYTHONPATH="/home/user23/KAI/builds/Kai 1.1"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONPATH="$ROOT"
 python3 -m kai11.cli --mode plan --scope '{"allowlist":["example.com"]}'

@@ -2,7 +2,7 @@
 
 ## Generate a local tool health report
 ```
-python3 /home/user23/KAI/builds/Kai\ 1.1/scripts/bootstrap_tools.py
+python3 scripts/bootstrap_tools.py
 ```
 
 ## View health report

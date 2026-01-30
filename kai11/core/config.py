@@ -1,7 +1,7 @@
 from pathlib import Path
 
-ROOT = Path("/home/user23/KAI")
-BUILD_ROOT = Path("/home/user23/KAI/builds/Kai 1.1")
+BUILD_ROOT = Path(__file__).resolve().parents[2]
+ROOT = BUILD_ROOT
 OUTPUT_DIR = BUILD_ROOT / "outputs"
 RUNS_DIR = OUTPUT_DIR / "runs"
 REPORTS_DIR = OUTPUT_DIR / "reports"

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-exec "/home/user23/KAI/builds/Kai 1.1/.venv-tools/semgrep/bin/semgrep" "semgrep semgrep"
+exec semgrep "$@"
