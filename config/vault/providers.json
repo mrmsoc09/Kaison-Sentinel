@@ -36,6 +36,42 @@
       "docs": "https://docs.github.com/en/rest",
       "rate_limit": "varies",
       "notes": "Use fine-grained PAT"
+    },
+    {
+      "id": "source.openai",
+      "name": "OpenAI",
+      "category": "llm",
+      "auth_type": "api_key",
+      "docs": "https://platform.openai.com/docs",
+      "rate_limit": "varies",
+      "notes": "Store API key in vault."
+    },
+    {
+      "id": "source.anthropic",
+      "name": "Anthropic",
+      "category": "llm",
+      "auth_type": "api_key",
+      "docs": "https://docs.anthropic.com/",
+      "rate_limit": "varies",
+      "notes": "Store API key in vault."
+    },
+    {
+      "id": "source.gemini",
+      "name": "Google Gemini",
+      "category": "llm",
+      "auth_type": "api_key",
+      "docs": "https://ai.google.dev/",
+      "rate_limit": "varies",
+      "notes": "Store API key or Vertex service account."
+    },
+    {
+      "id": "source.azure_openai",
+      "name": "Azure OpenAI",
+      "category": "llm",
+      "auth_type": "api_key",
+      "docs": "https://learn.microsoft.com/azure/ai-services/openai/",
+      "rate_limit": "varies",
+      "notes": "Store API key in vault."
     }
   ]
 }

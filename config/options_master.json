@@ -33,6 +33,20 @@
       "enabled": false,
       "action": "archive"
     },
+    "vault_backend": "local",
+    "auto_install_tools": true,
+    "allow_install": false,
+    "budget_default_tier": "standard",
+    "stealth_default": "standard",
+    "scan_duration_days": 42,
+    "swap_window_days": 14,
+    "pool_size_min": 50,
+    "pool_size_max": 500,
+    "budget_presets": {
+      "economy": {"daily_budget_usd": 10, "stealth": "high", "max_parallel_cap": 2},
+      "standard": {"daily_budget_usd": 25, "stealth": "standard", "max_parallel_cap": 4},
+      "max": {"daily_budget_usd": 100, "stealth": "low", "max_parallel_cap": 8}
+    },
     "langstudio": {
       "wrap_tools": true
     },

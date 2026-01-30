@@ -52,6 +52,27 @@
         <input id="planPlaybooks" placeholder="Playbook IDs (comma-separated)" />
         <input id="planMitre" placeholder="MITRE technique id (optional)" />
         <div class="row">
+          <select id="planBudgetTier">
+            <option value="economy">Budget: Economy</option>
+            <option value="standard" selected>Budget: Standard</option>
+            <option value="max">Budget: Max</option>
+          </select>
+          <input id="planBudgetDaily" type="number" min="0" step="1" placeholder="Daily budget (USD)" />
+        </div>
+        <div class="row">
+          <select id="planStealth">
+            <option value="high">Stealth: High</option>
+            <option value="standard" selected>Stealth: Standard</option>
+            <option value="low">Stealth: Low</option>
+          </select>
+          <input id="planDuration" type="number" min="1" step="1" placeholder="Scan duration (days)" />
+        </div>
+        <div class="row">
+          <input id="planPoolSize" type="number" min="1" step="1" placeholder="Pool size (optional)" />
+          <input id="planActiveLimit" type="number" min="1" step="1" placeholder="Active scans (optional)" />
+        </div>
+        <label><input id="planAutoInstall" type="checkbox" /> Auto‑install missing tools</label>
+        <div class="row">
           <select id="planKind">
             <option value="osint">OSINT</option>
             <option value="vuln">Vuln</option>
@@ -139,12 +160,24 @@
       </div>
     </div>
     <div class="panel">
+      <div class="panel-title">LLM Providers</div>
+      <div class="panel-body">
+        <pre id="llmProviders" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
       <div class="panel-title">Pipeline Status</div>
       <div class="panel-body">
         <div class="chip">OSINT circle: enabled</div>
         <div class="chip">Vuln circle: enabled</div>
         <div class="chip">LangStudio: enabled</div>
         <div class="chip">Network: gated</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Autonomy Status</div>
+      <div class="panel-body">
+        <pre id="autonomyStatus" class="results"></pre>
       </div>
     </div>
     <div class="panel">
@@ -383,5 +416,7 @@
   <script src="/jobs.js"></script>
   <script src="/evidence.js"></script>
   <script src="/mitre.js"></script>
+  <script src="/autonomy.js"></script>
+  <script src="/llm.js"></script>
 </body>
 </html>

@@ -33,6 +33,8 @@ from .retention import apply_retention
 from .run_store_pg import store_run_metadata
 from .webhooks import post_webhook
 from .report_context import build_report_context
+from .scan_planner import build_scan_plan
+from .autonomy import autonomy_insights
 from .validation import validation_checklist
 from .graph_builder import write_graph
 from .vuln_findings import normalize_vuln_result
@@ -110,6 +112,9 @@ def run_plan(scope: Dict[str, Any]) -> Dict[str, Any]:
         record.plan["playbook_ids"] = playbook_ids
         if resolved.get("missing"):
             record.plan["playbook_missing"] = resolved.get("missing")
+    scan_plan = build_scan_plan(scope, options, record.run_id)
+    record.plan.update(scan_plan)
+    record.plan["autonomy"] = autonomy_insights(options)
     evidence_path = write_evidence_bundle(record.run_id, module_plans)
     append_audit({"event": "plan", "run_id": record.run_id, "modules": record.plan["modules"]})
     orchestration = run_orchestration({
@@ -128,6 +133,9 @@ def run_plan(scope: Dict[str, Any]) -> Dict[str, Any]:
         "scan_prompt": scan_prompt,
         "orchestration": orchestration,
         "options": options,
+        "scan_profile": scan_plan.get("scan_profile"),
+        "scan_pool": scan_plan.get("scan_pool"),
+        "autonomy": record.plan.get("autonomy"),
         "evidence_bundle": evidence_path,
     }
 

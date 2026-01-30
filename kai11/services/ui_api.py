@@ -29,6 +29,8 @@ from ..core.export_bundle import build_bundle
 from ..core.task_queue import list_jobs, enqueue_task
 from ..core.programs import list_programs
 from ..core.program_sync import program_sync_status
+from ..core.hardware import hardware_profile
+from ..core.llm_registry import load_llm_profiles
 from ..core.run_history import list_runs
 from ..core.mitre_planner import list_techniques as list_mitre_techniques, build_mitre_plan, export_mitre_bundle
 
@@ -136,6 +138,10 @@ def handle_assets(path: str, query: str = ""):
         return 200, {"programs": list_programs()}
     if path == "/api/programs/sync/status":
         return 200, program_sync_status()
+    if path == "/api/hardware":
+        return 200, hardware_profile()
+    if path == "/api/llm/providers":
+        return 200, load_llm_profiles()
     if path == "/api/jobs":
         return 200, list_jobs()
     if path == "/api/exports/bundle":

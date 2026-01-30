@@ -78,6 +78,13 @@ async function doPlan() {
     .map(s => s.trim())
     .filter(Boolean);
   const mitreId = document.getElementById('planMitre')?.value.trim();
+  const budgetTier = document.getElementById('planBudgetTier')?.value;
+  const dailyBudget = parseFloat(document.getElementById('planBudgetDaily')?.value || '');
+  const stealth = document.getElementById('planStealth')?.value;
+  const durationDays = parseInt(document.getElementById('planDuration')?.value || '', 10);
+  const poolSize = parseInt(document.getElementById('planPoolSize')?.value || '', 10);
+  const activeLimit = parseInt(document.getElementById('planActiveLimit')?.value || '', 10);
+  const autoInstall = document.getElementById('planAutoInstall')?.checked;
   const kind = document.getElementById('planKind').value;
   const role = document.getElementById('planRole').value;
   const reportFormat = document.getElementById('reportFormat')?.value;
@@ -93,6 +100,13 @@ async function doPlan() {
           constraints: constraints,
           playbook_ids: playbooks || [],
           mitre_technique_id: mitreId || undefined,
+          budget_tier: budgetTier || undefined,
+          daily_budget_usd: Number.isFinite(dailyBudget) ? dailyBudget : undefined,
+          stealth: stealth || undefined,
+          scan_duration_days: Number.isFinite(durationDays) ? durationDays : undefined,
+          scan_pool_size: Number.isFinite(poolSize) ? poolSize : undefined,
+          max_active_scans: Number.isFinite(activeLimit) ? activeLimit : undefined,
+          auto_install_tools: !!autoInstall,
           module_kind: kind,
           role: role,
           report_format_id: reportFormat || undefined

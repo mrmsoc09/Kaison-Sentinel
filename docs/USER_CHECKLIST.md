@@ -16,6 +16,10 @@
 - [ ] Goal
 - [ ] Targets (allowlist)
 - [ ] Constraints
+- [ ] Budget tier + daily budget
+- [ ] Stealth level
+- [ ] Scan duration + pool size + active scans
+- [ ] Auto-install tools (if allowed)
 - [ ] Playbook IDs (comma-separated)
 - [ ] MITRE Technique ID
 - [ ] Module Kind: OSINT / Vuln / All
@@ -42,6 +46,7 @@
 ## UI — Setup Hub
 - [ ] Mark setup steps complete/in progress
 - [ ] Program scopes cache sync (Sync now)
+- [ ] Vault backend + LLM + DB + tool installer + budget profile
 
 ## UI — Proxy Overrides
 - [ ] HTTP proxy

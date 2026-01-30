@@ -127,6 +127,10 @@ class SearchHandler(BaseHTTPRequestHandler):
             return self._send_file(UI_DIR / "evidence.js", "text/javascript; charset=utf-8")
         if parsed.path == "/mitre.js":
             return self._send_file(UI_DIR / "mitre.js", "text/javascript; charset=utf-8")
+        if parsed.path == "/autonomy.js":
+            return self._send_file(UI_DIR / "autonomy.js", "text/javascript; charset=utf-8")
+        if parsed.path == "/llm.js":
+            return self._send_file(UI_DIR / "llm.js", "text/javascript; charset=utf-8")
         if parsed.path == "/search":
             qs = parse_qs(parsed.query)
             query = (qs.get("q") or [""])[0]

@@ -19,6 +19,36 @@
       "notes": "Add API keys to the vault with required scopes."
     },
     {
+      "id": "vault_backend",
+      "title": "Vault backend",
+      "status": "todo",
+      "notes": "Configure local vault or HashiCorp Vault (VAULT_ADDR + VAULT_TOKEN)."
+    },
+    {
+      "id": "llm_setup",
+      "title": "LLM setup",
+      "status": "todo",
+      "notes": "Add LLM API keys or configure local LLM endpoint."
+    },
+    {
+      "id": "db_setup",
+      "title": "Database setup",
+      "status": "todo",
+      "notes": "Configure Postgres/pgvector (optional for MVP)."
+    },
+    {
+      "id": "tool_install",
+      "title": "Tool installer",
+      "status": "todo",
+      "notes": "Enable auto-install or run install scripts."
+    },
+    {
+      "id": "scan_budget",
+      "title": "Budget & stealth profile",
+      "status": "todo",
+      "notes": "Select budget tier and stealth level for scan planning."
+    },
+    {
       "id": "program_scopes",
       "title": "Program scopes cache",
       "status": "todo",

@@ -11,6 +11,7 @@ from .limits import rate_limit
 from .tool_policy import tool_allowed
 from .hooks import before_tool, after_tool
 from .tool_registry import category_meta
+from .options import get_options
 
 CONF_OSINT = BUILD_ROOT / "config" / "tools_osint.json"
 CONF_VULN = BUILD_ROOT / "config" / "tools_vuln.json"
@@ -83,6 +84,12 @@ def run_tool(tool_id: str, target: str, options: Dict[str, Any] | None = None) -
             return {"tool": tool_id, "status": "blocked", "reason": "category_not_allowed", "category": category}
 
     if not shutil.which(binary):
+        auto_opts = options or get_options("all")
+        if auto_opts.get("auto_install_tools"):
+            res = _attempt_install(t, auto_opts)
+            if res.get("status") == "install_started":
+                return {"tool": tool_id, "status": "install_started", "binary": binary, "install": res}
+            return {"tool": tool_id, "status": "missing_binary", "binary": binary, "install": res}
         return {"tool": tool_id, "status": "missing_binary", "binary": binary}
 
     meta = category_meta(category)
@@ -137,3 +144,21 @@ def run_tool(tool_id: str, target: str, options: Dict[str, Any] | None = None) -
         return {"tool": tool_id, "status": "timeout"}
     except Exception as e:
         return {"tool": tool_id, "status": "error", "error": str(e)}
+
+
+def _attempt_install(tool: Dict[str, Any], options: Dict[str, Any]) -> Dict[str, Any]:
+    if not options.get("allow_install") and os.getenv("KAI_ALLOW_INSTALL") != "1":
+        return {"status": "blocked", "reason": "install_not_allowed"}
+    module_id = tool.get("module_id") or ""
+    script = None
+    if module_id.startswith("osint"):
+        script = BUILD_ROOT / "scripts" / "install_osint_core.sh"
+    elif module_id.startswith("vuln"):
+        script = BUILD_ROOT / "scripts" / "install_vuln_core.sh"
+    if not script or not script.exists():
+        return {"status": "error", "reason": "install_script_missing"}
+    try:
+        subprocess.run(["bash", str(script)], check=True)
+        return {"status": "install_started", "script": str(script)}
+    except Exception as exc:  # noqa: BLE001
+        return {"status": "error", "reason": str(exc)}

@@ -8,6 +8,7 @@
 2) Set required env:
    - `KAI_ENCRYPTION_KEY="..."` or `KAI_ALLOW_PLAINTEXT=1`
    - `KAI_ALLOW_NETWORK=1` (only if executing scans)
+   - `KAI_ALLOW_INSTALL=1` (optional: auto-install missing tools)
 3) Start Kaison Sentinel API/UI
    - `python3 -m kai11.services.server --index ./outputs/vector_store.jsonl --host 127.0.0.1 --port 7878`
 4) Optional async worker
@@ -28,3 +29,10 @@
 - Auto-sync (optional):
   - Enable in `config/options_override.json`:
     - `"program_sync": {"enabled": true, "auto_trigger": true, "interval_hours": 24}`
+
+## Vault Backend
+- Local vault (default): encrypted files under `config/vault/keys`
+- HashiCorp Vault:
+  - Set `KAI_VAULT_BACKEND=hashicorp`
+  - Set `VAULT_ADDR` and `VAULT_TOKEN`
+  - Keys stored under `secret/kaison/<source_id>`

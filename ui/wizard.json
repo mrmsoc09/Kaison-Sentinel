@@ -5,7 +5,10 @@
       "title": "Scope & Authorization",
       "fields": [
         "allowlist",
-        "program"
+        "program",
+        "budget_tier",
+        "daily_budget_usd",
+        "stealth"
       ]
     },
     {

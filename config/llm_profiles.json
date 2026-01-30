@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "providers": [
+    {
+      "id": "local_ollama",
+      "name": "Ollama (local)",
+      "type": "local",
+      "endpoint": "http://localhost:11434",
+      "models": ["llama3", "mistral", "qwen2.5"],
+      "notes": "No API key required; runs on local host."
+    },
+    {
+      "id": "local_lmstudio",
+      "name": "LM Studio (local)",
+      "type": "local",
+      "endpoint": "http://localhost:1234",
+      "models": ["local-model"],
+      "notes": "Set endpoint to LM Studio server."
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "type": "cloud",
+      "env_key": "OPENAI_API_KEY",
+      "notes": "Use vault source: source.openai"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "type": "cloud",
+      "env_key": "ANTHROPIC_API_KEY",
+      "notes": "Use vault source: source.anthropic"
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / Vertex AI",
+      "type": "cloud",
+      "env_key": "GOOGLE_APPLICATION_CREDENTIALS",
+      "notes": "Use service account key or API key."
+    }
+  ]
+}

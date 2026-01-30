@@ -7,7 +7,7 @@ See `docs/USER_CHECKLIST.md` for the full options checklist.
 
 1) Open UI at `http://localhost:7878`
 2) (Optional) Use **MITRE Planner** to auto‑fill playbooks + technique
-3) Fill **Guided Plan** (goal + targets + playbook IDs)
+3) Fill **Guided Plan** (goal + targets + budget/stealth + playbook IDs)
 4) (Optional) Refresh program scope cache
    - `KAI_ALLOW_NETWORK=1 python3 scripts/fetch_program_guidelines.py --allow-network`
    - Or use **Setup Hub → Program scopes cache → Sync now**

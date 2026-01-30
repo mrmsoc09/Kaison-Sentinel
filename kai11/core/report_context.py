@@ -68,6 +68,9 @@ def build_report_context(scope: Dict[str, Any], assets: List[str], findings: Lis
     if isinstance(playbook_ids, str):
         playbook_ids = [p.strip() for p in playbook_ids.split(",") if p.strip()]
     playbook_context = ", ".join(playbook_ids) if playbook_ids else "None"
+    budget = scope.get("budget_tier") or "standard"
+    stealth = scope.get("stealth") or "standard"
+    daily_budget = scope.get("daily_budget_usd")
     return {
         "severity_counts": counts,
         "scope_summary": scope_summary,
@@ -78,4 +81,5 @@ def build_report_context(scope: Dict[str, Any], assets: List[str], findings: Lis
         "mitre_context": mitre_context or "None",
         "playbook_context": playbook_context,
         "validation_recommendation": _validation_recommendation(counts),
+        "scan_profile": f"budget={budget}, stealth={stealth}, daily_budget_usd={daily_budget}",
     }
