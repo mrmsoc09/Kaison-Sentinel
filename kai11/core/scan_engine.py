@@ -256,6 +256,12 @@ def run_execute(scope: Dict[str, Any], approved: bool = False, mitigation_tier: 
     hil_alert = maybe_hil_alert(loop_state.get("loops", {}).get("hil_cadence", {}), options, record.run_id, scope)
     loop_state_path = write_loop_state(record.run_id, loop_state)
 
+    report_paths = {}
+    for r in report_bundle:
+        fmt = (r.get("format") or "md").lower()
+        ext = "md" if fmt == "md" else fmt
+        report_paths[fmt] = write_report(record.run_id, r.get("content", ""), ext=ext)
+
     run_record = {
         "run_id": record.run_id,
         "mode": record.mode,
@@ -283,11 +289,6 @@ def run_execute(scope: Dict[str, Any], approved: bool = False, mitigation_tier: 
     run_record["eval_path"] = eval_path
     evidence_path = write_evidence_bundle(record.run_id, module_exec)
     run_path = write_run(record.run_id, run_record)
-    report_paths = {}
-    for r in report_bundle:
-        fmt = (r.get("format") or "md").lower()
-        ext = "md" if fmt == "md" else fmt
-        report_paths[fmt] = write_report(record.run_id, r.get("content", ""), ext=ext)
     report_path = report_paths.get("md") or next(iter(report_paths.values()), "")
     redaction_path = write_redaction_summary(record.run_id)
     graph_path = write_graph(record.run_id, all_artifacts)
