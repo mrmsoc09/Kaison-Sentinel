@@ -3,6 +3,9 @@ import time
 
 from .core.task_queue import fetch_next_task, mark_job
 from .core.program_sync import sync_program_scopes, maybe_auto_sync
+from .core.scope_parser import parse_cached_scopes
+from .core.scheduler import queue_active_plan_tasks
+from .core.options import get_options
 from .core.scan_engine import run_execute, run_plan
 
 
@@ -19,6 +22,12 @@ def run_worker(poll_interval: int = 3) -> None:
             mode = task.get("mode", "execute")
             if mode == "program_sync":
                 result = sync_program_scopes(force=bool(task.get("force")))
+            elif mode == "program_parse":
+                result = parse_cached_scopes()
+            elif mode == "schedule_plan":
+                scope = task.get("scope") or {}
+                options = get_options(scope.get("module_kind", "osint"))
+                result = queue_active_plan_tasks(scope, options)
             else:
                 scope = task.get("scope") or {}
                 if mode == "plan":

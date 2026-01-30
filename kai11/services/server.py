@@ -10,7 +10,7 @@ from ..core.api_auth import auth_enabled, validate_api_key, header_name
 from ..core.api_limits import check_rate_limit
 from ..core.rbac import has_permission
 from ..core.config import BUILD_ROOT
-from .ui_api import handle_assets, handle_plan, handle_execute, handle_add_key, handle_save_playbook, handle_import_playbooks, handle_queue_email, handle_attach_evidence, handle_email_draft, handle_profile_update, handle_email_config_update, handle_setup_update, handle_options_override, handle_execute_async, handle_mitre_plan, handle_mitre_export, handle_program_sync
+from .ui_api import handle_assets, handle_plan, handle_execute, handle_add_key, handle_save_playbook, handle_import_playbooks, handle_queue_email, handle_attach_evidence, handle_email_draft, handle_profile_update, handle_email_config_update, handle_setup_update, handle_options_override, handle_execute_async, handle_mitre_plan, handle_mitre_export, handle_program_sync, handle_program_parse, handle_scheduler_preview, handle_scheduler_run
 
 UI_DIR = BUILD_ROOT / "ui"
 
@@ -131,6 +131,8 @@ class SearchHandler(BaseHTTPRequestHandler):
             return self._send_file(UI_DIR / "autonomy.js", "text/javascript; charset=utf-8")
         if parsed.path == "/llm.js":
             return self._send_file(UI_DIR / "llm.js", "text/javascript; charset=utf-8")
+        if parsed.path == "/scheduler.js":
+            return self._send_file(UI_DIR / "scheduler.js", "text/javascript; charset=utf-8")
         if parsed.path == "/search":
             qs = parse_qs(parsed.query)
             query = (qs.get("q") or [""])[0]
@@ -372,6 +374,36 @@ class SearchHandler(BaseHTTPRequestHandler):
             except Exception:
                 payload = {}
             status, data = handle_program_sync(payload)
+            return self._send_json(status, data)
+        if parsed.path == "/api/programs/parse":
+            auth = self._ensure_auth("plan")
+            if auth is None:
+                return
+            status, data = handle_program_parse({})
+            return self._send_json(status, data)
+        if parsed.path == "/api/scheduler/preview":
+            auth = self._ensure_auth("plan")
+            if auth is None:
+                return
+            length = int(self.headers.get("Content-Length", "0"))
+            raw = self.rfile.read(length).decode("utf-8") if length else "{}"
+            try:
+                payload = json.loads(raw)
+            except Exception:
+                payload = {}
+            status, data = handle_scheduler_preview(payload)
+            return self._send_json(status, data)
+        if parsed.path == "/api/scheduler/run":
+            auth = self._ensure_auth("plan")
+            if auth is None:
+                return
+            length = int(self.headers.get("Content-Length", "0"))
+            raw = self.rfile.read(length).decode("utf-8") if length else "{}"
+            try:
+                payload = json.loads(raw)
+            except Exception:
+                payload = {}
+            status, data = handle_scheduler_run(payload)
             return self._send_json(status, data)
         self._send_json(404, {"error": "not_found"})
 

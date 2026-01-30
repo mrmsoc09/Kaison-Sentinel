@@ -181,6 +181,15 @@
       </div>
     </div>
     <div class="panel">
+      <div class="panel-title">Scheduler</div>
+      <div class="panel-body">
+        <button id="parseScopesBtn">Parse Scope Cache</button>
+        <button id="schedulerPreviewBtn">Preview Schedule</button>
+        <button id="schedulerRunBtn" class="primary">Queue Plan Tasks</button>
+        <pre id="schedulerStatus" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
       <div class="panel-title">Run Outputs</div>
       <div class="panel-body">
         <input id="runIdLookup" placeholder="run_id (optional)" />
@@ -418,5 +427,6 @@
   <script src="/mitre.js"></script>
   <script src="/autonomy.js"></script>
   <script src="/llm.js"></script>
+  <script src="/scheduler.js"></script>
 </body>
 </html>

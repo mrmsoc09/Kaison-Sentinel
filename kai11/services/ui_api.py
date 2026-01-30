@@ -29,6 +29,8 @@ from ..core.export_bundle import build_bundle
 from ..core.task_queue import list_jobs, enqueue_task
 from ..core.programs import list_programs
 from ..core.program_sync import program_sync_status
+from ..core.scope_parser import parse_cached_scopes, load_parsed_scopes
+from ..core.scheduler import scheduler_status, build_schedule, queue_active_plan_tasks
 from ..core.hardware import hardware_profile
 from ..core.llm_registry import load_llm_profiles
 from ..core.run_history import list_runs
@@ -142,6 +144,10 @@ def handle_assets(path: str, query: str = ""):
         return 200, hardware_profile()
     if path == "/api/llm/providers":
         return 200, load_llm_profiles()
+    if path == "/api/programs/scopes":
+        return 200, load_parsed_scopes()
+    if path == "/api/scheduler/status":
+        return 200, scheduler_status()
     if path == "/api/jobs":
         return 200, list_jobs()
     if path == "/api/exports/bundle":
@@ -250,6 +256,29 @@ def handle_program_sync(payload: dict):
     task = {
         "mode": "program_sync",
         "force": bool(payload.get("force")),
+    }
+    return 202, enqueue_task(task)
+
+
+def handle_program_parse(payload: dict):
+    task = {
+        "mode": "program_parse",
+    }
+    return 202, enqueue_task(task)
+
+
+def handle_scheduler_preview(payload: dict):
+    scope = payload.get("scope") or {}
+    options = get_options(scope.get("module_kind", "osint"))
+    return 200, build_schedule(scope, options)
+
+
+def handle_scheduler_run(payload: dict):
+    scope = payload.get("scope") or {}
+    options = get_options(scope.get("module_kind", "osint"))
+    task = {
+        "mode": "schedule_plan",
+        "scope": scope,
     }
     return 202, enqueue_task(task)
 

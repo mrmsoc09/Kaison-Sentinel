@@ -46,3 +46,11 @@
 ## Learning Loop Outputs
 - Training examples: `outputs/training_data.jsonl`
 - Training vector store: `outputs/training_vector_store.jsonl`
+
+## Scope Parsing & Scheduler
+- Parse cached scope pages into allowlists:
+  - `curl -X POST http://127.0.0.1:7878/api/programs/parse`
+- Preview schedule (plan-only):
+  - `curl -X POST http://127.0.0.1:7878/api/scheduler/preview -H 'Content-Type: application/json' -d '{"scope":{"module_kind":"osint"}}'`
+- Queue plan tasks from schedule:
+  - `curl -X POST http://127.0.0.1:7878/api/scheduler/run -H 'Content-Type: application/json' -d '{"scope":{"module_kind":"osint"}}'`

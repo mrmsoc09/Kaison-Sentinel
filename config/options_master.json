@@ -47,6 +47,11 @@
       "standard": {"daily_budget_usd": 25, "stealth": "standard", "max_parallel_cap": 4},
       "max": {"daily_budget_usd": 100, "stealth": "low", "max_parallel_cap": 8}
     },
+    "stealth_profiles": {
+      "high": {"min_interval_ms": 1500},
+      "standard": {"min_interval_ms": 500},
+      "low": {"min_interval_ms": 100}
+    },
     "langstudio": {
       "wrap_tools": true
     },

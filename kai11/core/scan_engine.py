@@ -75,6 +75,13 @@ def _apply_scope_overrides(options: Dict[str, Any], scope: Dict[str, Any]) -> Di
     for key in ("auto_install_tools", "allow_install"):
         if key in scope:
             out[key] = scope.get(key)
+    stealth = scope.get("stealth")
+    if stealth:
+        profiles = out.get("stealth_profiles", {})
+        profile = profiles.get(stealth, {})
+        if profile.get("min_interval_ms") is not None:
+            out.setdefault("rate_limits", {})
+            out["rate_limits"]["global_min_interval_ms"] = int(profile.get("min_interval_ms"))
     return out
 
 
