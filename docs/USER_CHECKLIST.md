@@ -48,6 +48,11 @@
 - [ ] Program scopes cache sync (Sync now)
 - [ ] Vault backend + LLM + DB + tool installer + budget profile
 
+## UI — Scheduler
+- [ ] Parse scope cache
+- [ ] Preview schedule
+- [ ] Queue plan tasks
+
 ## UI — Proxy Overrides
 - [ ] HTTP proxy
 - [ ] HTTPS proxy
@@ -93,6 +98,7 @@
 - [ ] `config/options_master.json` (global options)
 - [ ] `config/options_override.json` (runtime overrides)
 - [ ] `config/programs.json` (program list + scope URLs)
+- [ ] `outputs/program_scopes_parsed.json` (parsed allowlists)
 - [ ] `config/policy.json` + `config/policy_rules.json` (RBAC/deny rules)
 - [ ] `config/tools_osint.json` / `config/tools_vuln.json` (tool configs)
 - [ ] `config/tool_registry.json` / `config/tool_substitutes.json`

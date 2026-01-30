@@ -133,6 +133,8 @@ class SearchHandler(BaseHTTPRequestHandler):
             return self._send_file(UI_DIR / "llm.js", "text/javascript; charset=utf-8")
         if parsed.path == "/scheduler.js":
             return self._send_file(UI_DIR / "scheduler.js", "text/javascript; charset=utf-8")
+        if parsed.path == "/platform_options.js":
+            return self._send_file(UI_DIR / "platform_options.js", "text/javascript; charset=utf-8")
         if parsed.path == "/search":
             qs = parse_qs(parsed.query)
             query = (qs.get("q") or [""])[0]

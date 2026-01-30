@@ -72,6 +72,15 @@
       "docs": "https://learn.microsoft.com/azure/ai-services/openai/",
       "rate_limit": "varies",
       "notes": "Store API key in vault."
+    },
+    {
+      "id": "source.db_password",
+      "name": "Postgres Password",
+      "category": "database",
+      "auth_type": "password",
+      "docs": "local",
+      "rate_limit": "n/a",
+      "notes": "Store database password for pgvector/run DB."
     }
   ]
 }

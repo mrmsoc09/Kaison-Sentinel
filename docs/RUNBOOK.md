@@ -54,3 +54,7 @@
   - `curl -X POST http://127.0.0.1:7878/api/scheduler/preview -H 'Content-Type: application/json' -d '{"scope":{"module_kind":"osint"}}'`
 - Queue plan tasks from schedule:
   - `curl -X POST http://127.0.0.1:7878/api/scheduler/run -H 'Content-Type: application/json' -d '{"scope":{"module_kind":"osint"}}'`
+
+## Autonomy Repair
+- Run auto-repair (tool install + sync + parse):
+  - `curl -X GET http://127.0.0.1:7878/api/autonomy/repair`

@@ -2,16 +2,28 @@ import os
 from datetime import datetime
 from typing import Dict, Any
 
+from .options import get_options
+from .vault import get_key
+
 
 def _dsn() -> str:
     dsn = os.getenv("KAI_PGVECTOR_DSN")
     if dsn:
         return dsn
-    host = os.getenv("KAI_PG_HOST", "localhost")
-    port = os.getenv("KAI_PG_PORT", "5432")
-    db = os.getenv("KAI_PG_DB", "kaison")
-    user = os.getenv("KAI_PG_USER", "kaison")
-    password = os.getenv("KAI_PG_PASSWORD", "kaison")
+    opts = get_options("all")
+    db_cfg = opts.get("db", {})
+    host = os.getenv("KAI_PG_HOST", db_cfg.get("host", "localhost"))
+    port = os.getenv("KAI_PG_PORT", db_cfg.get("port", "5432"))
+    db = os.getenv("KAI_PG_DB", db_cfg.get("name", "kaison"))
+    user = os.getenv("KAI_PG_USER", db_cfg.get("user", "kaison"))
+    password = os.getenv("KAI_PG_PASSWORD")
+    if not password:
+        source = db_cfg.get("password_source")
+        if source:
+            res = get_key(source)
+            if res.get("status") == "ok":
+                password = res.get("key")
+    password = password or "kaison"
     return f"postgresql://{user}:{password}@{host}:{port}/{db}"
 
 

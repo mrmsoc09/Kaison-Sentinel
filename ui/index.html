@@ -143,6 +143,48 @@
       </div>
     </div>
     <div class="panel">
+      <div class="panel-title">Platform Options</div>
+      <div class="panel-body">
+        <div class="row">
+          <select id="optVaultBackend">
+            <option value="local">Vault: Local</option>
+            <option value="hashicorp">Vault: HashiCorp</option>
+          </select>
+          <select id="optLlmProvider">
+            <option value="">LLM: Default</option>
+            <option value="local_ollama">Local Ollama</option>
+            <option value="local_lmstudio">Local LM Studio</option>
+            <option value="openai">OpenAI</option>
+            <option value="anthropic">Anthropic</option>
+            <option value="gemini">Gemini</option>
+          </select>
+        </div>
+        <div class="row">
+          <input id="optDbHost" placeholder="DB host" />
+          <input id="optDbPort" placeholder="DB port" />
+        </div>
+        <div class="row">
+          <input id="optDbName" placeholder="DB name" />
+          <input id="optDbUser" placeholder="DB user" />
+        </div>
+        <div class="row">
+          <input id="optDbPassSource" placeholder="DB password source id (vault)" />
+          <input id="optDbSsl" placeholder="DB sslmode (disable/require)" />
+        </div>
+        <div class="row">
+          <label><input id="optAutoInstall" type="checkbox" /> Auto‑install tools</label>
+          <label><input id="optAllowInstall" type="checkbox" /> Allow install (requires env)</label>
+        </div>
+        <div class="row">
+          <label><input id="optProgramSync" type="checkbox" /> Program sync enabled</label>
+          <label><input id="optProgramAuto" type="checkbox" /> Auto‑sync</label>
+          <input id="optProgramInterval" placeholder="Sync interval hours" />
+        </div>
+        <button id="platformOptionsSave" class="primary">Save Options</button>
+        <pre id="platformOptionsStatus" class="results"></pre>
+      </div>
+    </div>
+    <div class="panel">
       <div class="panel-title">API Key Catalog</div>
       <div class="panel-body">
         <div id="keyCatalog" class="results"></div>
@@ -177,6 +219,7 @@
     <div class="panel">
       <div class="panel-title">Autonomy Status</div>
       <div class="panel-body">
+        <button id="autoRepairBtn" class="primary">Run Auto‑Repair</button>
         <pre id="autonomyStatus" class="results"></pre>
       </div>
     </div>
@@ -428,5 +471,6 @@
   <script src="/autonomy.js"></script>
   <script src="/llm.js"></script>
   <script src="/scheduler.js"></script>
+  <script src="/platform_options.js"></script>
 </body>
 </html>

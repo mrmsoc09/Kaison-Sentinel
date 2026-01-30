@@ -31,6 +31,7 @@ from ..core.programs import list_programs
 from ..core.program_sync import program_sync_status
 from ..core.scope_parser import parse_cached_scopes, load_parsed_scopes
 from ..core.scheduler import scheduler_status, build_schedule, queue_active_plan_tasks
+from ..core.auto_repair import run_auto_repair
 from ..core.hardware import hardware_profile
 from ..core.llm_registry import load_llm_profiles
 from ..core.run_history import list_runs
@@ -148,6 +149,8 @@ def handle_assets(path: str, query: str = ""):
         return 200, load_parsed_scopes()
     if path == "/api/scheduler/status":
         return 200, scheduler_status()
+    if path == "/api/autonomy/repair":
+        return 200, run_auto_repair()
     if path == "/api/jobs":
         return 200, list_jobs()
     if path == "/api/exports/bundle":

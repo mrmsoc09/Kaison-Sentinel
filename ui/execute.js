@@ -43,6 +43,7 @@ async function doExecute() {
           scan_pool_size: Number.isFinite(poolSize) ? poolSize : undefined,
           max_active_scans: Number.isFinite(activeLimit) ? activeLimit : undefined,
           auto_install_tools: !!autoInstall,
+          allow_install: !!autoInstall,
           module_kind: kind,
           role: role,
           validation_confirmed: validationConfirmed,

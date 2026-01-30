@@ -14,7 +14,20 @@ async function loadAutonomyStatus() {
   }
 }
 
+async function runAutoRepair() {
+  const el = document.getElementById('autonomyStatus');
+  try {
+    const res = await fetch('/api/autonomy/repair');
+    const data = await res.json();
+    if (el) el.textContent = JSON.stringify(data, null, 2);
+  } catch (e) {
+    if (el) el.textContent = 'Auto-repair failed.';
+  }
+}
+
 window.addEventListener('load', () => {
   loadAutonomyStatus();
   setInterval(loadAutonomyStatus, 60000);
+  const btn = document.getElementById('autoRepairBtn');
+  if (btn) btn.addEventListener('click', runAutoRepair);
 });

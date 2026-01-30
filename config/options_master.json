@@ -36,6 +36,15 @@
     "vault_backend": "local",
     "auto_install_tools": true,
     "allow_install": false,
+    "llm_active_provider": "",
+    "db": {
+      "host": "localhost",
+      "port": "5432",
+      "name": "kaison",
+      "user": "kaison",
+      "password_source": "source.db_password",
+      "sslmode": "disable"
+    },
     "budget_default_tier": "standard",
     "stealth_default": "standard",
     "scan_duration_days": 42,
